@@ -1,0 +1,36 @@
+{
+  "hosting": [
+    {
+      "target": "temp-a1437",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "portal-index.html"
+      ],
+      "cleanUrls": true
+    },
+    {
+      "target": "portal",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "index.html"
+      ],
+      "cleanUrls": true,
+      "rewrites": [
+        {
+          "source": "/",
+          "destination": "/portal-index.html"
+        },
+        {
+          "source": "**",
+          "destination": "/portal-index.html"
+        }
+      ]
+    }
+  ]
+}

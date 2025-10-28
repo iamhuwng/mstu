@@ -1,0 +1,45 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+.modal-content {
+    transition: transform 0.25s ease;
+}
+
+.tab-btn.active {
+    border-color: #3b82f6;
+    background-color: #3b82f6;
+    color: white;
+}
+
+.reading-pane {
+    position: sticky;
+    top: 1rem;
+}
+
+.auto-expand-input {
+    min-width: 8rem;
+    /* Start with a minimum width */
+    width: 8rem;
+    transition: width 0.2s ease-in-out;
+    border: none;
+    border-bottom: 1px solid #9ca3af;
+    background-color: transparent;
+    padding: 2px;
+}
+
+.auto-expand-input:focus {
+    outline: none;
+    border-bottom: 2px solid #3b82f6;
+}
+/* Makes the chat modal resizable by the user */
+#chat-modal {
+    resize: both;
+    overflow: auto;
+    min-width: 320px;
+    min-height: 400px;
+}

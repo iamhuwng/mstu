@@ -1,0 +1,15 @@
+{
+  "name": "homework-hub-legacy",
+  "version": "1.0.0",
+  "description": "Static server for the legacy homework hub",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

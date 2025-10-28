@@ -1,0 +1,17 @@
+{
+  "title": "Sample Quiz for E2E Test",
+  "questions": [
+    {
+      "question": "What is the capital of France?",
+      "options": ["London", "Paris", "Berlin", "Madrid"],
+      "answer": "Paris",
+      "timer": 20
+    },
+    {
+      "question": "What is 2 + 2?",
+      "options": ["3", "4", "5", "6"],
+      "answer": "4",
+      "timer": 10
+    }
+  ]
+}

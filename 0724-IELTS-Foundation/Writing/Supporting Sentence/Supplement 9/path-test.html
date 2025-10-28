@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Path Diagnostic Tool</title>
+    <style>
+        body { font-family: sans-serif; padding: 2em; line-height: 1.6; }
+        h1 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        .status { padding: 10px; margin: 5px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .fail { background-color: #f8d7da; color: #721c24; }
+        code { background-color: #e9ecef; padding: 2px 4px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>File Path Diagnostic</h1>
+    <p>This tool is testing different paths to find your main JavaScript file (`main.js`). One of the paths below should show "SUCCESS".</p>
+    <div id="results"></div>
+
+    <script type="module">
+        const resultsDiv = document.getElementById('results');
+
+        const pathsToTest = [
+            '../js/main.js',
+            '../../js/main.js',
+            '../../../js/main.js',
+            '../../../../js/main.js',
+            '../../../../../js/main.js',
+            '/js/main.js'
+        ];
+
+        async function runTest() {
+            let found = false;
+            for (const path of pathsToTest) {
+                let output = '';
+                try {
+                    // We use a dynamic import() to test if the module can be loaded from the path
+                    await import(path);
+                    output = `<div class="status success"><strong>SUCCESS:</strong> The path <code>${path}</code> is correct!</div>`;
+                    found = true;
+                } catch (error) {
+                    output = `<div class="status fail"><strong>FAIL:</strong> The path <code>${path}</code> did not work.</div>`;
+                }
+                resultsDiv.innerHTML += output;
+            }
+
+            if(found) {
+                resultsDiv.innerHTML += "<hr><p><strong>Please copy the successful path and send it back to me.</strong></p>";
+            } else {
+                 resultsDiv.innerHTML += "<hr><p class='status fail'><strong>No valid path was found.</strong> Please double-check that your `js` folder is at the top level of your project.</p>";
+            }
+        }
+
+        runTest();
+    </script>
+</body>
+</html>

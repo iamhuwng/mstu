@@ -1,0 +1,380 @@
+{
+  "title": "Comprehensive Mock Test - General Knowledge",
+  "description": "A comprehensive test covering multiple subjects with various question types",
+  "passage": {
+    "type": "text",
+    "content": "General Knowledge Context:\n\nThis quiz tests your understanding of various topics including geography, science, history, and culture. Read each question carefully and select the best answer from the options provided. Some questions may have multiple correct answers.\n\nGood luck!",
+    "imageUrl": null,
+    "caption": null
+  },
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "question": "What is the capital of France?",
+      "options": ["London", "Berlin", "Paris", "Madrid"],
+      "answer": "Paris",
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which planet is known as the Red Planet?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "answer": "Mars",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of the following are primary colors?",
+      "options": ["Red", "Green", "Blue", "Yellow", "Orange", "Purple"],
+      "answer": ["Red", "Blue", "Yellow"],
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is 7 × 8?",
+      "options": ["54", "56", "58", "60"],
+      "answer": "56",
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are programming languages?",
+      "options": ["Python", "HTML", "JavaScript", "CSS", "Java", "SQL"],
+      "answer": ["Python", "JavaScript", "Java"],
+      "timer": 30,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "options": ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+      "answer": "William Shakespeare",
+      "passage": {
+        "type": "text",
+        "content": "William Shakespeare (1564-1616) was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language. His works include 39 plays, 154 sonnets, and several poems. Among his most famous plays are 'Romeo and Juliet', 'Hamlet', 'Macbeth', and 'Othello'. His plays have been translated into every major language and are performed more often than those of any other playwright.",
+        "imageUrl": null,
+        "caption": null
+      },
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of the following are mammals?",
+      "options": ["Dolphin", "Shark", "Whale", "Octopus", "Bat", "Eagle"],
+      "answer": ["Dolphin", "Whale", "Bat"],
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "answer": "Au",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which countries are in North America?",
+      "options": ["Canada", "Brazil", "Mexico", "Argentina", "United States", "Chile"],
+      "answer": ["Canada", "Mexico", "United States"],
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "How many continents are there on Earth?",
+      "options": ["5", "6", "7", "8"],
+      "answer": "7",
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are renewable energy sources?",
+      "options": ["Solar", "Coal", "Wind", "Natural Gas", "Hydroelectric", "Oil"],
+      "answer": ["Solar", "Wind", "Hydroelectric"],
+      "timer": 30,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are types of triangles?",
+      "options": ["Equilateral", "Scalene", "Pentagon", "Isosceles", "Hexagon", "Right"],
+      "answer": ["Equilateral", "Scalene", "Isosceles", "Right"],
+      "timer": 30,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "In which year did World War II end?",
+      "options": ["1943", "1944", "1945", "1946"],
+      "answer": "1945",
+      "passage": {
+        "type": "both",
+        "content": "World War II was a global conflict that lasted from 1939 to 1945. It involved the vast majority of the world's nations, forming two opposing military alliances: the Allies and the Axis powers. The war ended in 1945 with the surrender of Germany in May and Japan in September, following the atomic bombings of Hiroshima and Nagasaki.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Second_world_war_europe_1943-1945_map_en.png/500px-Second_world_war_europe_1943-1945_map_en.png",
+        "caption": "Map of Europe during World War II (1943-1945)"
+      },
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of the following are web browsers?",
+      "options": ["Chrome", "Photoshop", "Firefox", "Word", "Safari", "Excel"],
+      "answer": ["Chrome", "Firefox", "Safari"],
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the smallest prime number?",
+      "options": ["0", "1", "2", "3"],
+      "answer": "2",
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are Shakespeare plays?",
+      "options": ["Hamlet", "Pride and Prejudice", "Macbeth", "1984", "Othello", "The Great Gatsby"],
+      "answer": ["Hamlet", "Macbeth", "Othello"],
+      "timer": 30,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the speed of light in vacuum?",
+      "options": ["300,000 km/s", "150,000 km/s", "450,000 km/s", "600,000 km/s"],
+      "answer": "300,000 km/s",
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are operating systems?",
+      "options": ["Windows", "Chrome", "Linux", "Safari", "macOS", "Firefox"],
+      "answer": ["Windows", "Linux", "macOS"],
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Who painted the Mona Lisa?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+      "answer": "Leonardo da Vinci",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "The capital of Japan is _____.",
+      "wordBank": ["Tokyo", "Kyoto", "Osaka", "Hiroshima"],
+      "answer": "Tokyo",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "Water freezes at _____ degrees Celsius.",
+      "wordBank": ["0", "32", "100", "-10"],
+      "answer": "0",
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "The chemical formula for water is _____.",
+      "wordBank": ["H2O", "CO2", "O2", "H2O2"],
+      "answer": "H2O",
+      "passage": {
+        "type": "image",
+        "content": null,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Water_molecule_3D.svg/400px-Water_molecule_3D.svg.png",
+        "caption": "3D representation of a water molecule (H2O)"
+      },
+      "timer": 15,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "The first president of the United States was _____.",
+      "wordBank": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+      "answer": "George Washington",
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "The longest river in the world is the _____.",
+      "wordBank": ["Nile", "Amazon", "Mississippi", "Yangtze"],
+      "answer": "Nile",
+      "timer": 25,
+      "points": 10
+    },
+    {
+      "type": "completion",
+      "question": "What is the capital of Italy?",
+      "answer": ["Rome", "rome"],
+      "timer": 20,
+      "points": 10
+    },
+    {
+      "type": "matching",
+      "question": "Match each country to its capital city.",
+      "items": [
+        { "id": "item-1", "text": "Japan" },
+        { "id": "item-2", "text": "Canada" },
+        { "id": "item-3", "text": "Australia" }
+      ],
+      "options": [
+        { "id": "opt-a", "text": "Canberra" },
+        { "id": "opt-b", "text": "Tokyo" },
+        { "id": "opt-c", "text": "Ottawa" }
+      ],
+      "answers": {
+        "item-1": "opt-b",
+        "item-2": "opt-c",
+        "item-3": "opt-a"
+      },
+      "reusableAnswers": false,
+      "timer": 40,
+      "points": 10
+    },
+    {
+      "type": "matching",
+      "question": "Match the elements to their chemical symbols:",
+      "items": [
+        { "id": "item-1", "text": "Oxygen" },
+        { "id": "item-2", "text": "Carbon" },
+        { "id": "item-3", "text": "Nitrogen" },
+        { "id": "item-4", "text": "Hydrogen" }
+      ],
+      "options": [
+        { "id": "opt-a", "text": "O" },
+        { "id": "opt-b", "text": "C" },
+        { "id": "opt-c", "text": "N" },
+        { "id": "opt-d", "text": "H" }
+      ],
+      "answers": {
+        "item-1": "opt-a",
+        "item-2": "opt-b",
+        "item-3": "opt-c",
+        "item-4": "opt-d"
+      },
+      "reusableAnswers": false,
+      "timer": 35,
+      "points": 10
+    },
+    {
+      "type": "matching",
+      "question": "Match the planets to their positions from the Sun:",
+      "items": [
+        { "id": "item-1", "text": "Mercury" },
+        { "id": "item-2", "text": "Venus" },
+        { "id": "item-3", "text": "Earth" },
+        { "id": "item-4", "text": "Mars" }
+      ],
+      "options": [
+        { "id": "opt-a", "text": "1st" },
+        { "id": "opt-b", "text": "2nd" },
+        { "id": "opt-c", "text": "3rd" },
+        { "id": "opt-d", "text": "4th" }
+      ],
+      "answers": {
+        "item-1": "opt-a",
+        "item-2": "opt-b",
+        "item-3": "opt-c",
+        "item-4": "opt-d"
+      },
+      "reusableAnswers": false,
+      "timer": 40,
+      "points": 10
+    },
+    {
+      "type": "matching",
+      "question": "Match the mathematical operations to their symbols:",
+      "items": [
+        { "id": "item-1", "text": "Addition" },
+        { "id": "item-2", "text": "Subtraction" },
+        { "id": "item-3", "text": "Multiplication" },
+        { "id": "item-4", "text": "Division" }
+      ],
+      "options": [
+        { "id": "opt-a", "text": "+" },
+        { "id": "opt-b", "text": "-" },
+        { "id": "opt-c", "text": "×" },
+        { "id": "opt-d", "text": "÷" }
+      ],
+      "answers": {
+        "item-1": "opt-a",
+        "item-2": "opt-b",
+        "item-3": "opt-c",
+        "item-4": "opt-d"
+      },
+      "reusableAnswers": false,
+      "timer": 30,
+      "points": 10
+    },
+    {
+      "type": "matching",
+      "question": "Match the programming concepts to their descriptions:",
+      "items": [
+        { "id": "item-1", "text": "Variable" },
+        { "id": "item-2", "text": "Function" },
+        { "id": "item-3", "text": "Loop" },
+        { "id": "item-4", "text": "Condition" }
+      ],
+      "options": [
+        { "id": "opt-a", "text": "Stores data" },
+        { "id": "opt-b", "text": "Reusable code block" },
+        { "id": "opt-c", "text": "Repeats actions" },
+        { "id": "opt-d", "text": "Makes decisions" }
+      ],
+      "answers": {
+        "item-1": "opt-a",
+        "item-2": "opt-b",
+        "item-3": "opt-c",
+        "item-4": "opt-d"
+      },
+      "reusableAnswers": false,
+      "timer": 45,
+      "points": 10
+    },
+    {
+      "type": "diagram-labeling",
+      "question": "Label the parts of the plant cell.",
+      "diagramUrl": "/plant-cell.png",
+      "labels": [
+        {
+          "id": "label-1",
+          "sentence": "Converts light energy into chemical energy.",
+          "answer": "Chloroplast",
+          "inputType": "completion"
+        },
+        {
+          "id": "label-2",
+          "sentence": "The rigid outer layer of a plant cell.",
+          "answer": "Cell wall",
+          "inputType": "completion"
+        }
+      ],
+      "timer": 60,
+      "points": 10
+    }
+  ]
+}

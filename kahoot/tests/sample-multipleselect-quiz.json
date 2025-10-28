@@ -1,0 +1,26 @@
+{
+  "title": "Programming Languages Quiz (Multiple Select)",
+  "questions": [
+    {
+      "type": "multiple-select",
+      "question": "Which of the following are programming languages?",
+      "options": ["Python", "HTML", "JavaScript", "CSS"],
+      "answer": ["Python", "JavaScript"],
+      "timer": 30
+    },
+    {
+      "type": "multiple-select",
+      "question": "Which of these are statically typed languages?",
+      "options": ["Java", "Python", "TypeScript", "JavaScript"],
+      "answer": ["Java", "TypeScript"],
+      "timer": 25
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the capital of France?",
+      "options": ["London", "Paris", "Berlin", "Madrid"],
+      "answer": "Paris",
+      "timer": 20
+    }
+  ]
+}

@@ -1,0 +1,354 @@
+﻿[2025-10-24T10:47:14.500Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T10:47:14.501Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:47:14.725Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=0, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302834101,"totalTime":30}
+[2025-10-24T10:47:14.730Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T10:47:14.730Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:47:14.964Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T10:47:14.981Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T10:47:16.167Z] [DRAWING] Drawing mode DISABLED
+[2025-10-24T10:47:16.186Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T10:47:16.197Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T10:47:17.313Z] [CANVAS] Initialized, passageId=default, loadedStrokes=0
+[2025-10-24T10:47:17.315Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T10:47:17.329Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T10:47:17.330Z] [CANVAS] Auto-saved 0 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:47:17.330Z] [DRAWING] Drawing mode ENABLED, passageId: default
+[2025-10-24T10:47:17.330Z] [DRAWING] Loaded 0 saved strokes from localStorage
+[2025-10-24T10:47:18.802Z] [CANVAS] ✏️ Stroke started: type=touch, pressure=0.500, buttons=1, physicalEraser=false
+[2025-10-24T10:47:18.802Z] [CANVAS] Initial point: x=320.5, y=223.5, width=3.46, coalescedEvents=1
+[2025-10-24T10:47:18.823Z] [CANVAS] ✓ Stroke ended: totalPoints=1
+[2025-10-24T10:47:18.825Z] [CANVAS] Stroke saved: totalStrokes=1, points=1, isEraser=false
+[2025-10-24T10:47:18.830Z] [CANVAS] Auto-saved 1 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:47:18.846Z] [DRAWING] Stroke completed, totalStrokes: 1, points: 1
+[2025-10-24T10:47:18.858Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.309, buttons=1, physicalEraser=false
+[2025-10-24T10:47:18.859Z] [CANVAS] Initial point: x=52.5, y=162.0, width=2.76, coalescedEvents=1
+[2025-10-24T10:47:18.925Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:47:18.963Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:47:19.007Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:47:19.052Z] [CANVAS] Drawing progress: points=40, coalescedEvents=1
+[2025-10-24T10:47:19.109Z] [CANVAS] Drawing progress: points=50, coalescedEvents=1
+[2025-10-24T10:47:19.114Z] [CANVAS] ✓ Stroke ended: totalPoints=50
+[2025-10-24T10:47:19.116Z] [CANVAS] Stroke saved: totalStrokes=2, points=50, isEraser=false
+[2025-10-24T10:47:19.118Z] [CANVAS] Auto-saved 2 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:47:19.178Z] [DRAWING] Stroke completed, totalStrokes: 2, points: 50
+[2025-10-24T10:47:19.291Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.196, buttons=1, physicalEraser=false
+[2025-10-24T10:47:19.291Z] [CANVAS] Initial point: x=46.5, y=219.5, width=2.28, coalescedEvents=1
+[2025-10-24T10:47:19.338Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:47:19.383Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:47:19.428Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:47:19.465Z] [CANVAS] Drawing progress: points=40, coalescedEvents=1
+[2025-10-24T10:47:19.496Z] [CANVAS] ✓ Stroke ended: totalPoints=45
+[2025-10-24T10:47:19.497Z] [CANVAS] Stroke saved: totalStrokes=3, points=45, isEraser=false
+[2025-10-24T10:47:19.498Z] [CANVAS] Auto-saved 3 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:47:19.556Z] [DRAWING] Stroke completed, totalStrokes: 3, points: 45
+[2025-10-24T10:47:19.606Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.295, buttons=1, physicalEraser=false
+[2025-10-24T10:47:19.606Z] [CANVAS] Initial point: x=88.0, y=133.0, width=2.70, coalescedEvents=1
+[2025-10-24T10:47:19.668Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:47:19.706Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:47:19.743Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:47:19.781Z] [CANVAS] Drawing progress: points=40, coalescedEvents=1
+[2025-10-24T10:47:19.796Z] [CANVAS] ✓ Stroke ended: totalPoints=41
+[2025-10-24T10:47:19.797Z] [CANVAS] Stroke saved: totalStrokes=4, points=41, isEraser=false
+[2025-10-24T10:47:19.799Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:47:19.859Z] [DRAWING] Stroke completed, totalStrokes: 4, points: 41
+[2025-10-24T10:47:44.826Z] [TEACHER QUIZ] handleTimeUp called, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302834101,"totalTime":30}
+[2025-10-24T10:47:44.830Z] [TEACHER QUIZ] Updating status to feedback
+[2025-10-24T10:47:44.834Z] [TEACHER QUIZ] Game session updated: status=feedback, currentQuestionIndex=0, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302834101,"totalTime":30}
+[2025-10-24T10:47:44.842Z] [TEACHER QUIZ] Status check: status=feedback, hasQuiz=true, hasQuestions=true
+[2025-10-24T10:47:44.842Z] [TEACHER QUIZ] Navigating to feedback page
+[2025-10-24T10:47:45.252Z] [TEACHER QUIZ] Component unmounting
+[2025-10-24T10:47:45.254Z] [TEACHER FEEDBACK] Component mounted for session: active_session
+[2025-10-24T10:47:45.477Z] [TEACHER FEEDBACK] Game session updated: status=feedback, currentQuestionIndex=0
+[2025-10-24T10:47:45.479Z] [TEACHER FEEDBACK] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T10:47:45.715Z] [TEACHER FEEDBACK] Quiz loaded: 13 questions
+[2025-10-24T10:47:50.824Z] [TEACHER FEEDBACK] Game session updated: status=in-progress, currentQuestionIndex=1
+[2025-10-24T10:47:50.839Z] [TEACHER FEEDBACK] Status changed to in-progress, navigating to quiz page
+[2025-10-24T10:47:50.851Z] [TEACHER FEEDBACK] Component unmounting
+[2025-10-24T10:47:50.851Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T10:47:50.852Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:47:51.080Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=1, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302870818,"totalTime":30}
+[2025-10-24T10:47:51.083Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T10:47:51.083Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:47:51.317Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T10:47:51.339Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T10:48:20.822Z] [TEACHER QUIZ] handleTimeUp called, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302870818,"totalTime":30}
+[2025-10-24T10:48:20.824Z] [TEACHER QUIZ] Updating status to feedback
+[2025-10-24T10:48:20.826Z] [TEACHER QUIZ] Game session updated: status=feedback, currentQuestionIndex=1, timer={"isPaused":false,"pausedDuration":0,"startTime":1761302870818,"totalTime":30}
+[2025-10-24T10:48:20.835Z] [TEACHER QUIZ] Status check: status=feedback, hasQuiz=true, hasQuestions=true
+[2025-10-24T10:48:20.835Z] [TEACHER QUIZ] Navigating to feedback page
+[2025-10-24T10:48:20.842Z] [TEACHER QUIZ] Component unmounting
+[2025-10-24T10:48:20.844Z] [TEACHER FEEDBACK] Component mounted for session: active_session
+[2025-10-24T10:48:21.069Z] [TEACHER FEEDBACK] Game session updated: status=feedback, currentQuestionIndex=1
+[2025-10-24T10:48:21.070Z] [TEACHER FEEDBACK] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T10:48:21.303Z] [TEACHER FEEDBACK] Quiz loaded: 13 questions
+[2025-10-24T10:48:25.341Z] [TEACHER FEEDBACK] Game session updated: status=in-progress, currentQuestionIndex=0
+[2025-10-24T10:48:25.345Z] [TEACHER FEEDBACK] Status changed to in-progress, navigating to quiz page
+[2025-10-24T10:48:25.352Z] [TEACHER FEEDBACK] Component unmounting
+[2025-10-24T10:48:25.352Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T10:48:25.353Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:48:25.573Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=0, timer={"isPaused":true,"pausedAt":1761302905341,"pausedDuration":0,"startTime":1761302905341,"totalTime":30}
+[2025-10-24T10:48:25.575Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T10:48:25.575Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T10:48:25.804Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T10:48:25.822Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T10:48:29.341Z] [DRAWING] Drawing mode DISABLED
+[2025-10-24T10:48:29.345Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T10:48:29.351Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T10:48:30.810Z] [CANVAS] Initialized, passageId=default, loadedStrokes=4
+[2025-10-24T10:48:30.811Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T10:48:30.816Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T10:48:30.817Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:30.817Z] [DRAWING] Drawing mode ENABLED, passageId: default
+[2025-10-24T10:48:30.817Z] [DRAWING] Loaded 4 saved strokes from localStorage
+[2025-10-24T10:48:36.764Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.344, buttons=1, physicalEraser=false
+[2025-10-24T10:48:36.765Z] [CANVAS] Initial point: x=85.5, y=151.0, width=2.89, coalescedEvents=1
+[2025-10-24T10:48:36.850Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:48:36.895Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:48:36.933Z] [CANVAS] ✓ Stroke ended: totalPoints=26
+[2025-10-24T10:48:36.934Z] [CANVAS] Stroke saved: totalStrokes=5, points=26, isEraser=false
+[2025-10-24T10:48:36.940Z] [CANVAS] Auto-saved 5 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:36.943Z] [DRAWING] Stroke completed, totalStrokes: 5, points: 26
+[2025-10-24T10:48:37.043Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.394, buttons=1, physicalEraser=false
+[2025-10-24T10:48:37.043Z] [CANVAS] Initial point: x=87.0, y=189.5, width=3.08, coalescedEvents=1
+[2025-10-24T10:48:37.174Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:48:37.175Z] [CANVAS] Stroke saved: totalStrokes=6, points=2, isEraser=false
+[2025-10-24T10:48:37.179Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:37.233Z] [DRAWING] Stroke completed, totalStrokes: 6, points: 2
+[2025-10-24T10:48:37.299Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.365, buttons=1, physicalEraser=false
+[2025-10-24T10:48:37.299Z] [CANVAS] Initial point: x=106.5, y=147.0, width=2.98, coalescedEvents=1
+[2025-10-24T10:48:37.345Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:48:37.383Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:48:37.441Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:48:37.444Z] [CANVAS] ✓ Stroke ended: totalPoints=30
+[2025-10-24T10:48:37.447Z] [CANVAS] Stroke saved: totalStrokes=7, points=30, isEraser=false
+[2025-10-24T10:48:37.451Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:37.517Z] [DRAWING] Stroke completed, totalStrokes: 7, points: 30
+[2025-10-24T10:48:37.587Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.309, buttons=1, physicalEraser=false
+[2025-10-24T10:48:37.587Z] [CANVAS] Initial point: x=124.0, y=173.5, width=2.76, coalescedEvents=1
+[2025-10-24T10:48:38.482Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:48:38.483Z] [CANVAS] Stroke saved: totalStrokes=8, points=2, isEraser=false
+[2025-10-24T10:48:38.486Z] [CANVAS] Auto-saved 8 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:38.544Z] [DRAWING] Stroke completed, totalStrokes: 8, points: 2
+[2025-10-24T10:48:44.479Z] [DRAWING] Undo triggered, strokeCount before: 8
+[2025-10-24T10:48:44.481Z] [CANVAS] Undo: 8 → 7 strokes
+[2025-10-24T10:48:44.481Z] [DRAWING] Undo completed, strokeCount after: 7
+[2025-10-24T10:48:44.487Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:44.490Z] [CANVAS] Canvas redrawn after undo
+[2025-10-24T10:48:46.613Z] [DRAWING] Undo triggered, strokeCount before: 7
+[2025-10-24T10:48:46.613Z] [CANVAS] Undo: 7 → 6 strokes
+[2025-10-24T10:48:46.613Z] [DRAWING] Undo completed, strokeCount after: 6
+[2025-10-24T10:48:46.618Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:46.623Z] [CANVAS] Canvas redrawn after undo
+[2025-10-24T10:48:48.122Z] [DRAWING] Undo triggered, strokeCount before: 6
+[2025-10-24T10:48:48.122Z] [CANVAS] Undo: 6 → 5 strokes
+[2025-10-24T10:48:48.122Z] [DRAWING] Undo completed, strokeCount after: 5
+[2025-10-24T10:48:48.126Z] [CANVAS] Auto-saved 5 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:48.128Z] [CANVAS] Canvas redrawn after undo
+[2025-10-24T10:48:49.180Z] [DRAWING] Undo triggered, strokeCount before: 5
+[2025-10-24T10:48:49.181Z] [CANVAS] Undo: 5 → 4 strokes
+[2025-10-24T10:48:49.181Z] [DRAWING] Undo completed, strokeCount after: 4
+[2025-10-24T10:48:49.185Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:49.186Z] [CANVAS] Canvas redrawn after undo
+[2025-10-24T10:48:50.002Z] [DRAWING] Undo triggered, strokeCount before: 4
+[2025-10-24T10:48:50.002Z] [CANVAS] Undo: 4 → 3 strokes
+[2025-10-24T10:48:50.002Z] [DRAWING] Undo completed, strokeCount after: 3
+[2025-10-24T10:48:50.011Z] [CANVAS] Auto-saved 3 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:50.017Z] [CANVAS] Canvas redrawn after undo
+[2025-10-24T10:48:50.872Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.309, buttons=1, physicalEraser=false
+[2025-10-24T10:48:50.873Z] [CANVAS] Initial point: x=225.0, y=140.0, width=2.76, coalescedEvents=1
+[2025-10-24T10:48:50.933Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:48:50.985Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:48:51.022Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:48:51.077Z] [CANVAS] ✓ Stroke ended: totalPoints=38
+[2025-10-24T10:48:51.078Z] [CANVAS] Stroke saved: totalStrokes=4, points=38, isEraser=false
+[2025-10-24T10:48:51.080Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:51.083Z] [DRAWING] Stroke completed, totalStrokes: 4, points: 38
+[2025-10-24T10:48:51.201Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.154, buttons=1, physicalEraser=false
+[2025-10-24T10:48:51.202Z] [CANVAS] Initial point: x=210.0, y=206.5, width=2.08, coalescedEvents=1
+[2025-10-24T10:48:51.362Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:48:51.363Z] [CANVAS] Stroke saved: totalStrokes=5, points=2, isEraser=false
+[2025-10-24T10:48:51.365Z] [CANVAS] Auto-saved 5 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:51.426Z] [DRAWING] Stroke completed, totalStrokes: 5, points: 2
+[2025-10-24T10:48:51.519Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.365, buttons=1, physicalEraser=false
+[2025-10-24T10:48:51.520Z] [CANVAS] Initial point: x=269.5, y=130.0, width=2.98, coalescedEvents=1
+[2025-10-24T10:48:51.548Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:48:51.593Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:48:51.631Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:48:51.676Z] [CANVAS] ✓ Stroke ended: totalPoints=37
+[2025-10-24T10:48:51.677Z] [CANVAS] Stroke saved: totalStrokes=6, points=37, isEraser=false
+[2025-10-24T10:48:51.679Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:51.746Z] [DRAWING] Stroke completed, totalStrokes: 6, points: 37
+[2025-10-24T10:48:54.820Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.323, buttons=1, physicalEraser=false
+[2025-10-24T10:48:54.820Z] [CANVAS] Initial point: x=331.5, y=129.5, width=2.81, coalescedEvents=1
+[2025-10-24T10:48:54.874Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:48:54.911Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:48:54.949Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:48:54.994Z] [CANVAS] Drawing progress: points=40, coalescedEvents=1
+[2025-10-24T10:48:55.032Z] [CANVAS] Drawing progress: points=50, coalescedEvents=1
+[2025-10-24T10:48:55.084Z] [CANVAS] Drawing progress: points=60, coalescedEvents=1
+[2025-10-24T10:48:55.122Z] [CANVAS] Drawing progress: points=70, coalescedEvents=1
+[2025-10-24T10:48:55.160Z] [CANVAS] Drawing progress: points=80, coalescedEvents=1
+[2025-10-24T10:48:55.205Z] [CANVAS] Drawing progress: points=90, coalescedEvents=1
+[2025-10-24T10:48:55.249Z] [CANVAS] Drawing progress: points=100, coalescedEvents=1
+[2025-10-24T10:48:55.286Z] [CANVAS] Drawing progress: points=110, coalescedEvents=1
+[2025-10-24T10:48:55.324Z] [CANVAS] Drawing progress: points=120, coalescedEvents=1
+[2025-10-24T10:48:55.362Z] [CANVAS] Drawing progress: points=130, coalescedEvents=1
+[2025-10-24T10:48:55.400Z] [CANVAS] Drawing progress: points=140, coalescedEvents=1
+[2025-10-24T10:48:55.445Z] [CANVAS] Drawing progress: points=150, coalescedEvents=1
+[2025-10-24T10:48:55.482Z] [CANVAS] Drawing progress: points=160, coalescedEvents=1
+[2025-10-24T10:48:55.527Z] [CANVAS] Drawing progress: points=170, coalescedEvents=1
+[2025-10-24T10:48:55.572Z] [CANVAS] Drawing progress: points=180, coalescedEvents=1
+[2025-10-24T10:48:55.617Z] [CANVAS] Drawing progress: points=190, coalescedEvents=1
+[2025-10-24T10:48:55.662Z] [CANVAS] Drawing progress: points=200, coalescedEvents=1
+[2025-10-24T10:48:55.707Z] [CANVAS] Drawing progress: points=210, coalescedEvents=1
+[2025-10-24T10:48:55.752Z] [CANVAS] Drawing progress: points=220, coalescedEvents=1
+[2025-10-24T10:48:55.790Z] [CANVAS] Drawing progress: points=230, coalescedEvents=1
+[2025-10-24T10:48:55.835Z] [CANVAS] Drawing progress: points=240, coalescedEvents=1
+[2025-10-24T10:48:55.872Z] [CANVAS] Drawing progress: points=250, coalescedEvents=1
+[2025-10-24T10:48:55.917Z] [CANVAS] Drawing progress: points=260, coalescedEvents=1
+[2025-10-24T10:48:55.963Z] [CANVAS] Drawing progress: points=270, coalescedEvents=1
+[2025-10-24T10:48:56.008Z] [CANVAS] Drawing progress: points=280, coalescedEvents=1
+[2025-10-24T10:48:56.052Z] [CANVAS] Drawing progress: points=290, coalescedEvents=1
+[2025-10-24T10:48:56.090Z] [CANVAS] Drawing progress: points=300, coalescedEvents=1
+[2025-10-24T10:48:56.135Z] [CANVAS] Drawing progress: points=310, coalescedEvents=1
+[2025-10-24T10:48:56.203Z] [CANVAS] Drawing progress: points=320, coalescedEvents=1
+[2025-10-24T10:48:56.248Z] [CANVAS] Drawing progress: points=330, coalescedEvents=1
+[2025-10-24T10:48:56.293Z] [CANVAS] Drawing progress: points=340, coalescedEvents=1
+[2025-10-24T10:48:56.338Z] [CANVAS] Drawing progress: points=350, coalescedEvents=1
+[2025-10-24T10:48:56.376Z] [CANVAS] Drawing progress: points=360, coalescedEvents=1
+[2025-10-24T10:48:56.414Z] [CANVAS] ✓ Stroke ended: totalPoints=366
+[2025-10-24T10:48:56.415Z] [CANVAS] Stroke saved: totalStrokes=7, points=366, isEraser=false
+[2025-10-24T10:48:56.418Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:48:56.474Z] [DRAWING] Stroke completed, totalStrokes: 7, points: 366
+[2025-10-24T10:48:59.276Z] [DRAWING] Clear requested, strokeCount: 7
+[2025-10-24T10:49:29.688Z] [CANVAS] Clear all: removing 7 strokes
+[2025-10-24T10:49:29.688Z] [CANVAS] ✅ Canvas cleared successfully
+[2025-10-24T10:49:29.688Z] [DRAWING] ✅ All drawings cleared
+[2025-10-24T10:49:29.692Z] [CANVAS] Auto-saved 0 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:35.474Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.154, buttons=1, physicalEraser=false
+[2025-10-24T10:49:35.476Z] [CANVAS] Initial point: x=54.5, y=141.5, width=2.08, coalescedEvents=1
+[2025-10-24T10:49:35.526Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:35.571Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:35.608Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:49:35.653Z] [CANVAS] Drawing progress: points=40, coalescedEvents=1
+[2025-10-24T10:49:35.707Z] [CANVAS] ✓ Stroke ended: totalPoints=48
+[2025-10-24T10:49:35.708Z] [CANVAS] Stroke saved: totalStrokes=1, points=48, isEraser=false
+[2025-10-24T10:49:35.709Z] [CANVAS] Auto-saved 1 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:35.764Z] [DRAWING] Stroke completed, totalStrokes: 1, points: 48
+[2025-10-24T10:49:35.794Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.126, buttons=1, physicalEraser=false
+[2025-10-24T10:49:35.794Z] [CANVAS] Initial point: x=58.5, y=188.0, width=1.94, coalescedEvents=1
+[2025-10-24T10:49:35.833Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:35.887Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:35.943Z] [CANVAS] Drawing progress: points=30, coalescedEvents=1
+[2025-10-24T10:49:35.954Z] [CANVAS] ✓ Stroke ended: totalPoints=31
+[2025-10-24T10:49:35.955Z] [CANVAS] Stroke saved: totalStrokes=2, points=31, isEraser=false
+[2025-10-24T10:49:35.956Z] [CANVAS] Auto-saved 2 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:36.018Z] [DRAWING] Stroke completed, totalStrokes: 2, points: 31
+[2025-10-24T10:49:36.049Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.281, buttons=1, physicalEraser=false
+[2025-10-24T10:49:36.049Z] [CANVAS] Initial point: x=89.0, y=117.0, width=2.65, coalescedEvents=1
+[2025-10-24T10:49:36.263Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:36.264Z] [CANVAS] Stroke saved: totalStrokes=3, points=2, isEraser=false
+[2025-10-24T10:49:36.266Z] [CANVAS] Auto-saved 3 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:36.318Z] [DRAWING] Stroke completed, totalStrokes: 3, points: 2
+[2025-10-24T10:49:40.284Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:40.285Z] [CANVAS] Initial point: x=52.0, y=164.5, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:40.358Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:40.447Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:40.545Z] [CANVAS] ✓ Stroke ended: totalPoints=27
+[2025-10-24T10:49:40.546Z] [CANVAS] Stroke saved: totalStrokes=4, points=27, isEraser=true
+[2025-10-24T10:49:40.547Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:40.607Z] [DRAWING] Stroke completed, totalStrokes: 4, points: 27
+[2025-10-24T10:49:40.869Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:40.869Z] [CANVAS] Initial point: x=47.0, y=179.0, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:40.958Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:41.034Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:41.100Z] [CANVAS] ✓ Stroke ended: totalPoints=23
+[2025-10-24T10:49:41.101Z] [CANVAS] Stroke saved: totalStrokes=5, points=23, isEraser=true
+[2025-10-24T10:49:41.103Z] [CANVAS] Auto-saved 5 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:41.162Z] [DRAWING] Stroke completed, totalStrokes: 5, points: 23
+[2025-10-24T10:49:41.349Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:41.349Z] [CANVAS] Initial point: x=46.0, y=181.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:41.597Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:41.598Z] [CANVAS] Stroke saved: totalStrokes=6, points=2, isEraser=true
+[2025-10-24T10:49:41.599Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:41.667Z] [DRAWING] Stroke completed, totalStrokes: 6, points: 2
+[2025-10-24T10:49:41.815Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:41.815Z] [CANVAS] Initial point: x=45.5, y=181.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:41.889Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:41.997Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:42.031Z] [CANVAS] ✓ Stroke ended: totalPoints=22
+[2025-10-24T10:49:42.032Z] [CANVAS] Stroke saved: totalStrokes=7, points=22, isEraser=true
+[2025-10-24T10:49:42.034Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:42.039Z] [DRAWING] Stroke completed, totalStrokes: 7, points: 22
+[2025-10-24T10:49:42.265Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:42.265Z] [CANVAS] Initial point: x=44.0, y=179.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:42.340Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:42.422Z] [CANVAS] ✓ Stroke ended: totalPoints=18
+[2025-10-24T10:49:42.423Z] [CANVAS] Stroke saved: totalStrokes=8, points=18, isEraser=true
+[2025-10-24T10:49:42.425Z] [CANVAS] Auto-saved 8 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:42.479Z] [DRAWING] Stroke completed, totalStrokes: 8, points: 18
+[2025-10-24T10:49:43.287Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:43.287Z] [CANVAS] Initial point: x=106.0, y=375.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:43.579Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:43.580Z] [CANVAS] Stroke saved: totalStrokes=9, points=2, isEraser=true
+[2025-10-24T10:49:43.582Z] [CANVAS] Auto-saved 9 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:43.635Z] [DRAWING] Stroke completed, totalStrokes: 9, points: 2
+[2025-10-24T10:49:43.707Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:43.707Z] [CANVAS] Initial point: x=200.5, y=286.0, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:43.781Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:43.856Z] [CANVAS] Drawing progress: points=20, coalescedEvents=1
+[2025-10-24T10:49:43.955Z] [CANVAS] ✓ Stroke ended: totalPoints=28
+[2025-10-24T10:49:43.956Z] [CANVAS] Stroke saved: totalStrokes=10, points=28, isEraser=true
+[2025-10-24T10:49:43.958Z] [CANVAS] Auto-saved 10 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:44.016Z] [DRAWING] Stroke completed, totalStrokes: 10, points: 28
+[2025-10-24T10:49:44.129Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:44.129Z] [CANVAS] Initial point: x=189.5, y=269.0, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:44.201Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:44.313Z] [CANVAS] ✓ Stroke ended: totalPoints=19
+[2025-10-24T10:49:44.314Z] [CANVAS] Stroke saved: totalStrokes=11, points=19, isEraser=true
+[2025-10-24T10:49:44.316Z] [CANVAS] Auto-saved 11 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:44.379Z] [DRAWING] Stroke completed, totalStrokes: 11, points: 19
+[2025-10-24T10:49:44.547Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:44.547Z] [CANVAS] Initial point: x=199.5, y=268.0, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:44.795Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:44.796Z] [CANVAS] Stroke saved: totalStrokes=12, points=2, isEraser=true
+[2025-10-24T10:49:44.798Z] [CANVAS] Auto-saved 12 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:44.818Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:44.818Z] [CANVAS] Initial point: x=104.5, y=376.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:44.839Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:44.840Z] [CANVAS] Stroke saved: totalStrokes=13, points=2, isEraser=true
+[2025-10-24T10:49:44.841Z] [CANVAS] Auto-saved 13 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:44.863Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:44.863Z] [CANVAS] Initial point: x=108.0, y=374.0, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:44.884Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:44.885Z] [CANVAS] Stroke saved: totalStrokes=14, points=2, isEraser=true
+[2025-10-24T10:49:44.888Z] [CANVAS] Auto-saved 14 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:44.948Z] [DRAWING] Stroke completed, totalStrokes: 14, points: 2
+[2025-10-24T10:49:44.948Z] [DRAWING] Stroke completed, totalStrokes: 14, points: 2
+[2025-10-24T10:49:44.948Z] [DRAWING] Stroke completed, totalStrokes: 14, points: 2
+[2025-10-24T10:49:45.178Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:45.179Z] [CANVAS] Initial point: x=151.5, y=326.0, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:45.267Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:45.319Z] [CANVAS] ✓ Stroke ended: totalPoints=14
+[2025-10-24T10:49:45.320Z] [CANVAS] Stroke saved: totalStrokes=15, points=14, isEraser=true
+[2025-10-24T10:49:45.322Z] [CANVAS] Auto-saved 15 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:45.391Z] [DRAWING] Stroke completed, totalStrokes: 15, points: 14
+[2025-10-24T10:49:45.572Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:45.573Z] [CANVAS] Initial point: x=217.5, y=263.0, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:45.627Z] [CANVAS] Drawing progress: points=10, coalescedEvents=1
+[2025-10-24T10:49:45.650Z] [CANVAS] ✓ Stroke ended: totalPoints=10
+[2025-10-24T10:49:45.651Z] [CANVAS] Stroke saved: totalStrokes=16, points=10, isEraser=true
+[2025-10-24T10:49:45.654Z] [CANVAS] Auto-saved 16 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:45.708Z] [DRAWING] Stroke completed, totalStrokes: 16, points: 10
+[2025-10-24T10:49:45.839Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true
+[2025-10-24T10:49:45.839Z] [CANVAS] Initial point: x=126.0, y=358.5, width=11.56, coalescedEvents=1
+[2025-10-24T10:49:45.890Z] [CANVAS] ✓ Stroke ended: totalPoints=2
+[2025-10-24T10:49:45.891Z] [CANVAS] Stroke saved: totalStrokes=17, points=2, isEraser=true
+[2025-10-24T10:49:45.893Z] [CANVAS] Auto-saved 17 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:45.963Z] [DRAWING] Stroke completed, totalStrokes: 17, points: 2
+[2025-10-24T10:49:45.973Z] [CANVAS] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true
+[2025-10-24T10:49:45.973Z] [CANVAS] Initial point: x=150.0, y=344.5, width=11.52, coalescedEvents=1
+[2025-10-24T10:49:46.010Z] [CANVAS] ✓ Stroke ended: totalPoints=3
+[2025-10-24T10:49:46.013Z] [CANVAS] Stroke saved: totalStrokes=18, points=3, isEraser=true
+[2025-10-24T10:49:46.014Z] [CANVAS] Auto-saved 18 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T10:49:46.072Z] [DRAWING] Stroke completed, totalStrokes: 18, points: 3

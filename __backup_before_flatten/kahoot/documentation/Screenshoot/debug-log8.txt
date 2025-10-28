@@ -1,0 +1,1083 @@
+﻿[2025-10-24T11:19:24.195Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T11:19:24.195Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:19:24.391Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=0, timer={"isPaused":false,"pausedDuration":0,"startTime":1761304763794,"totalTime":30}
+[2025-10-24T11:19:24.396Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T11:19:24.396Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:19:24.597Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T11:19:24.620Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:19:28.020Z] [DRAWING] Drawing mode DISABLED
+[2025-10-24T11:19:28.035Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:19:28.042Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:19:29.464Z] [CANVAS] Initialized, passageId=default, loadedStrokes=0
+[2025-10-24T11:19:29.466Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T11:19:29.472Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:29.472Z] [PERF] 🔄 Redraw useEffect triggered! Render #1, -1761304751297.00ms since last render
+[2025-10-24T11:19:29.472Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x3714.796875
+[2025-10-24T11:19:29.472Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:29.472Z] [CANVAS] Auto-saved 0 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:19:29.472Z] [PERF] 💾 localStorage save: 0.40ms, size: 0.00KB
+[2025-10-24T11:19:29.472Z] [DRAWING] Drawing mode ENABLED, passageId: default
+[2025-10-24T11:19:29.472Z] [DRAWING] Loaded 0 saved strokes from localStorage
+[2025-10-24T11:19:39.619Z] [DRAWING] Font size changed: 16px → 18px
+[2025-10-24T11:19:39.638Z] [DRAWING] Canvas size updated: 613x4503.3828125
+[2025-10-24T11:19:39.651Z] [CANVAS] Initializing canvas: 613x4503.3828125, DPR=2
+[2025-10-24T11:19:39.659Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:39.659Z] [PERF] 🔄 Redraw useEffect triggered! Render #2, -1761304741109.90ms since last render
+[2025-10-24T11:19:39.659Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x4503.3828125
+[2025-10-24T11:19:39.659Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:39.816Z] [DRAWING] Font size changed: 18px → 20px
+[2025-10-24T11:19:39.831Z] [DRAWING] Canvas size updated: 613x5328
+[2025-10-24T11:19:39.840Z] [CANVAS] Initializing canvas: 613x5328, DPR=2
+[2025-10-24T11:19:39.847Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:39.847Z] [PERF] 🔄 Redraw useEffect triggered! Render #3, -1761304740922.30ms since last render
+[2025-10-24T11:19:39.847Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x5328
+[2025-10-24T11:19:39.847Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:40.062Z] [DRAWING] Font size changed: 20px → 22px
+[2025-10-24T11:19:40.084Z] [DRAWING] Canvas size updated: 613x6176.625
+[2025-10-24T11:19:40.092Z] [CANVAS] Initializing canvas: 613x6176.625, DPR=2
+[2025-10-24T11:19:40.101Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:40.101Z] [PERF] 🔄 Redraw useEffect triggered! Render #4, -1761304740667.80ms since last render
+[2025-10-24T11:19:40.101Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x6176.625
+[2025-10-24T11:19:40.101Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:40.491Z] [DRAWING] Font size changed: 22px → 20px
+[2025-10-24T11:19:40.498Z] [DRAWING] Canvas size updated: 613x5328
+[2025-10-24T11:19:40.502Z] [CANVAS] Initializing canvas: 613x5328, DPR=2
+[2025-10-24T11:19:40.511Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:40.511Z] [PERF] 🔄 Redraw useEffect triggered! Render #5, -1761304740257.40ms since last render
+[2025-10-24T11:19:40.511Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x5328
+[2025-10-24T11:19:40.511Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:40.670Z] [DRAWING] Font size changed: 20px → 18px
+[2025-10-24T11:19:40.678Z] [DRAWING] Canvas size updated: 613x4503.3828125
+[2025-10-24T11:19:40.682Z] [CANVAS] Initializing canvas: 613x4503.3828125, DPR=2
+[2025-10-24T11:19:40.689Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:40.689Z] [PERF] 🔄 Redraw useEffect triggered! Render #6, -1761304740080.20ms since last render
+[2025-10-24T11:19:40.689Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x4503.3828125
+[2025-10-24T11:19:40.689Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:40.868Z] [DRAWING] Font size changed: 18px → 16px
+[2025-10-24T11:19:40.882Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:19:40.906Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T11:19:40.914Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:40.914Z] [PERF] 🔄 Redraw useEffect triggered! Render #7, -1761304739855.30ms since last render
+[2025-10-24T11:19:40.914Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x3714.796875
+[2025-10-24T11:19:40.914Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:41.832Z] [DRAWING] Font size changed: 16px → 18px
+[2025-10-24T11:19:41.843Z] [DRAWING] Canvas size updated: 613x4503.3828125
+[2025-10-24T11:19:41.850Z] [CANVAS] Initializing canvas: 613x4503.3828125, DPR=2
+[2025-10-24T11:19:41.859Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:41.859Z] [PERF] 🔄 Redraw useEffect triggered! Render #8, -1761304738909.60ms since last render
+[2025-10-24T11:19:41.859Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x4503.3828125
+[2025-10-24T11:19:41.859Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:42.309Z] [DRAWING] Font size changed: 18px → 16px
+[2025-10-24T11:19:42.324Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:19:42.349Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T11:19:42.358Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:19:42.358Z] [PERF] 🔄 Redraw useEffect triggered! Render #9, -1761304738410.60ms since last render
+[2025-10-24T11:19:42.358Z] [PERF] 📊 Current state: 0 strokes, canvas: 613x3714.796875
+[2025-10-24T11:19:42.358Z] [PERF] ⏭️ Redraw useEffect SKIPPED (no strokes or contexts not ready)
+[2025-10-24T11:19:46.659Z] [PERF] 🎬 startDrawing() called at 35353.70ms
+[2025-10-24T11:19:46.659Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.014, buttons=1, physicalEraser=false, tilt=[25,13]
+[2025-10-24T11:19:46.659Z] [PEN] Initial point: x=202.5, y=13.5, width=4.79, pressure=0.014, coalescedEvents=1
+[2025-10-24T11:19:46.659Z] [PERF] ⏱️ startDrawing() completed in 0.40ms
+[2025-10-24T11:19:46.711Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.327
+[2025-10-24T11:19:46.712Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:19:46.758Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.389
+[2025-10-24T11:19:46.758Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:19:46.802Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.426
+[2025-10-24T11:19:46.803Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:19:46.854Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.459
+[2025-10-24T11:19:46.854Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:19:46.906Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.481
+[2025-10-24T11:19:46.906Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:19:46.959Z] [PERF] 🛑 stopDrawing() called at 35654.50ms
+[2025-10-24T11:19:46.960Z] [PEN] ✓ Stroke ended: totalPoints=56, duration=301ms, avgPressure=0.478, speed=186pts/s
+[2025-10-24T11:19:46.960Z] [PERF] 📝 Calling setStrokes() at 35654.70ms
+[2025-10-24T11:19:46.960Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 56 points
+[2025-10-24T11:19:46.960Z] [PERF] ⏱️ Main canvas draw took 0.80ms
+[2025-10-24T11:19:46.960Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 56 points
+[2025-10-24T11:19:46.961Z] [PERF] ⏱️ Offscreen canvas draw took 0.70ms
+[2025-10-24T11:19:46.961Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.70ms
+[2025-10-24T11:19:46.963Z] [PEN] 💾 Stroke saved: totalStrokes=1, points=56, isEraser=false, pressure=[min:0.014, avg:0.478, max:0.569], tilt=true
+[2025-10-24T11:19:46.963Z] [PERF] ⏱️ setStrokes() callback executed in 3.70ms
+[2025-10-24T11:19:46.966Z] [PERF] 🔄 Redraw useEffect triggered! Render #10, -1761304733803.10ms since last render
+[2025-10-24T11:19:46.966Z] [PERF] 📊 Current state: 1 strokes, canvas: 613x3714.796875
+[2025-10-24T11:19:46.966Z] [CANVAS] Initial redraw: 1 strokes loaded
+[2025-10-24T11:19:46.966Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.30ms
+[2025-10-24T11:19:46.967Z] [CANVAS] Auto-saved 1 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:19:46.967Z] [PERF] 💾 localStorage save: 0.40ms, size: 5.45KB
+[2025-10-24T11:19:46.993Z] [DRAWING] Stroke completed, totalStrokes: 1, points: 56
+[2025-10-24T11:19:47.922Z] [PERF] 🛑 stopDrawing() called at 36617.50ms
+[2025-10-24T11:19:53.837Z] [TEACHER QUIZ] handleTimeUp called, timer={"isPaused":false,"pausedDuration":0,"startTime":1761304763794,"totalTime":30}
+[2025-10-24T11:19:53.837Z] [TEACHER QUIZ] Updating status to feedback
+[2025-10-24T11:19:53.839Z] [TEACHER QUIZ] Game session updated: status=feedback, currentQuestionIndex=0, timer={"isPaused":false,"pausedDuration":0,"startTime":1761304763794,"totalTime":30}
+[2025-10-24T11:19:53.841Z] [TEACHER QUIZ] Status check: status=feedback, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:19:53.841Z] [TEACHER QUIZ] Navigating to feedback page
+[2025-10-24T11:19:54.210Z] [TEACHER QUIZ] Component unmounting
+[2025-10-24T11:19:54.211Z] [TEACHER FEEDBACK] Component mounted for session: active_session
+[2025-10-24T11:19:54.411Z] [TEACHER FEEDBACK] Game session updated: status=feedback, currentQuestionIndex=0
+[2025-10-24T11:19:54.412Z] [TEACHER FEEDBACK] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T11:19:54.613Z] [TEACHER FEEDBACK] Quiz loaded: 13 questions
+[2025-10-24T11:19:59.620Z] [TEACHER FEEDBACK] Game session updated: status=in-progress, currentQuestionIndex=1
+[2025-10-24T11:19:59.631Z] [TEACHER FEEDBACK] Status changed to in-progress, navigating to quiz page
+[2025-10-24T11:19:59.639Z] [TEACHER FEEDBACK] Component unmounting
+[2025-10-24T11:19:59.641Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T11:19:59.642Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:19:59.848Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=1, timer={"isPaused":false,"pausedDuration":0,"startTime":1761304799619,"totalTime":30}
+[2025-10-24T11:19:59.850Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T11:19:59.850Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:20:00.052Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T11:20:00.064Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:20:00.995Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=1, timer={"isPaused":true,"pausedAt":1761304800994,"pausedDuration":0,"startTime":1761304799619,"totalTime":30}
+[2025-10-24T11:20:00.997Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:20:02.032Z] [DRAWING] Drawing mode DISABLED
+[2025-10-24T11:20:02.035Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:20:02.042Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:20:03.203Z] [CANVAS] Initialized, passageId=default, loadedStrokes=1
+[2025-10-24T11:20:03.204Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T11:20:03.209Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:20:03.209Z] [PERF] 🔄 Redraw useEffect triggered! Render #1, -1761304751299.00ms since last render
+[2025-10-24T11:20:03.209Z] [PERF] 📊 Current state: 1 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:03.210Z] [CANVAS] Initial redraw: 1 strokes loaded
+[2025-10-24T11:20:03.210Z] [PERF] ⏱️ Redraw useEffect TOTAL: 1.00ms
+[2025-10-24T11:20:03.210Z] [CANVAS] Auto-saved 1 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:03.210Z] [PERF] 💾 localStorage save: 0.50ms, size: 5.45KB
+[2025-10-24T11:20:03.210Z] [DRAWING] Drawing mode ENABLED, passageId: default
+[2025-10-24T11:20:03.210Z] [DRAWING] Loaded 1 saved strokes from localStorage
+[2025-10-24T11:20:07.460Z] [PERF] 🎬 startDrawing() called at 56154.70ms
+[2025-10-24T11:20:07.460Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.323, buttons=1, physicalEraser=false, tilt=[37,20]
+[2025-10-24T11:20:07.460Z] [PEN] Initial point: x=428.5, y=200.0, width=2.81, pressure=0.323, coalescedEvents=1
+[2025-10-24T11:20:07.460Z] [PERF] ⏱️ startDrawing() completed in 0.90ms
+[2025-10-24T11:20:07.537Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.609
+[2025-10-24T11:20:07.537Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.597Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.698
+[2025-10-24T11:20:07.597Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.641Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.735
+[2025-10-24T11:20:07.641Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:07.687Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.753
+[2025-10-24T11:20:07.687Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.739Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.763
+[2025-10-24T11:20:07.739Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.777Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.770
+[2025-10-24T11:20:07.777Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.822Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.775
+[2025-10-24T11:20:07.822Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.866Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.778
+[2025-10-24T11:20:07.866Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.904Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.781
+[2025-10-24T11:20:07.905Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:07.949Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.783
+[2025-10-24T11:20:07.949Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:07.987Z] [PEN] Drawing progress: points=110, coalescedEvents=1, avgPressure=0.785
+[2025-10-24T11:20:07.987Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:08.032Z] [PEN] Drawing progress: points=120, coalescedEvents=1, avgPressure=0.788
+[2025-10-24T11:20:08.032Z] [PERF] ⚡ draw() execution: 0.20ms for 1 events
+[2025-10-24T11:20:08.085Z] [PEN] Drawing progress: points=130, coalescedEvents=1, avgPressure=0.779
+[2025-10-24T11:20:08.085Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.086Z] [PERF] 🛑 stopDrawing() called at 56781.50ms
+[2025-10-24T11:20:08.086Z] [PEN] ✓ Stroke ended: totalPoints=130, duration=626ms, avgPressure=0.779, speed=208pts/s
+[2025-10-24T11:20:08.086Z] [PERF] 📝 Calling setStrokes() at 56781.60ms
+[2025-10-24T11:20:08.086Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 130 points
+[2025-10-24T11:20:08.087Z] [PERF] ⏱️ Main canvas draw took 0.90ms
+[2025-10-24T11:20:08.087Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 130 points
+[2025-10-24T11:20:08.089Z] [PERF] ⏱️ Offscreen canvas draw took 1.40ms
+[2025-10-24T11:20:08.089Z] [PERF] ✅ stopDrawing() TOTAL duration: 2.50ms
+[2025-10-24T11:20:08.092Z] [PEN] 💾 Stroke saved: totalStrokes=2, points=130, isEraser=false, pressure=[min:0.273, avg:0.779, max:0.816], tilt=true
+[2025-10-24T11:20:08.092Z] [PERF] ⏱️ setStrokes() callback executed in 5.30ms
+[2025-10-24T11:20:08.093Z] [PERF] 🔄 Redraw useEffect triggered! Render #2, 4883.50ms since last render
+[2025-10-24T11:20:08.093Z] [PERF] 📊 Current state: 2 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:08.096Z] [CANVAS] Initial redraw: 2 strokes loaded
+[2025-10-24T11:20:08.096Z] [PERF] ⏱️ Redraw useEffect TOTAL: 2.50ms
+[2025-10-24T11:20:08.097Z] [CANVAS] Auto-saved 2 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:08.097Z] [PERF] 💾 localStorage save: 0.70ms, size: 17.97KB
+[2025-10-24T11:20:08.157Z] [DRAWING] Stroke completed, totalStrokes: 2, points: 130
+[2025-10-24T11:20:08.169Z] [PERF] 🎬 startDrawing() called at 56863.60ms
+[2025-10-24T11:20:08.169Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.014, buttons=1, physicalEraser=false, tilt=[33,28]
+[2025-10-24T11:20:08.169Z] [PEN] Initial point: x=459.5, y=133.0, width=1.20, pressure=0.014, coalescedEvents=1
+[2025-10-24T11:20:08.169Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:08.234Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.302
+[2025-10-24T11:20:08.235Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.272Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.466
+[2025-10-24T11:20:08.272Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.324Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.545
+[2025-10-24T11:20:08.325Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.370Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.594
+[2025-10-24T11:20:08.370Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.453Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.626
+[2025-10-24T11:20:08.454Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.490Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.647
+[2025-10-24T11:20:08.490Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.534Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.662
+[2025-10-24T11:20:08.535Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.579Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.675
+[2025-10-24T11:20:08.580Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.625Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.691
+[2025-10-24T11:20:08.625Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.685Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.705
+[2025-10-24T11:20:08.685Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:08.731Z] [PERF] 🛑 stopDrawing() called at 57425.70ms
+[2025-10-24T11:20:08.731Z] [PEN] ✓ Stroke ended: totalPoints=107, duration=562ms, avgPressure=0.708, speed=190pts/s
+[2025-10-24T11:20:08.731Z] [PERF] 📝 Calling setStrokes() at 57426.10ms
+[2025-10-24T11:20:08.731Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 107 points
+[2025-10-24T11:20:08.732Z] [PERF] ⏱️ Main canvas draw took 0.60ms
+[2025-10-24T11:20:08.732Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 107 points
+[2025-10-24T11:20:08.733Z] [PERF] ⏱️ Offscreen canvas draw took 1.40ms
+[2025-10-24T11:20:08.733Z] [PERF] ✅ stopDrawing() TOTAL duration: 2.40ms
+[2025-10-24T11:20:08.735Z] [PEN] 💾 Stroke saved: totalStrokes=3, points=107, isEraser=false, pressure=[min:0.014, avg:0.708, max:0.839], tilt=true
+[2025-10-24T11:20:08.735Z] [PERF] ⏱️ setStrokes() callback executed in 4.10ms
+[2025-10-24T11:20:08.738Z] [PERF] 🔄 Redraw useEffect triggered! Render #3, 641.70ms since last render
+[2025-10-24T11:20:08.738Z] [PERF] 📊 Current state: 3 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:08.739Z] [CANVAS] Initial redraw: 3 strokes loaded
+[2025-10-24T11:20:08.739Z] [PERF] ⏱️ Redraw useEffect TOTAL: 1.90ms
+[2025-10-24T11:20:08.740Z] [CANVAS] Auto-saved 3 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:08.740Z] [PERF] 💾 localStorage save: 0.70ms, size: 28.29KB
+[2025-10-24T11:20:08.806Z] [DRAWING] Stroke completed, totalStrokes: 3, points: 107
+[2025-10-24T11:20:08.981Z] [PERF] 🎬 startDrawing() called at 57676.20ms
+[2025-10-24T11:20:08.981Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.126, buttons=1, physicalEraser=false, tilt=[29,32]
+[2025-10-24T11:20:08.981Z] [PEN] Initial point: x=519.0, y=154.5, width=1.94, pressure=0.126, coalescedEvents=1
+[2025-10-24T11:20:08.981Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:09.030Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.409
+[2025-10-24T11:20:09.031Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:09.076Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.549
+[2025-10-24T11:20:09.076Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:09.113Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.603
+[2025-10-24T11:20:09.113Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.150Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.631
+[2025-10-24T11:20:09.150Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.197Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.648
+[2025-10-24T11:20:09.197Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.240Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.661
+[2025-10-24T11:20:09.240Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.285Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.672
+[2025-10-24T11:20:09.285Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.323Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.681
+[2025-10-24T11:20:09.323Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.360Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.683
+[2025-10-24T11:20:09.361Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.413Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.686
+[2025-10-24T11:20:09.413Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.458Z] [PEN] Drawing progress: points=110, coalescedEvents=1, avgPressure=0.693
+[2025-10-24T11:20:09.459Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.495Z] [PEN] Drawing progress: points=120, coalescedEvents=1, avgPressure=0.702
+[2025-10-24T11:20:09.495Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:09.526Z] [PERF] 🛑 stopDrawing() called at 58221.40ms
+[2025-10-24T11:20:09.527Z] [PEN] ✓ Stroke ended: totalPoints=125, duration=546ms, avgPressure=0.701, speed=229pts/s
+[2025-10-24T11:20:09.527Z] [PERF] 📝 Calling setStrokes() at 58221.80ms
+[2025-10-24T11:20:09.527Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 125 points
+[2025-10-24T11:20:09.527Z] [PERF] ⏱️ Main canvas draw took 0.70ms
+[2025-10-24T11:20:09.527Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 125 points
+[2025-10-24T11:20:09.529Z] [PERF] ⏱️ Offscreen canvas draw took 1.10ms
+[2025-10-24T11:20:09.529Z] [PERF] ✅ stopDrawing() TOTAL duration: 2.20ms
+[2025-10-24T11:20:09.531Z] [PEN] 💾 Stroke saved: totalStrokes=4, points=125, isEraser=false, pressure=[min:0.126, avg:0.701, max:0.800], tilt=true
+[2025-10-24T11:20:09.531Z] [PERF] ⏱️ setStrokes() callback executed in 4.70ms
+[2025-10-24T11:20:09.534Z] [PERF] 🔄 Redraw useEffect triggered! Render #4, 794.50ms since last render
+[2025-10-24T11:20:09.534Z] [PERF] 📊 Current state: 4 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:09.540Z] [CANVAS] Initial redraw: 4 strokes loaded
+[2025-10-24T11:20:09.540Z] [PERF] ⏱️ Redraw useEffect TOTAL: 5.50ms
+[2025-10-24T11:20:09.540Z] [CANVAS] Auto-saved 4 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:09.540Z] [PERF] 💾 localStorage save: 0.80ms, size: 40.40KB
+[2025-10-24T11:20:09.607Z] [DRAWING] Stroke completed, totalStrokes: 4, points: 125
+[2025-10-24T11:20:09.686Z] [PERF] 🎬 startDrawing() called at 58381.40ms
+[2025-10-24T11:20:09.686Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.379, buttons=1, physicalEraser=false, tilt=[31,30]
+[2025-10-24T11:20:09.686Z] [PEN] Initial point: x=526.5, y=108.0, width=3.03, pressure=0.379, coalescedEvents=1
+[2025-10-24T11:20:09.686Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:09.888Z] [PERF] 🛑 stopDrawing() called at 58582.90ms
+[2025-10-24T11:20:09.888Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=202ms, avgPressure=0.451, speed=10pts/s
+[2025-10-24T11:20:09.888Z] [PERF] 📝 Calling setStrokes() at 58583.40ms
+[2025-10-24T11:20:09.888Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:09.888Z] [PERF] ⏱️ Main canvas draw took 0.20ms
+[2025-10-24T11:20:09.888Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:09.888Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:09.888Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.70ms
+[2025-10-24T11:20:09.891Z] [PEN] 💾 Stroke saved: totalStrokes=5, points=2, isEraser=false, pressure=[min:0.379, avg:0.451, max:0.522], tilt=true
+[2025-10-24T11:20:09.891Z] [PERF] ⏱️ setStrokes() callback executed in 2.80ms
+[2025-10-24T11:20:09.893Z] [PERF] 🔄 Redraw useEffect triggered! Render #5, 353.40ms since last render
+[2025-10-24T11:20:09.893Z] [PERF] 📊 Current state: 5 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:09.896Z] [CANVAS] Initial redraw: 5 strokes loaded
+[2025-10-24T11:20:09.896Z] [PERF] ⏱️ Redraw useEffect TOTAL: 3.30ms
+[2025-10-24T11:20:09.897Z] [CANVAS] Auto-saved 5 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:09.897Z] [PERF] 💾 localStorage save: 0.80ms, size: 40.69KB
+[2025-10-24T11:20:09.955Z] [DRAWING] Stroke completed, totalStrokes: 5, points: 2
+[2025-10-24T11:20:09.981Z] [PERF] 🎬 startDrawing() called at 58676.40ms
+[2025-10-24T11:20:09.982Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.394, buttons=1, physicalEraser=false, tilt=[29,28]
+[2025-10-24T11:20:09.982Z] [PEN] Initial point: x=535.5, y=144.0, width=3.08, pressure=0.394, coalescedEvents=1
+[2025-10-24T11:20:09.982Z] [PERF] ⏱️ startDrawing() completed in 0.40ms
+[2025-10-24T11:20:10.036Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.612
+[2025-10-24T11:20:10.036Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:10.089Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.716
+[2025-10-24T11:20:10.089Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:10.126Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.752
+[2025-10-24T11:20:10.126Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:10.172Z] [PERF] 🛑 stopDrawing() called at 58866.60ms
+[2025-10-24T11:20:10.172Z] [PEN] ✓ Stroke ended: totalPoints=37, duration=190ms, avgPressure=0.748, speed=195pts/s
+[2025-10-24T11:20:10.172Z] [PERF] 📝 Calling setStrokes() at 58867.00ms
+[2025-10-24T11:20:10.172Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 37 points
+[2025-10-24T11:20:10.172Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:10.172Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 37 points
+[2025-10-24T11:20:10.172Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:10.172Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.50ms
+[2025-10-24T11:20:10.175Z] [PEN] 💾 Stroke saved: totalStrokes=6, points=37, isEraser=false, pressure=[min:0.394, avg:0.748, max:0.827], tilt=true
+[2025-10-24T11:20:10.175Z] [PERF] ⏱️ setStrokes() callback executed in 2.70ms
+[2025-10-24T11:20:10.176Z] [PERF] 🔄 Redraw useEffect triggered! Render #6, 279.90ms since last render
+[2025-10-24T11:20:10.176Z] [PERF] 📊 Current state: 6 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:10.177Z] [CANVAS] Initial redraw: 6 strokes loaded
+[2025-10-24T11:20:10.177Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.50ms
+[2025-10-24T11:20:10.178Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:10.178Z] [PERF] 💾 localStorage save: 1.10ms, size: 44.35KB
+[2025-10-24T11:20:10.237Z] [DRAWING] Stroke completed, totalStrokes: 6, points: 37
+[2025-10-24T11:20:10.314Z] [PERF] 🛑 stopDrawing() called at 59008.70ms
+[2025-10-24T11:20:11.134Z] [PERF] 🎬 startDrawing() called at 59829.00ms
+[2025-10-24T11:20:11.134Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.379, buttons=1, physicalEraser=false, tilt=[34,13]
+[2025-10-24T11:20:11.134Z] [PEN] Initial point: x=447.5, y=298.0, width=3.03, pressure=0.379, coalescedEvents=1
+[2025-10-24T11:20:11.134Z] [PERF] ⏱️ startDrawing() completed in 0.40ms
+[2025-10-24T11:20:11.192Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.611
+[2025-10-24T11:20:11.192Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.245Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.692
+[2025-10-24T11:20:11.245Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.282Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.721
+[2025-10-24T11:20:11.282Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.320Z] [PERF] 🛑 stopDrawing() called at 60015.40ms
+[2025-10-24T11:20:11.321Z] [PEN] ✓ Stroke ended: totalPoints=34, duration=187ms, avgPressure=0.721, speed=182pts/s
+[2025-10-24T11:20:11.321Z] [PERF] 📝 Calling setStrokes() at 60015.90ms
+[2025-10-24T11:20:11.321Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 34 points
+[2025-10-24T11:20:11.321Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:11.321Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 34 points
+[2025-10-24T11:20:11.321Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:11.321Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.60ms
+[2025-10-24T11:20:11.323Z] [PEN] 💾 Stroke saved: totalStrokes=7, points=34, isEraser=false, pressure=[min:0.379, avg:0.721, max:0.780], tilt=true
+[2025-10-24T11:20:11.323Z] [PERF] ⏱️ setStrokes() callback executed in 2.50ms
+[2025-10-24T11:20:11.325Z] [PERF] 🔄 Redraw useEffect triggered! Render #7, 1148.50ms since last render
+[2025-10-24T11:20:11.325Z] [PERF] 📊 Current state: 7 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:11.326Z] [CANVAS] Initial redraw: 7 strokes loaded
+[2025-10-24T11:20:11.326Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.40ms
+[2025-10-24T11:20:11.327Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:11.327Z] [PERF] 💾 localStorage save: 1.00ms, size: 47.71KB
+[2025-10-24T11:20:11.388Z] [DRAWING] Stroke completed, totalStrokes: 7, points: 34
+[2025-10-24T11:20:11.429Z] [PERF] 🎬 startDrawing() called at 60123.70ms
+[2025-10-24T11:20:11.429Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.379, buttons=1, physicalEraser=false, tilt=[34,9]
+[2025-10-24T11:20:11.429Z] [PEN] Initial point: x=438.0, y=287.5, width=3.03, pressure=0.379, coalescedEvents=1
+[2025-10-24T11:20:11.429Z] [PERF] ⏱️ startDrawing() completed in 0.20ms
+[2025-10-24T11:20:11.470Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.555
+[2025-10-24T11:20:11.470Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.524Z] [PERF] 🛑 stopDrawing() called at 60218.60ms
+[2025-10-24T11:20:11.524Z] [PEN] ✓ Stroke ended: totalPoints=19, duration=95ms, avgPressure=0.601, speed=200pts/s
+[2025-10-24T11:20:11.524Z] [PERF] 📝 Calling setStrokes() at 60219.00ms
+[2025-10-24T11:20:11.524Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 19 points
+[2025-10-24T11:20:11.524Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:11.524Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 19 points
+[2025-10-24T11:20:11.524Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:11.524Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.50ms
+[2025-10-24T11:20:11.527Z] [PEN] 💾 Stroke saved: totalStrokes=8, points=19, isEraser=false, pressure=[min:0.291, avg:0.601, max:0.730], tilt=true
+[2025-10-24T11:20:11.527Z] [PERF] ⏱️ setStrokes() callback executed in 3.10ms
+[2025-10-24T11:20:11.529Z] [PERF] 🔄 Redraw useEffect triggered! Render #8, 203.30ms since last render
+[2025-10-24T11:20:11.529Z] [PERF] 📊 Current state: 8 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:11.529Z] [CANVAS] Initial redraw: 8 strokes loaded
+[2025-10-24T11:20:11.529Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.60ms
+[2025-10-24T11:20:11.530Z] [CANVAS] Auto-saved 8 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:11.530Z] [PERF] 💾 localStorage save: 1.00ms, size: 49.62KB
+[2025-10-24T11:20:11.595Z] [DRAWING] Stroke completed, totalStrokes: 8, points: 19
+[2025-10-24T11:20:11.681Z] [PERF] 🎬 startDrawing() called at 60376.40ms
+[2025-10-24T11:20:11.682Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.098, buttons=1, physicalEraser=false, tilt=[29,17]
+[2025-10-24T11:20:11.682Z] [PEN] Initial point: x=484.5, y=285.0, width=1.78, pressure=0.098, coalescedEvents=1
+[2025-10-24T11:20:11.682Z] [PERF] ⏱️ startDrawing() completed in 0.50ms
+[2025-10-24T11:20:11.725Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.241
+[2025-10-24T11:20:11.726Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.771Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.429
+[2025-10-24T11:20:11.771Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:11.816Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.533
+[2025-10-24T11:20:11.816Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:11.853Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.591
+[2025-10-24T11:20:11.853Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.898Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.626
+[2025-10-24T11:20:11.898Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.943Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.649
+[2025-10-24T11:20:11.943Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:11.981Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.666
+[2025-10-24T11:20:11.981Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:12.033Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.684
+[2025-10-24T11:20:12.033Z] [PERF] ⚡ draw() execution: 0.20ms for 1 events
+[2025-10-24T11:20:12.071Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.702
+[2025-10-24T11:20:12.072Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:12.123Z] [PERF] 🛑 stopDrawing() called at 60818.40ms
+[2025-10-24T11:20:12.123Z] [PEN] ✓ Stroke ended: totalPoints=95, duration=441ms, avgPressure=0.703, speed=215pts/s
+[2025-10-24T11:20:12.123Z] [PERF] 📝 Calling setStrokes() at 60818.50ms
+[2025-10-24T11:20:12.123Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 95 points
+[2025-10-24T11:20:12.123Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:12.123Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 95 points
+[2025-10-24T11:20:12.124Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:12.124Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.30ms
+[2025-10-24T11:20:12.128Z] [PEN] 💾 Stroke saved: totalStrokes=9, points=95, isEraser=false, pressure=[min:0.098, avg:0.703, max:0.841], tilt=true
+[2025-10-24T11:20:12.128Z] [PERF] ⏱️ setStrokes() callback executed in 4.80ms
+[2025-10-24T11:20:12.131Z] [PERF] 🔄 Redraw useEffect triggered! Render #9, 602.00ms since last render
+[2025-10-24T11:20:12.131Z] [PERF] 📊 Current state: 9 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:12.132Z] [CANVAS] Initial redraw: 9 strokes loaded
+[2025-10-24T11:20:12.132Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:12.133Z] [CANVAS] Auto-saved 9 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:12.133Z] [PERF] 💾 localStorage save: 1.30ms, size: 58.76KB
+[2025-10-24T11:20:12.192Z] [DRAWING] Stroke completed, totalStrokes: 9, points: 95
+[2025-10-24T11:20:12.235Z] [PERF] 🛑 stopDrawing() called at 60930.30ms
+[2025-10-24T11:20:16.590Z] [PERF] 🎬 startDrawing() called at 65284.70ms
+[2025-10-24T11:20:16.590Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.328, buttons=1, physicalEraser=false, tilt=[38,9]
+[2025-10-24T11:20:16.590Z] [PEN] Initial point: x=23.0, y=50.0, width=2.83, pressure=0.328, coalescedEvents=1
+[2025-10-24T11:20:16.590Z] [PERF] ⏱️ startDrawing() completed in 0.20ms
+[2025-10-24T11:20:16.635Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.579
+[2025-10-24T11:20:16.636Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.687Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.656
+[2025-10-24T11:20:16.687Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.725Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.688
+[2025-10-24T11:20:16.726Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.763Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.704
+[2025-10-24T11:20:16.763Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.808Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.714
+[2025-10-24T11:20:16.808Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.853Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.721
+[2025-10-24T11:20:16.853Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.897Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.726
+[2025-10-24T11:20:16.898Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:16.950Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.734
+[2025-10-24T11:20:16.950Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:16.987Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.744
+[2025-10-24T11:20:16.988Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:17.032Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.756
+[2025-10-24T11:20:17.032Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:17.083Z] [PEN] Drawing progress: points=110, coalescedEvents=1, avgPressure=0.764
+[2025-10-24T11:20:17.083Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:17.100Z] [PERF] 🛑 stopDrawing() called at 65794.70ms
+[2025-10-24T11:20:17.100Z] [PEN] ✓ Stroke ended: totalPoints=112, duration=510ms, avgPressure=0.758, speed=220pts/s
+[2025-10-24T11:20:17.100Z] [PERF] 📝 Calling setStrokes() at 65794.70ms
+[2025-10-24T11:20:17.100Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 112 points
+[2025-10-24T11:20:17.100Z] [PERF] ⏱️ Main canvas draw took 0.30ms
+[2025-10-24T11:20:17.100Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 112 points
+[2025-10-24T11:20:17.100Z] [PERF] ⏱️ Offscreen canvas draw took 0.30ms
+[2025-10-24T11:20:17.100Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.60ms
+[2025-10-24T11:20:17.105Z] [PEN] 💾 Stroke saved: totalStrokes=10, points=112, isEraser=false, pressure=[min:0.309, avg:0.758, max:0.869], tilt=true
+[2025-10-24T11:20:17.105Z] [PERF] ⏱️ setStrokes() callback executed in 5.50ms
+[2025-10-24T11:20:17.107Z] [PERF] 🔄 Redraw useEffect triggered! Render #10, 4974.50ms since last render
+[2025-10-24T11:20:17.107Z] [PERF] 📊 Current state: 10 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:17.108Z] [CANVAS] Initial redraw: 10 strokes loaded
+[2025-10-24T11:20:17.108Z] [PERF] ⏱️ Redraw useEffect TOTAL: 1.50ms
+[2025-10-24T11:20:17.110Z] [CANVAS] Auto-saved 10 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:17.110Z] [PERF] 💾 localStorage save: 1.50ms, size: 69.27KB
+[2025-10-24T11:20:17.178Z] [DRAWING] Stroke completed, totalStrokes: 10, points: 112
+[2025-10-24T11:20:17.219Z] [PERF] 🎬 startDrawing() called at 65913.90ms
+[2025-10-24T11:20:17.219Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.478, buttons=1, physicalEraser=false, tilt=[39,13]
+[2025-10-24T11:20:17.220Z] [PEN] Initial point: x=49.5, y=39.0, width=3.38, pressure=0.478, coalescedEvents=1
+[2025-10-24T11:20:17.220Z] [PERF] ⏱️ startDrawing() completed in 0.80ms
+[2025-10-24T11:20:17.517Z] [PERF] 🛑 stopDrawing() called at 66212.10ms
+[2025-10-24T11:20:17.518Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=299ms, avgPressure=0.524, speed=7pts/s
+[2025-10-24T11:20:17.518Z] [PERF] 📝 Calling setStrokes() at 66213.00ms
+[2025-10-24T11:20:17.518Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:17.518Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:17.518Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:17.518Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:17.518Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.00ms
+[2025-10-24T11:20:17.522Z] [PEN] 💾 Stroke saved: totalStrokes=11, points=2, isEraser=false, pressure=[min:0.478, avg:0.524, max:0.571], tilt=true
+[2025-10-24T11:20:17.522Z] [PERF] ⏱️ setStrokes() callback executed in 4.40ms
+[2025-10-24T11:20:17.524Z] [PERF] 🔄 Redraw useEffect triggered! Render #11, 416.00ms since last render
+[2025-10-24T11:20:17.524Z] [PERF] 📊 Current state: 11 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:17.526Z] [CANVAS] Initial redraw: 11 strokes loaded
+[2025-10-24T11:20:17.526Z] [PERF] ⏱️ Redraw useEffect TOTAL: 1.50ms
+[2025-10-24T11:20:17.527Z] [CANVAS] Auto-saved 11 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:17.527Z] [PERF] 💾 localStorage save: 1.10ms, size: 69.55KB
+[2025-10-24T11:20:17.605Z] [DRAWING] Stroke completed, totalStrokes: 11, points: 2
+[2025-10-24T11:20:17.622Z] [PERF] 🎬 startDrawing() called at 66317.10ms
+[2025-10-24T11:20:17.622Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.098, buttons=1, physicalEraser=false, tilt=[37,14]
+[2025-10-24T11:20:17.622Z] [PEN] Initial point: x=72.5, y=30.0, width=1.78, pressure=0.098, coalescedEvents=1
+[2025-10-24T11:20:17.622Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:17.672Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.503
+[2025-10-24T11:20:17.672Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:17.723Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.638
+[2025-10-24T11:20:17.724Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:17.769Z] [PERF] 🛑 stopDrawing() called at 66463.70ms
+[2025-10-24T11:20:17.769Z] [PEN] ✓ Stroke ended: totalPoints=28, duration=147ms, avgPressure=0.663, speed=190pts/s
+[2025-10-24T11:20:17.769Z] [PERF] 📝 Calling setStrokes() at 66463.70ms
+[2025-10-24T11:20:17.769Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 28 points
+[2025-10-24T11:20:17.769Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:17.769Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 28 points
+[2025-10-24T11:20:17.769Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:17.769Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.20ms
+[2025-10-24T11:20:17.773Z] [PEN] 💾 Stroke saved: totalStrokes=12, points=28, isEraser=false, pressure=[min:0.098, avg:0.663, max:0.791], tilt=true
+[2025-10-24T11:20:17.773Z] [PERF] ⏱️ setStrokes() callback executed in 3.90ms
+[2025-10-24T11:20:17.774Z] [PERF] 🔄 Redraw useEffect triggered! Render #12, 248.60ms since last render
+[2025-10-24T11:20:17.774Z] [PERF] 📊 Current state: 12 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:17.775Z] [CANVAS] Initial redraw: 12 strokes loaded
+[2025-10-24T11:20:17.775Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:17.776Z] [CANVAS] Auto-saved 12 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:17.776Z] [PERF] 💾 localStorage save: 1.40ms, size: 72.27KB
+[2025-10-24T11:20:17.842Z] [DRAWING] Stroke completed, totalStrokes: 12, points: 28
+[2025-10-24T11:20:17.872Z] [PERF] 🎬 startDrawing() called at 66567.20ms
+[2025-10-24T11:20:17.873Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.267, buttons=1, physicalEraser=false, tilt=[38,18]
+[2025-10-24T11:20:17.873Z] [PEN] Initial point: x=70.0, y=21.5, width=2.59, pressure=0.267, coalescedEvents=1
+[2025-10-24T11:20:17.873Z] [PERF] ⏱️ startDrawing() completed in 0.60ms
+[2025-10-24T11:20:17.933Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.558
+[2025-10-24T11:20:17.933Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:17.956Z] [PERF] 🛑 stopDrawing() called at 66651.60ms
+[2025-10-24T11:20:17.957Z] [PEN] ✓ Stroke ended: totalPoints=11, duration=84ms, avgPressure=0.571, speed=131pts/s
+[2025-10-24T11:20:17.957Z] [PERF] 📝 Calling setStrokes() at 66652.20ms
+[2025-10-24T11:20:17.957Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 11 points
+[2025-10-24T11:20:17.957Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:17.957Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 11 points
+[2025-10-24T11:20:17.957Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:17.957Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.60ms
+[2025-10-24T11:20:17.960Z] [PEN] 💾 Stroke saved: totalStrokes=13, points=11, isEraser=false, pressure=[min:0.267, avg:0.571, max:0.733], tilt=true
+[2025-10-24T11:20:17.960Z] [PERF] ⏱️ setStrokes() callback executed in 3.40ms
+[2025-10-24T11:20:17.962Z] [PERF] 🔄 Redraw useEffect triggered! Render #13, 187.50ms since last render
+[2025-10-24T11:20:17.962Z] [PERF] 📊 Current state: 13 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:17.963Z] [CANVAS] Initial redraw: 13 strokes loaded
+[2025-10-24T11:20:17.963Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:17.964Z] [CANVAS] Auto-saved 13 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:17.964Z] [PERF] 💾 localStorage save: 0.90ms, size: 73.40KB
+[2025-10-24T11:20:18.032Z] [DRAWING] Stroke completed, totalStrokes: 13, points: 11
+[2025-10-24T11:20:18.062Z] [PERF] 🎬 startDrawing() called at 66757.60ms
+[2025-10-24T11:20:18.063Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.112, buttons=1, physicalEraser=false, tilt=[38,26]
+[2025-10-24T11:20:18.063Z] [PEN] Initial point: x=84.0, y=24.5, width=1.87, pressure=0.112, coalescedEvents=1
+[2025-10-24T11:20:18.063Z] [PERF] ⏱️ startDrawing() completed in 0.60ms
+[2025-10-24T11:20:18.106Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.292
+[2025-10-24T11:20:18.107Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:18.152Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.491
+[2025-10-24T11:20:18.152Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:18.218Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.573
+[2025-10-24T11:20:18.219Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:18.264Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.614
+[2025-10-24T11:20:18.264Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:18.301Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.639
+[2025-10-24T11:20:18.302Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:18.347Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.663
+[2025-10-24T11:20:18.347Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:18.384Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.685
+[2025-10-24T11:20:18.384Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:18.414Z] [PERF] 🛑 stopDrawing() called at 67109.40ms
+[2025-10-24T11:20:18.414Z] [PEN] ✓ Stroke ended: totalPoints=74, duration=351ms, avgPressure=0.684, speed=211pts/s
+[2025-10-24T11:20:18.414Z] [PERF] 📝 Calling setStrokes() at 67109.40ms
+[2025-10-24T11:20:18.414Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 74 points
+[2025-10-24T11:20:18.414Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:18.414Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 74 points
+[2025-10-24T11:20:18.415Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:18.415Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.20ms
+[2025-10-24T11:20:18.421Z] [PEN] 💾 Stroke saved: totalStrokes=14, points=74, isEraser=false, pressure=[min:0.112, avg:0.684, max:0.816], tilt=true
+[2025-10-24T11:20:18.421Z] [PERF] ⏱️ setStrokes() callback executed in 6.20ms
+[2025-10-24T11:20:18.423Z] [PERF] 🔄 Redraw useEffect triggered! Render #14, 459.60ms since last render
+[2025-10-24T11:20:18.423Z] [PERF] 📊 Current state: 14 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:18.424Z] [CANVAS] Initial redraw: 14 strokes loaded
+[2025-10-24T11:20:18.424Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:18.425Z] [CANVAS] Auto-saved 14 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:18.425Z] [PERF] 💾 localStorage save: 1.70ms, size: 80.48KB
+[2025-10-24T11:20:18.491Z] [DRAWING] Stroke completed, totalStrokes: 14, points: 74
+[2025-10-24T11:20:18.521Z] [PERF] 🎬 startDrawing() called at 67216.50ms
+[2025-10-24T11:20:18.522Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.084, buttons=1, physicalEraser=false, tilt=[32,11]
+[2025-10-24T11:20:18.522Z] [PEN] Initial point: x=125.5, y=12.5, width=1.71, pressure=0.084, coalescedEvents=1
+[2025-10-24T11:20:18.522Z] [PERF] ⏱️ startDrawing() completed in 0.60ms
+[2025-10-24T11:20:18.956Z] [PERF] 🛑 stopDrawing() called at 67651.50ms
+[2025-10-24T11:20:18.958Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=436ms, avgPressure=0.266, speed=5pts/s
+[2025-10-24T11:20:18.958Z] [PERF] 📝 Calling setStrokes() at 67652.90ms
+[2025-10-24T11:20:18.958Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:18.958Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:18.958Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:18.958Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:18.958Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.50ms
+[2025-10-24T11:20:18.963Z] [PEN] 💾 Stroke saved: totalStrokes=15, points=2, isEraser=false, pressure=[min:0.084, avg:0.266, max:0.447], tilt=true
+[2025-10-24T11:20:18.963Z] [PERF] ⏱️ setStrokes() callback executed in 5.20ms
+[2025-10-24T11:20:18.966Z] [PERF] 🔄 Redraw useEffect triggered! Render #15, 542.10ms since last render
+[2025-10-24T11:20:18.966Z] [PERF] 📊 Current state: 15 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:18.966Z] [CANVAS] Initial redraw: 15 strokes loaded
+[2025-10-24T11:20:18.966Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:18.968Z] [CANVAS] Auto-saved 15 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:18.968Z] [PERF] 💾 localStorage save: 1.50ms, size: 80.77KB
+[2025-10-24T11:20:19.031Z] [DRAWING] Stroke completed, totalStrokes: 15, points: 2
+[2025-10-24T11:20:19.046Z] [PERF] 🛑 stopDrawing() called at 67741.40ms
+[2025-10-24T11:20:19.376Z] [PERF] 🎬 startDrawing() called at 68071.30ms
+[2025-10-24T11:20:19.376Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.084, buttons=1, physicalEraser=false, tilt=[36,13]
+[2025-10-24T11:20:19.376Z] [PEN] Initial point: x=177.5, y=56.0, width=1.71, pressure=0.084, coalescedEvents=1
+[2025-10-24T11:20:19.376Z] [PERF] ⏱️ startDrawing() completed in 0.20ms
+[2025-10-24T11:20:19.428Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.356
+[2025-10-24T11:20:19.428Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:19.473Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.530
+[2025-10-24T11:20:19.473Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.510Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.604
+[2025-10-24T11:20:19.510Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.555Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.644
+[2025-10-24T11:20:19.556Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.593Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.670
+[2025-10-24T11:20:19.593Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.645Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.691
+[2025-10-24T11:20:19.646Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.683Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.709
+[2025-10-24T11:20:19.683Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:19.721Z] [PERF] 🛑 stopDrawing() called at 68415.80ms
+[2025-10-24T11:20:19.721Z] [PEN] ✓ Stroke ended: totalPoints=76, duration=345ms, avgPressure=0.711, speed=220pts/s
+[2025-10-24T11:20:19.721Z] [PERF] 📝 Calling setStrokes() at 68416.50ms
+[2025-10-24T11:20:19.721Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 76 points
+[2025-10-24T11:20:19.721Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:19.721Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 76 points
+[2025-10-24T11:20:19.722Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:19.722Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.90ms
+[2025-10-24T11:20:19.725Z] [PEN] 💾 Stroke saved: totalStrokes=16, points=76, isEraser=false, pressure=[min:0.084, avg:0.711, max:0.818], tilt=true
+[2025-10-24T11:20:19.725Z] [PERF] ⏱️ setStrokes() callback executed in 3.90ms
+[2025-10-24T11:20:19.727Z] [PERF] 🔄 Redraw useEffect triggered! Render #16, 760.90ms since last render
+[2025-10-24T11:20:19.727Z] [PERF] 📊 Current state: 16 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:19.728Z] [CANVAS] Initial redraw: 16 strokes loaded
+[2025-10-24T11:20:19.728Z] [PERF] ⏱️ Redraw useEffect TOTAL: 1.10ms
+[2025-10-24T11:20:19.730Z] [CANVAS] Auto-saved 16 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:19.730Z] [PERF] 💾 localStorage save: 1.90ms, size: 88.03KB
+[2025-10-24T11:20:19.804Z] [DRAWING] Stroke completed, totalStrokes: 16, points: 76
+[2025-10-24T11:20:19.855Z] [PERF] 🎬 startDrawing() called at 68550.50ms
+[2025-10-24T11:20:19.855Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.379, buttons=1, physicalEraser=false, tilt=[34,11]
+[2025-10-24T11:20:19.855Z] [PEN] Initial point: x=205.0, y=38.5, width=3.03, pressure=0.379, coalescedEvents=1
+[2025-10-24T11:20:19.855Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:20.248Z] [PERF] 🛑 stopDrawing() called at 68942.80ms
+[2025-10-24T11:20:20.249Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=394ms, avgPressure=0.423, speed=5pts/s
+[2025-10-24T11:20:20.249Z] [PERF] 📝 Calling setStrokes() at 68943.80ms
+[2025-10-24T11:20:20.249Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:20.249Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:20.249Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:20.249Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:20.249Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.10ms
+[2025-10-24T11:20:20.254Z] [PEN] 💾 Stroke saved: totalStrokes=17, points=2, isEraser=false, pressure=[min:0.379, avg:0.423, max:0.467], tilt=true
+[2025-10-24T11:20:20.254Z] [PERF] ⏱️ setStrokes() callback executed in 5.40ms
+[2025-10-24T11:20:20.257Z] [PERF] 🔄 Redraw useEffect triggered! Render #17, 528.20ms since last render
+[2025-10-24T11:20:20.257Z] [PERF] 📊 Current state: 17 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:20.258Z] [CANVAS] Initial redraw: 17 strokes loaded
+[2025-10-24T11:20:20.258Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:20.259Z] [CANVAS] Auto-saved 17 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:20.259Z] [PERF] 💾 localStorage save: 1.20ms, size: 88.31KB
+[2025-10-24T11:20:20.306Z] [PERF] 🛑 stopDrawing() called at 69001.30ms
+[2025-10-24T11:20:20.325Z] [DRAWING] Stroke completed, totalStrokes: 17, points: 2
+[2025-10-24T11:20:29.200Z] [PERF] 🎬 startDrawing() called at 77895.60ms
+[2025-10-24T11:20:29.201Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:29.201Z] [PEN] Initial point: x=435.0, y=203.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:29.201Z] [PERF] ⏱️ startDrawing() completed in 0.90ms
+[2025-10-24T11:20:29.274Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.616
+[2025-10-24T11:20:29.275Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:29.342Z] [PERF] 🛑 stopDrawing() called at 78036.70ms
+[2025-10-24T11:20:29.342Z] [PEN] ✓ Stroke ended: totalPoints=15, duration=141ms, avgPressure=0.616, speed=106pts/s
+[2025-10-24T11:20:29.342Z] [PERF] 📝 Calling setStrokes() at 78036.70ms
+[2025-10-24T11:20:29.342Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 15 points
+[2025-10-24T11:20:29.342Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:29.342Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 15 points
+[2025-10-24T11:20:29.342Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:29.342Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.10ms
+[2025-10-24T11:20:29.350Z] [PEN] 💾 Stroke saved: totalStrokes=18, points=15, isEraser=true, pressure=[min:0.614, avg:0.616, max:0.617], tilt=false
+[2025-10-24T11:20:29.350Z] [PERF] ⏱️ setStrokes() callback executed in 8.40ms
+[2025-10-24T11:20:29.353Z] [PERF] 🔄 Redraw useEffect triggered! Render #18, 9095.50ms since last render
+[2025-10-24T11:20:29.353Z] [PERF] 📊 Current state: 18 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:29.354Z] [CANVAS] Initial redraw: 18 strokes loaded
+[2025-10-24T11:20:29.354Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.90ms
+[2025-10-24T11:20:29.356Z] [CANVAS] Auto-saved 18 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:29.356Z] [PERF] 💾 localStorage save: 2.00ms, size: 89.82KB
+[2025-10-24T11:20:29.420Z] [DRAWING] Stroke completed, totalStrokes: 18, points: 15
+[2025-10-24T11:20:29.465Z] [PERF] 🎬 startDrawing() called at 78159.90ms
+[2025-10-24T11:20:29.465Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:29.465Z] [PEN] Initial point: x=445.5, y=188.5, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:29.465Z] [PERF] ⏱️ startDrawing() completed in 0.60ms
+[2025-10-24T11:20:29.532Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.613
+[2025-10-24T11:20:29.532Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:29.597Z] [PERF] 🛑 stopDrawing() called at 78292.50ms
+[2025-10-24T11:20:29.598Z] [PEN] ✓ Stroke ended: totalPoints=14, duration=133ms, avgPressure=0.613, speed=105pts/s
+[2025-10-24T11:20:29.598Z] [PERF] 📝 Calling setStrokes() at 78293.50ms
+[2025-10-24T11:20:29.598Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 14 points
+[2025-10-24T11:20:29.598Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:29.598Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 14 points
+[2025-10-24T11:20:29.598Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:29.598Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.10ms
+[2025-10-24T11:20:29.604Z] [PEN] 💾 Stroke saved: totalStrokes=19, points=14, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:29.604Z] [PERF] ⏱️ setStrokes() callback executed in 5.10ms
+[2025-10-24T11:20:29.607Z] [PERF] 🔄 Redraw useEffect triggered! Render #19, 253.10ms since last render
+[2025-10-24T11:20:29.607Z] [PERF] 📊 Current state: 19 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:29.608Z] [CANVAS] Initial redraw: 19 strokes loaded
+[2025-10-24T11:20:29.608Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:29.609Z] [CANVAS] Auto-saved 19 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:29.609Z] [PERF] 💾 localStorage save: 1.20ms, size: 91.22KB
+[2025-10-24T11:20:29.687Z] [DRAWING] Stroke completed, totalStrokes: 19, points: 14
+[2025-10-24T11:20:29.705Z] [PERF] 🎬 startDrawing() called at 78400.50ms
+[2025-10-24T11:20:29.705Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:29.705Z] [PEN] Initial point: x=444.5, y=189.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:29.705Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:29.784Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.614
+[2025-10-24T11:20:29.785Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:29.837Z] [PERF] 🛑 stopDrawing() called at 78532.00ms
+[2025-10-24T11:20:29.837Z] [PEN] ✓ Stroke ended: totalPoints=13, duration=132ms, avgPressure=0.614, speed=98pts/s
+[2025-10-24T11:20:29.837Z] [PERF] 📝 Calling setStrokes() at 78532.00ms
+[2025-10-24T11:20:29.837Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 13 points
+[2025-10-24T11:20:29.837Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:29.837Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 13 points
+[2025-10-24T11:20:29.837Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:29.837Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.10ms
+[2025-10-24T11:20:29.844Z] [PEN] 💾 Stroke saved: totalStrokes=20, points=13, isEraser=true, pressure=[min:0.613, avg:0.614, max:0.615], tilt=false
+[2025-10-24T11:20:29.844Z] [PERF] ⏱️ setStrokes() callback executed in 6.80ms
+[2025-10-24T11:20:29.847Z] [PERF] 🔄 Redraw useEffect triggered! Render #20, 239.20ms since last render
+[2025-10-24T11:20:29.847Z] [PERF] 📊 Current state: 20 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:29.848Z] [CANVAS] Initial redraw: 20 strokes loaded
+[2025-10-24T11:20:29.848Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:29.849Z] [CANVAS] Auto-saved 20 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:29.849Z] [PERF] 💾 localStorage save: 1.20ms, size: 92.52KB
+[2025-10-24T11:20:29.925Z] [DRAWING] Stroke completed, totalStrokes: 20, points: 13
+[2025-10-24T11:20:29.951Z] [PERF] 🎬 startDrawing() called at 78646.60ms
+[2025-10-24T11:20:29.952Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:29.952Z] [PEN] Initial point: x=440.5, y=208.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:29.952Z] [PERF] ⏱️ startDrawing() completed in 0.80ms
+[2025-10-24T11:20:30.025Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.616
+[2025-10-24T11:20:30.025Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:30.048Z] [PERF] 🛑 stopDrawing() called at 78742.90ms
+[2025-10-24T11:20:30.049Z] [PEN] ✓ Stroke ended: totalPoints=11, duration=97ms, avgPressure=0.616, speed=113pts/s
+[2025-10-24T11:20:30.049Z] [PERF] 📝 Calling setStrokes() at 78743.70ms
+[2025-10-24T11:20:30.049Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 11 points
+[2025-10-24T11:20:30.049Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:30.049Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 11 points
+[2025-10-24T11:20:30.049Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:30.049Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.80ms
+[2025-10-24T11:20:30.054Z] [PEN] 💾 Stroke saved: totalStrokes=21, points=11, isEraser=true, pressure=[min:0.614, avg:0.616, max:0.617], tilt=false
+[2025-10-24T11:20:30.054Z] [PERF] ⏱️ setStrokes() callback executed in 4.90ms
+[2025-10-24T11:20:30.057Z] [PERF] 🔄 Redraw useEffect triggered! Render #21, 209.30ms since last render
+[2025-10-24T11:20:30.057Z] [PERF] 📊 Current state: 21 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:30.058Z] [CANVAS] Initial redraw: 21 strokes loaded
+[2025-10-24T11:20:30.058Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:30.059Z] [CANVAS] Auto-saved 21 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:30.059Z] [PERF] 💾 localStorage save: 1.10ms, size: 93.66KB
+[2025-10-24T11:20:30.147Z] [DRAWING] Stroke completed, totalStrokes: 21, points: 11
+[2025-10-24T11:20:30.387Z] [PERF] 🎬 startDrawing() called at 79082.40ms
+[2025-10-24T11:20:30.389Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:30.389Z] [PEN] Initial point: x=534.5, y=162.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:30.389Z] [PERF] ⏱️ startDrawing() completed in 1.40ms
+[2025-10-24T11:20:30.531Z] [PERF] 🛑 stopDrawing() called at 79225.70ms
+[2025-10-24T11:20:30.532Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=143ms, avgPressure=0.613, speed=14pts/s
+[2025-10-24T11:20:30.532Z] [PERF] 📝 Calling setStrokes() at 79226.80ms
+[2025-10-24T11:20:30.532Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:30.532Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:30.532Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:30.532Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:30.532Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.20ms
+[2025-10-24T11:20:30.537Z] [PEN] 💾 Stroke saved: totalStrokes=22, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:30.537Z] [PERF] ⏱️ setStrokes() callback executed in 5.70ms
+[2025-10-24T11:20:30.540Z] [PERF] 🔄 Redraw useEffect triggered! Render #22, 482.00ms since last render
+[2025-10-24T11:20:30.540Z] [PERF] 📊 Current state: 22 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:30.540Z] [CANVAS] Initial redraw: 22 strokes loaded
+[2025-10-24T11:20:30.540Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:30.542Z] [CANVAS] Auto-saved 22 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:30.542Z] [PERF] 💾 localStorage save: 1.80ms, size: 93.94KB
+[2025-10-24T11:20:30.604Z] [DRAWING] Stroke completed, totalStrokes: 22, points: 2
+[2025-10-24T11:20:30.683Z] [PERF] 🎬 startDrawing() called at 79378.10ms
+[2025-10-24T11:20:30.684Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:30.684Z] [PEN] Initial point: x=582.0, y=199.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:30.684Z] [PERF] ⏱️ startDrawing() completed in 0.80ms
+[2025-10-24T11:20:30.746Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.616
+[2025-10-24T11:20:30.746Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:30.813Z] [PERF] 🛑 stopDrawing() called at 79508.00ms
+[2025-10-24T11:20:30.814Z] [PEN] ✓ Stroke ended: totalPoints=15, duration=130ms, avgPressure=0.615, speed=115pts/s
+[2025-10-24T11:20:30.814Z] [PERF] 📝 Calling setStrokes() at 79509.10ms
+[2025-10-24T11:20:30.814Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 15 points
+[2025-10-24T11:20:30.814Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:30.814Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 15 points
+[2025-10-24T11:20:30.814Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:30.814Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.10ms
+[2025-10-24T11:20:30.819Z] [PEN] 💾 Stroke saved: totalStrokes=23, points=15, isEraser=true, pressure=[min:0.614, avg:0.615, max:0.617], tilt=false
+[2025-10-24T11:20:30.819Z] [PERF] ⏱️ setStrokes() callback executed in 4.90ms
+[2025-10-24T11:20:30.821Z] [PERF] 🔄 Redraw useEffect triggered! Render #23, 280.90ms since last render
+[2025-10-24T11:20:30.821Z] [PERF] 📊 Current state: 23 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:30.822Z] [CANVAS] Initial redraw: 23 strokes loaded
+[2025-10-24T11:20:30.822Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:30.824Z] [CANVAS] Auto-saved 23 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:30.824Z] [PERF] 💾 localStorage save: 1.40ms, size: 95.46KB
+[2025-10-24T11:20:30.886Z] [DRAWING] Stroke completed, totalStrokes: 23, points: 15
+[2025-10-24T11:20:30.954Z] [PERF] 🎬 startDrawing() called at 79649.40ms
+[2025-10-24T11:20:30.954Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:30.954Z] [PEN] Initial point: x=483.0, y=322.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:30.954Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:31.023Z] [PERF] 🛑 stopDrawing() called at 79717.90ms
+[2025-10-24T11:20:31.024Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=70ms, avgPressure=0.613, speed=29pts/s
+[2025-10-24T11:20:31.024Z] [PERF] 📝 Calling setStrokes() at 79718.70ms
+[2025-10-24T11:20:31.024Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:31.024Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:31.024Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:31.024Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:31.024Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.90ms
+[2025-10-24T11:20:31.029Z] [PEN] 💾 Stroke saved: totalStrokes=24, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:31.029Z] [PERF] ⏱️ setStrokes() callback executed in 5.60ms
+[2025-10-24T11:20:31.032Z] [PERF] 🔄 Redraw useEffect triggered! Render #24, 209.60ms since last render
+[2025-10-24T11:20:31.032Z] [PERF] 📊 Current state: 24 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.033Z] [CANVAS] Initial redraw: 24 strokes loaded
+[2025-10-24T11:20:31.033Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.90ms
+[2025-10-24T11:20:31.034Z] [CANVAS] Auto-saved 24 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.034Z] [PERF] 💾 localStorage save: 1.30ms, size: 95.74KB
+[2025-10-24T11:20:31.060Z] [PERF] 🎬 startDrawing() called at 79754.90ms
+[2025-10-24T11:20:31.060Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:31.060Z] [PEN] Initial point: x=437.5, y=401.5, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:31.060Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:31.084Z] [PERF] 🛑 stopDrawing() called at 79778.90ms
+[2025-10-24T11:20:31.085Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=25ms, avgPressure=0.613, speed=80pts/s
+[2025-10-24T11:20:31.085Z] [PERF] 📝 Calling setStrokes() at 79779.70ms
+[2025-10-24T11:20:31.085Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:31.085Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:31.085Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:31.085Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:31.085Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.80ms
+[2025-10-24T11:20:31.090Z] [PEN] 💾 Stroke saved: totalStrokes=25, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:31.090Z] [PERF] ⏱️ setStrokes() callback executed in 5.80ms
+[2025-10-24T11:20:31.092Z] [PERF] 🔄 Redraw useEffect triggered! Render #25, 59.70ms since last render
+[2025-10-24T11:20:31.092Z] [PERF] 📊 Current state: 25 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.093Z] [CANVAS] Initial redraw: 25 strokes loaded
+[2025-10-24T11:20:31.093Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:31.095Z] [CANVAS] Auto-saved 25 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.095Z] [PERF] 💾 localStorage save: 1.60ms, size: 96.02KB
+[2025-10-24T11:20:31.182Z] [PERF] 🎬 startDrawing() called at 79876.70ms
+[2025-10-24T11:20:31.182Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:31.182Z] [PEN] Initial point: x=449.0, y=317.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:31.182Z] [PERF] ⏱️ startDrawing() completed in 0.20ms
+[2025-10-24T11:20:31.256Z] [DRAWING] Stroke completed, totalStrokes: 25, points: 2
+[2025-10-24T11:20:31.257Z] [DRAWING] Stroke completed, totalStrokes: 25, points: 2
+[2025-10-24T11:20:31.286Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.613
+[2025-10-24T11:20:31.286Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:31.309Z] [PERF] 🛑 stopDrawing() called at 80004.20ms
+[2025-10-24T11:20:31.309Z] [PEN] ✓ Stroke ended: totalPoints=11, duration=127ms, avgPressure=0.613, speed=87pts/s
+[2025-10-24T11:20:31.309Z] [PERF] 📝 Calling setStrokes() at 80004.20ms
+[2025-10-24T11:20:31.309Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 11 points
+[2025-10-24T11:20:31.309Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:31.309Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 11 points
+[2025-10-24T11:20:31.309Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:31.309Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.10ms
+[2025-10-24T11:20:31.316Z] [PEN] 💾 Stroke saved: totalStrokes=26, points=11, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.615], tilt=false
+[2025-10-24T11:20:31.316Z] [PERF] ⏱️ setStrokes() callback executed in 7.10ms
+[2025-10-24T11:20:31.318Z] [PERF] 🔄 Redraw useEffect triggered! Render #26, 225.20ms since last render
+[2025-10-24T11:20:31.318Z] [PERF] 📊 Current state: 26 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.319Z] [CANVAS] Initial redraw: 26 strokes loaded
+[2025-10-24T11:20:31.319Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:31.321Z] [CANVAS] Auto-saved 26 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.321Z] [PERF] 💾 localStorage save: 1.50ms, size: 97.13KB
+[2025-10-24T11:20:31.407Z] [DRAWING] Stroke completed, totalStrokes: 26, points: 11
+[2025-10-24T11:20:31.435Z] [PERF] 🎬 startDrawing() called at 80130.20ms
+[2025-10-24T11:20:31.436Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:31.436Z] [PEN] Initial point: x=424.5, y=232.5, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:31.436Z] [PERF] ⏱️ startDrawing() completed in 1.10ms
+[2025-10-24T11:20:31.493Z] [PERF] 🛑 stopDrawing() called at 80187.90ms
+[2025-10-24T11:20:31.494Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=58ms, avgPressure=0.613, speed=34pts/s
+[2025-10-24T11:20:31.494Z] [PERF] 📝 Calling setStrokes() at 80189.00ms
+[2025-10-24T11:20:31.494Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:31.494Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:31.494Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:31.494Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:31.494Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.10ms
+[2025-10-24T11:20:31.503Z] [PEN] 💾 Stroke saved: totalStrokes=27, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:31.503Z] [PERF] ⏱️ setStrokes() callback executed in 9.20ms
+[2025-10-24T11:20:31.506Z] [PERF] 🔄 Redraw useEffect triggered! Render #27, 186.70ms since last render
+[2025-10-24T11:20:31.506Z] [PERF] 📊 Current state: 27 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.507Z] [CANVAS] Initial redraw: 27 strokes loaded
+[2025-10-24T11:20:31.507Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.90ms
+[2025-10-24T11:20:31.508Z] [CANVAS] Auto-saved 27 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.508Z] [PERF] 💾 localStorage save: 1.20ms, size: 97.41KB
+[2025-10-24T11:20:31.531Z] [PERF] 🎬 startDrawing() called at 80226.10ms
+[2025-10-24T11:20:31.531Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:31.531Z] [PEN] Initial point: x=420.0, y=293.5, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:31.531Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:31.559Z] [PERF] 🛑 stopDrawing() called at 80253.70ms
+[2025-10-24T11:20:31.560Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=28ms, avgPressure=0.613, speed=71pts/s
+[2025-10-24T11:20:31.560Z] [PERF] 📝 Calling setStrokes() at 80254.60ms
+[2025-10-24T11:20:31.560Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:31.560Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:31.560Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:31.560Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:31.560Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.00ms
+[2025-10-24T11:20:31.565Z] [PEN] 💾 Stroke saved: totalStrokes=28, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:31.565Z] [PERF] ⏱️ setStrokes() callback executed in 5.80ms
+[2025-10-24T11:20:31.568Z] [PERF] 🔄 Redraw useEffect triggered! Render #28, 60.90ms since last render
+[2025-10-24T11:20:31.568Z] [PERF] 📊 Current state: 28 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.568Z] [CANVAS] Initial redraw: 28 strokes loaded
+[2025-10-24T11:20:31.568Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:31.570Z] [CANVAS] Auto-saved 28 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.570Z] [PERF] 💾 localStorage save: 1.40ms, size: 97.69KB
+[2025-10-24T11:20:31.643Z] [DRAWING] Stroke completed, totalStrokes: 28, points: 2
+[2025-10-24T11:20:31.644Z] [DRAWING] Stroke completed, totalStrokes: 28, points: 2
+[2025-10-24T11:20:31.826Z] [PERF] 🎬 startDrawing() called at 80521.50ms
+[2025-10-24T11:20:31.827Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:31.827Z] [PEN] Initial point: x=448.5, y=13.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:31.827Z] [PERF] ⏱️ startDrawing() completed in 0.90ms
+[2025-10-24T11:20:31.901Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.617
+[2025-10-24T11:20:31.901Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:31.969Z] [PERF] 🛑 stopDrawing() called at 80664.50ms
+[2025-10-24T11:20:31.971Z] [PEN] ✓ Stroke ended: totalPoints=15, duration=144ms, avgPressure=0.617, speed=104pts/s
+[2025-10-24T11:20:31.971Z] [PERF] 📝 Calling setStrokes() at 80665.80ms
+[2025-10-24T11:20:31.971Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 15 points
+[2025-10-24T11:20:31.971Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:31.971Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 15 points
+[2025-10-24T11:20:31.971Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:31.971Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.40ms
+[2025-10-24T11:20:31.978Z] [PEN] 💾 Stroke saved: totalStrokes=29, points=15, isEraser=true, pressure=[min:0.617, avg:0.617, max:0.617], tilt=false
+[2025-10-24T11:20:31.978Z] [PERF] ⏱️ setStrokes() callback executed in 7.10ms
+[2025-10-24T11:20:31.980Z] [PERF] 🔄 Redraw useEffect triggered! Render #29, 411.70ms since last render
+[2025-10-24T11:20:31.980Z] [PERF] 📊 Current state: 29 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:31.981Z] [CANVAS] Initial redraw: 29 strokes loaded
+[2025-10-24T11:20:31.981Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.70ms
+[2025-10-24T11:20:31.982Z] [CANVAS] Auto-saved 29 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:31.982Z] [PERF] 💾 localStorage save: 1.30ms, size: 99.16KB
+[2025-10-24T11:20:32.053Z] [DRAWING] Stroke completed, totalStrokes: 29, points: 15
+[2025-10-24T11:20:32.095Z] [PERF] 🎬 startDrawing() called at 80790.30ms
+[2025-10-24T11:20:32.095Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:32.095Z] [PEN] Initial point: x=492.5, y=22.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:32.095Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:32.165Z] [PERF] 🛑 stopDrawing() called at 80859.60ms
+[2025-10-24T11:20:32.166Z] [PEN] ✓ Stroke ended: totalPoints=6, duration=71ms, avgPressure=0.613, speed=85pts/s
+[2025-10-24T11:20:32.166Z] [PERF] 📝 Calling setStrokes() at 80860.90ms
+[2025-10-24T11:20:32.166Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 6 points
+[2025-10-24T11:20:32.166Z] [PERF] ⏱️ Main canvas draw took 0.10ms
+[2025-10-24T11:20:32.166Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 6 points
+[2025-10-24T11:20:32.166Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:32.166Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.40ms
+[2025-10-24T11:20:32.175Z] [PEN] 💾 Stroke saved: totalStrokes=30, points=6, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:32.175Z] [PERF] ⏱️ setStrokes() callback executed in 9.70ms
+[2025-10-24T11:20:32.178Z] [PERF] 🔄 Redraw useEffect triggered! Render #30, 196.90ms since last render
+[2025-10-24T11:20:32.178Z] [PERF] 📊 Current state: 30 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:32.178Z] [CANVAS] Initial redraw: 30 strokes loaded
+[2025-10-24T11:20:32.179Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:32.180Z] [CANVAS] Auto-saved 30 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:32.180Z] [PERF] 💾 localStorage save: 1.70ms, size: 99.80KB
+[2025-10-24T11:20:32.240Z] [DRAWING] Stroke completed, totalStrokes: 30, points: 6
+[2025-10-24T11:20:32.323Z] [PERF] 🎬 startDrawing() called at 81018.00ms
+[2025-10-24T11:20:32.323Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:32.323Z] [PEN] Initial point: x=562.0, y=23.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:32.323Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:32.420Z] [PERF] 🛑 stopDrawing() called at 81115.00ms
+[2025-10-24T11:20:32.421Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=98ms, avgPressure=0.617, speed=20pts/s
+[2025-10-24T11:20:32.421Z] [PERF] 📝 Calling setStrokes() at 81116.20ms
+[2025-10-24T11:20:32.421Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:32.421Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:32.421Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:32.421Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:32.421Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.30ms
+[2025-10-24T11:20:32.427Z] [PEN] 💾 Stroke saved: totalStrokes=31, points=2, isEraser=true, pressure=[min:0.617, avg:0.617, max:0.617], tilt=false
+[2025-10-24T11:20:32.427Z] [PERF] ⏱️ setStrokes() callback executed in 6.40ms
+[2025-10-24T11:20:32.430Z] [PERF] 🔄 Redraw useEffect triggered! Render #31, 251.50ms since last render
+[2025-10-24T11:20:32.430Z] [PERF] 📊 Current state: 31 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:32.431Z] [CANVAS] Initial redraw: 31 strokes loaded
+[2025-10-24T11:20:32.431Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:32.432Z] [CANVAS] Auto-saved 31 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:32.432Z] [PERF] 💾 localStorage save: 1.20ms, size: 100.08KB
+[2025-10-24T11:20:32.506Z] [DRAWING] Stroke completed, totalStrokes: 31, points: 2
+[2025-10-24T11:20:32.532Z] [PERF] 🎬 startDrawing() called at 81226.90ms
+[2025-10-24T11:20:32.532Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:32.532Z] [PEN] Initial point: x=606.5, y=38.0, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:32.532Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:32.615Z] [PERF] 🛑 stopDrawing() called at 81309.60ms
+[2025-10-24T11:20:32.616Z] [PEN] ✓ Stroke ended: totalPoints=8, duration=84ms, avgPressure=0.616, speed=95pts/s
+[2025-10-24T11:20:32.616Z] [PERF] 📝 Calling setStrokes() at 81310.90ms
+[2025-10-24T11:20:32.616Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 8 points
+[2025-10-24T11:20:32.616Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:32.616Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 8 points
+[2025-10-24T11:20:32.616Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:32.616Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.40ms
+[2025-10-24T11:20:32.622Z] [PEN] 💾 Stroke saved: totalStrokes=32, points=8, isEraser=true, pressure=[min:0.614, avg:0.616, max:0.617], tilt=false
+[2025-10-24T11:20:32.622Z] [PERF] ⏱️ setStrokes() callback executed in 6.60ms
+[2025-10-24T11:20:32.625Z] [PERF] 🔄 Redraw useEffect triggered! Render #32, 194.50ms since last render
+[2025-10-24T11:20:32.625Z] [PERF] 📊 Current state: 32 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:32.626Z] [CANVAS] Initial redraw: 32 strokes loaded
+[2025-10-24T11:20:32.626Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:32.628Z] [CANVAS] Auto-saved 32 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:32.628Z] [PERF] 💾 localStorage save: 1.50ms, size: 100.92KB
+[2025-10-24T11:20:32.696Z] [DRAWING] Stroke completed, totalStrokes: 32, points: 8
+[2025-10-24T11:20:32.717Z] [PERF] 🛑 stopDrawing() called at 81412.10ms
+[2025-10-24T11:20:32.718Z] [PERF] 🎬 startDrawing() called at 81412.80ms
+[2025-10-24T11:20:32.718Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:32.718Z] [PEN] Initial point: x=627.5, y=40.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:32.718Z] [PERF] ⏱️ startDrawing() completed in 0.00ms
+[2025-10-24T11:20:32.826Z] [PERF] 🛑 stopDrawing() called at 81521.00ms
+[2025-10-24T11:20:32.827Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=109ms, avgPressure=0.613, speed=18pts/s
+[2025-10-24T11:20:32.827Z] [PERF] 📝 Calling setStrokes() at 81522.10ms
+[2025-10-24T11:20:32.827Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:32.827Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:32.827Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:32.827Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:32.827Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.20ms
+[2025-10-24T11:20:32.836Z] [PEN] 💾 Stroke saved: totalStrokes=33, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:32.836Z] [PERF] ⏱️ setStrokes() callback executed in 9.20ms
+[2025-10-24T11:20:32.839Z] [PERF] 🔄 Redraw useEffect triggered! Render #33, 213.10ms since last render
+[2025-10-24T11:20:32.839Z] [PERF] 📊 Current state: 33 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:32.840Z] [CANVAS] Initial redraw: 33 strokes loaded
+[2025-10-24T11:20:32.840Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.90ms
+[2025-10-24T11:20:32.842Z] [CANVAS] Auto-saved 33 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:32.842Z] [PERF] 💾 localStorage save: 2.30ms, size: 101.20KB
+[2025-10-24T11:20:32.878Z] [PERF] 🎬 startDrawing() called at 81573.00ms
+[2025-10-24T11:20:32.878Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:32.878Z] [PEN] Initial point: x=535.5, y=39.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:32.878Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:32.964Z] [DRAWING] Stroke completed, totalStrokes: 33, points: 2
+[2025-10-24T11:20:32.987Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.613
+[2025-10-24T11:20:32.987Z] [PERF] ⚡ draw() execution: 0.10ms for 1 events
+[2025-10-24T11:20:33.011Z] [PERF] 🛑 stopDrawing() called at 81705.70ms
+[2025-10-24T11:20:33.011Z] [PEN] ✓ Stroke ended: totalPoints=10, duration=133ms, avgPressure=0.613, speed=75pts/s
+[2025-10-24T11:20:33.011Z] [PERF] 📝 Calling setStrokes() at 81705.80ms
+[2025-10-24T11:20:33.011Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 10 points
+[2025-10-24T11:20:33.011Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:33.011Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 10 points
+[2025-10-24T11:20:33.011Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:33.011Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.20ms
+[2025-10-24T11:20:33.021Z] [PEN] 💾 Stroke saved: totalStrokes=34, points=10, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:33.021Z] [PERF] ⏱️ setStrokes() callback executed in 10.00ms
+[2025-10-24T11:20:33.023Z] [PERF] 🔄 Redraw useEffect triggered! Render #34, 183.30ms since last render
+[2025-10-24T11:20:33.023Z] [PERF] 📊 Current state: 34 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:33.024Z] [CANVAS] Initial redraw: 34 strokes loaded
+[2025-10-24T11:20:33.024Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:33.026Z] [CANVAS] Auto-saved 34 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:33.026Z] [PERF] 💾 localStorage save: 1.30ms, size: 102.21KB
+[2025-10-24T11:20:33.058Z] [PERF] 🎬 startDrawing() called at 81753.00ms
+[2025-10-24T11:20:33.058Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.617, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:33.058Z] [PEN] Initial point: x=462.5, y=37.5, width=11.56, pressure=0.617, coalescedEvents=1
+[2025-10-24T11:20:33.058Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:33.124Z] [DRAWING] Stroke completed, totalStrokes: 34, points: 10
+[2025-10-24T11:20:33.291Z] [PERF] 🛑 stopDrawing() called at 81986.00ms
+[2025-10-24T11:20:33.291Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=233ms, avgPressure=0.618, speed=9pts/s
+[2025-10-24T11:20:33.291Z] [PERF] 📝 Calling setStrokes() at 81986.10ms
+[2025-10-24T11:20:33.291Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:33.291Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:33.291Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:33.291Z] [PERF] ⏱️ Offscreen canvas draw took 0.00ms
+[2025-10-24T11:20:33.291Z] [PERF] ✅ stopDrawing() TOTAL duration: 0.10ms
+[2025-10-24T11:20:33.300Z] [PEN] 💾 Stroke saved: totalStrokes=35, points=2, isEraser=true, pressure=[min:0.617, avg:0.618, max:0.618], tilt=false
+[2025-10-24T11:20:33.300Z] [PERF] ⏱️ setStrokes() callback executed in 8.80ms
+[2025-10-24T11:20:33.302Z] [PERF] 🔄 Redraw useEffect triggered! Render #35, 278.30ms since last render
+[2025-10-24T11:20:33.302Z] [PERF] 📊 Current state: 35 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:33.303Z] [CANVAS] Initial redraw: 35 strokes loaded
+[2025-10-24T11:20:33.303Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.90ms
+[2025-10-24T11:20:33.305Z] [CANVAS] Auto-saved 35 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:33.305Z] [PERF] 💾 localStorage save: 1.30ms, size: 102.49KB
+[2025-10-24T11:20:33.376Z] [DRAWING] Stroke completed, totalStrokes: 35, points: 2
+[2025-10-24T11:20:33.480Z] [PERF] 🎬 startDrawing() called at 82175.10ms
+[2025-10-24T11:20:33.481Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:33.481Z] [PEN] Initial point: x=578.5, y=18.0, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:33.481Z] [PERF] ⏱️ startDrawing() completed in 1.10ms
+[2025-10-24T11:20:33.554Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.613
+[2025-10-24T11:20:33.554Z] [PERF] ⚡ draw() execution: 0.00ms for 1 events
+[2025-10-24T11:20:33.621Z] [PERF] 🛑 stopDrawing() called at 82315.80ms
+[2025-10-24T11:20:33.622Z] [PEN] ✓ Stroke ended: totalPoints=13, duration=141ms, avgPressure=0.613, speed=92pts/s
+[2025-10-24T11:20:33.622Z] [PERF] 📝 Calling setStrokes() at 82316.90ms
+[2025-10-24T11:20:33.622Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 13 points
+[2025-10-24T11:20:33.622Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:33.622Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 13 points
+[2025-10-24T11:20:33.622Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:33.622Z] [PERF] ✅ stopDrawing() TOTAL duration: 1.20ms
+[2025-10-24T11:20:33.629Z] [PEN] 💾 Stroke saved: totalStrokes=36, points=13, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:33.629Z] [PERF] ⏱️ setStrokes() callback executed in 7.00ms
+[2025-10-24T11:20:33.632Z] [PERF] 🔄 Redraw useEffect triggered! Render #36, 328.50ms since last render
+[2025-10-24T11:20:33.632Z] [PERF] 📊 Current state: 36 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:33.633Z] [CANVAS] Initial redraw: 36 strokes loaded
+[2025-10-24T11:20:33.633Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:33.634Z] [CANVAS] Auto-saved 36 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:33.634Z] [PERF] 💾 localStorage save: 1.30ms, size: 103.77KB
+[2025-10-24T11:20:33.708Z] [DRAWING] Stroke completed, totalStrokes: 36, points: 13
+[2025-10-24T11:20:33.735Z] [PERF] 🎬 startDrawing() called at 82430.00ms
+[2025-10-24T11:20:33.735Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.613, buttons=32, physicalEraser=true, tilt=[0,0]
+[2025-10-24T11:20:33.735Z] [PEN] Initial point: x=521.0, y=19.5, width=11.52, pressure=0.613, coalescedEvents=1
+[2025-10-24T11:20:33.735Z] [PERF] ⏱️ startDrawing() completed in 0.10ms
+[2025-10-24T11:20:33.825Z] [PERF] 🛑 stopDrawing() called at 82520.30ms
+[2025-10-24T11:20:33.827Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=92ms, avgPressure=0.613, speed=22pts/s
+[2025-10-24T11:20:33.827Z] [PERF] 📝 Calling setStrokes() at 82522.40ms
+[2025-10-24T11:20:33.827Z] [PERF] 🎨 Drawing final stroke to MAIN canvas: 2 points
+[2025-10-24T11:20:33.827Z] [PERF] ⏱️ Main canvas draw took 0.00ms
+[2025-10-24T11:20:33.827Z] [PERF] 🎨 Drawing final stroke to OFFSCREEN canvas: 2 points
+[2025-10-24T11:20:33.827Z] [PERF] ⏱️ Offscreen canvas draw took 0.10ms
+[2025-10-24T11:20:33.827Z] [PERF] ✅ stopDrawing() TOTAL duration: 2.20ms
+[2025-10-24T11:20:33.838Z] [PEN] 💾 Stroke saved: totalStrokes=37, points=2, isEraser=true, pressure=[min:0.613, avg:0.613, max:0.613], tilt=false
+[2025-10-24T11:20:33.838Z] [PERF] ⏱️ setStrokes() callback executed in 10.20ms
+[2025-10-24T11:20:33.840Z] [PERF] 🔄 Redraw useEffect triggered! Render #37, 207.60ms since last render
+[2025-10-24T11:20:33.840Z] [PERF] 📊 Current state: 37 strokes, canvas: 613x3714.796875
+[2025-10-24T11:20:33.841Z] [CANVAS] Initial redraw: 37 strokes loaded
+[2025-10-24T11:20:33.841Z] [PERF] ⏱️ Redraw useEffect TOTAL: 0.80ms
+[2025-10-24T11:20:33.843Z] [CANVAS] Auto-saved 37 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:20:33.843Z] [PERF] 💾 localStorage save: 1.50ms, size: 104.05KB
+[2025-10-24T11:20:33.871Z] [PERF] 🛑 stopDrawing() called at 82566.00ms
+[2025-10-24T11:20:33.935Z] [DRAWING] Stroke completed, totalStrokes: 37, points: 2
+[2025-10-24T11:20:54.143Z] [PERF] 🛑 stopDrawing() called at 102838.20ms

@@ -1,0 +1,120 @@
+{
+  "game_sessions": {
+    "-Obdu3qXu-szRMdxn6r7": {
+      "currentQuestion": 0,
+      "pin": "I1FZPI",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-ObduH9FrL8VNxDXcjoy": {
+      "currentQuestion": 0,
+      "pin": "ETAHQ5",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-ObduxaD0uYWknbVi99M": {
+      "currentQuestion": 0,
+      "pin": "PM4UDA",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-ObdvLX07wZeAXoalV9b": {
+      "currentQuestion": 0,
+      "pin": "1ARFES",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-ObdwU7sehSlOtGkvUOb": {
+      "pin": "HTBPZN",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "waiting"
+    },
+    "-ObdxV_VrbztjdBP1pDE": {
+      "currentQuestion": 0,
+      "pin": "FM8MI7",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-ObdxgXVv4O0TpGvDX14": {
+      "currentQuestion": 0,
+      "pin": "DYCX5T",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-Obdy3KjeZV3VTuJRfti": {
+      "pin": "WVDWZB",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "waiting"
+    },
+    "-Obdy7erTGgRAqUEBrRh": {
+      "currentQuestion": 0,
+      "pin": "WF9C9A",
+      "quizId": "-ObdtRYEkVgHxNtbwi4D",
+      "status": "in-progress"
+    },
+    "-Obdz_IB4jk-IJkHgaCL": {
+      "currentQuestion": 1,
+      "pin": "NAXL3P",
+      "quizId": "-ObdzZJ2FQ4QufzzSVOn",
+      "status": "finished"
+    },
+    "-Obe1UNR9DzeOFq4RA6d": {
+      "currentQuestion": 1,
+      "pin": "YL2TT8",
+      "quizId": "-ObdzZJ2FQ4QufzzSVOn",
+      "status": "show_results"
+    },
+    "-ObhgAcdSlkWa9ws1zQ0": {
+      "currentQuestion": 0,
+      "pin": "5L7BFU",
+      "quizId": "-ObdzZJ2FQ4QufzzSVOn",
+      "status": "show_results"
+    },
+    "-ObiDsU---H8o8EQ6USB": {
+      "pin": "EMS4M3",
+      "quizId": "-ObdzZJ2FQ4QufzzSVOn",
+      "status": "waiting"
+    },
+    "active_session": {
+      "quizId": "-ObdzZJ2FQ4QufzzSVOn",
+      "status": "waiting"
+    },
+    "default-session": {
+      "players": {
+        "-ObiCvHqfSpNIBJFlDp0": {
+          "name": "TestStudent",
+          "score": 0
+        }
+      }
+    }
+  },
+  "quizzes": {
+    "-ObdzZJ2FQ4QufzzSVOn": {
+      "questions": [
+        {
+          "correctAnswer": "4",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "text": "What is 2 + 2?",
+          "timer": 10
+        },
+        {
+          "correctAnswer": "Paris",
+          "options": [
+            "London",
+            "Berlin",
+            "Paris",
+            "Madrid"
+          ],
+          "text": "What is the capital of France?",
+          "timer": 10
+        }
+      ],
+      "title": "Mock Quiz for Testing"
+    }
+  }
+}

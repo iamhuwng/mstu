@@ -1,0 +1,263 @@
+import React from 'react';
+
+// --- SVG Icons (Self-contained components for clarity) ---
+// Added aria-hidden="true" to all icons as they are decorative.
+const LightningIcon = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>
+);
+
+const StarIcon = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.05 10.1c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.95-.69L11.049 2.927z" />
+  </svg>
+);
+
+const ChatIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+    </svg>
+);
+
+const ImageIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>
+);
+
+const SummaryIcon = ({ className }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h7" />
+    </svg>
+);
+
+const ManusLogo = ({ className }) => (
+    <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M32 58C20.44 58 12.32 51.1 10 42.44C10.6 42.56 11.24 42.64 11.92 42.64C19.64 42.64 26.16 38 29.08 31.84L32 25.88L34.92 31.84C37.84 38 44.36 42.64 52.08 42.64C52.76 42.64 53.4 42.56 54 42.44C51.68 51.1 43.56 58 32 58Z" fill="#334155"/>
+        <path d="M44.44 26.92C45.88 24.32 46.6 21.36 46.6 18.2C46.6 10.96 40.12 5 32 5C23.88 5 17.4 10.96 17.4 18.2C17.4 21.36 18.12 24.32 19.56 26.92L32 5L44.44 26.92Z" fill="#334155"/>
+    </svg>
+);
+
+
+// --- Reusable Card Component ---
+// Spreading ...props allows for passing onClick, aria-labels, etc.
+const Card = ({ children, className = '', as: Component = 'div', ...props }) => (
+  // Applied a custom, lighter shadow here. For more global control, this could be added to tailwind.config.js
+  <Component className={`rounded-3xl p-6 transition-transform hover:scale-[1.02] duration-300 ease-in-out shadow-lg ${className}`} {...props}>
+    {children}
+  </Component>
+);
+
+// To make 'shadow-sm-light' work, you would typically add this to your tailwind.config.js
+// extend: {
+//   boxShadow: {
+//     'sm-light': '0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
+//   }
+// }
+
+
+// --- Static Data Definitions ---
+// Moved data outside components to prevent re-creation on each render.
+const barChartData = [
+    { label: 'April', value: 90, time: '15m36s' },
+    { label: 'July', value: 50, time: '6m55s' },
+    { label: 'Nov', value: 30, time: '3m43s' },
+];
+
+const databaseUsers = [
+    { id: 1, name: 'Ethan Cooper', email: 'ethan@company.com'},
+    { id: 2, name: 'Liam Brooks', email: 'liam@company.com'},
+    { id: 3, name: 'Emma Davis', email: 'ema@company.com'},
+    { id: 4, name: 'Ava Mitchell', email: 'ava@company.com'},
+];
+
+const aiFeatures = [
+    {
+        icon: <ChatIcon className="w-8 h-8 text-slate-500" />,
+        title: 'AI chatbot',
+        description: 'Add an AI Chatbot to your web apps'
+    },
+    {
+        icon: <ImageIcon className="w-8 h-8 text-slate-500" />,
+        title: 'AI Image generation',
+        description: 'Generate assets using AI image generation'
+    },
+    {
+        icon: <SummaryIcon className="w-8 h-8 text-slate-500" />,
+        title: 'AI summary',
+        description: 'Automatically summarize data for you'
+    },
+];
+
+// --- Individual Feature Cards (Recreated from the image) ---
+
+const ContextCard = () => (
+    <Card className="bg-gradient-to-br from-violet-200 to-purple-200 text-purple-800 flex flex-col justify-center items-center text-center">
+        <div className="flex items-center gap-4">
+            <LightningIcon className="w-10 h-10" />
+            <StarIcon className="w-10 h-10" />
+        </div>
+        <h2 className="text-2xl font-bold mt-4">Faster, Smarter &</h2>
+        <h2 className="text-2xl font-bold">Unlimited Context</h2>
+    </Card>
+);
+
+const BarChartCard = () => (
+    <Card className="bg-yellow-100">
+        <div className="flex justify-around items-end h-full w-full">
+            {barChartData.map(item => (
+                <div key={item.label} className="flex flex-col items-center gap-2">
+                    <div className="text-yellow-600 text-xs font-semibold bg-white/70 rounded-md px-2 py-1">{item.time}</div>
+                    <div className="bg-yellow-300 rounded-lg w-10" style={{ height: `${item.value}%` }}></div>
+                    <span className="text-sm font-medium text-yellow-600">{item.label}</span>
+                </div>
+            ))}
+        </div>
+    </Card>
+);
+
+const ManusCard = () => (
+    <Card className="bg-orange-100 flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-bold text-orange-600">Manus 1.5</h2>
+        <span className="text-3xl font-bold text-orange-600">+</span>
+        <h2 className="text-3xl font-bold text-orange-600">Manus 1.5 Lite</h2>
+    </Card>
+);
+
+const SimpleButtonCard = ({ children, color = 'bg-sky-200 text-sky-800' }) => (
+    <Card className={`${color} flex items-center justify-center`}>
+        <h2 className="text-2xl font-bold">{children}</h2>
+    </Card>
+);
+
+const VersionControlCard = () => (
+    <Card className="bg-pink-200 text-pink-800 row-span-2">
+        <h2 className="text-xl font-bold mb-4">Version Control</h2>
+        <div className="bg-white/50 p-3 rounded-lg">
+            <p className="text-sm font-semibold text-pink-700 mb-2">Version History</p>
+            <div className="space-y-2">
+                <div className="bg-pink-100 p-2 rounded">
+                    <p className="text-xs font-medium text-pink-800">20 Messages</p>
+                    <p className="text-xs text-pink-600">Main Community Version</p>
+                </div>
+                <div className="bg-pink-50 p-2 rounded">
+                    <p className="text-xs font-medium text-pink-700">19 Messages</p>
+                    <p className="text-xs text-pink-500">Community Version</p>
+                </div>
+            </div>
+        </div>
+    </Card>
+);
+
+const MainImageCard = () => (
+    <Card className="lg:col-span-2 md:col-span-2 row-span-2 bg-cover bg-center flex flex-col justify-between items-center" style={{ backgroundImage: "url('https://placehold.co/600x400/d8b4fe/f5d0fe?text=Manus_Platform')" }}>
+         <div className="w-24 h-24 bg-white/80 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-md"> {/* Applied lighter shadow here */}
+            <ManusLogo className="w-16 h-16"/>
+        </div>
+        <h2 className="text-4xl font-extrabold text-purple-700 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-xl shadow-md">Manus 1.5</h2> {/* Applied lighter shadow here */}
+    </Card>
+);
+
+const DatabaseCard = () => (
+    <Card className="bg-teal-100 text-teal-800 lg:col-span-2 md:col-span-2">
+        <h2 className="text-xl font-bold mb-2">Built-in database</h2>
+        <div className="bg-white/80 p-3 rounded-lg text-sm">
+            <div className="grid grid-cols-3 gap-2 font-bold text-teal-700 border-b border-teal-200 pb-1 mb-1">
+                <div>ID</div>
+                <div>Name</div>
+                <div>Email</div>
+            </div>
+            <div className="space-y-1 text-xs font-medium">
+                 {databaseUsers.map(row => (
+                     <div key={row.id} className="grid grid-cols-3 gap-2">
+                         <div className="truncate">10203082312</div>
+                         <div>{row.name}</div>
+                         <div className="truncate">{row.email}</div>
+                     </div>
+                ))}
+            </div>
+        </div>
+    </Card>
+);
+
+const AnalyticsCard = () => (
+    <Card className="bg-white row-span-2">
+        <h2 className="text-xl font-bold mb-2 text-slate-800">Built-in Analytics</h2>
+        <div className="flex justify-between items-center text-sm mb-4">
+            <div className="text-center">
+                <p className="text-slate-500">PAGE VIEWS</p>
+                <p className="font-bold text-lg text-slate-800">982</p>
+            </div>
+            <div className="text-center">
+                <p className="text-slate-500">VISITS</p>
+                <p className="font-bold text-lg text-slate-800">201</p>
+            </div>
+            <div className="text-center">
+                <p className="text-slate-500">VISITORS</p>
+                <p className="font-bold text-lg text-slate-800">143</p>
+            </div>
+        </div>
+        <div className="w-full h-32">
+            <svg width="100%" height="100%" viewBox="0 0 100 50" preserveAspectRatio="none">
+                <path d="M 0 45 Q 25 10, 50 20 T 100 5" stroke="#a78bfa" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </div>
+    </Card>
+);
+
+// --- Refactored Components ---
+
+// A new component for the list items in the Embedded AI card.
+const AIFeatureRow = ({ icon, title, description }) => (
+    <div className="bg-white rounded-xl p-4 flex items-center gap-4 shadow-md"> {/* Applied lighter shadow here */}
+        {icon}
+        <div>
+            <p className="font-bold text-slate-800">{title}</p>
+            <p className="text-sm text-slate-600">{description}</p>
+        </div>
+    </div>
+);
+
+const EmbeddedAICard = () => (
+    <Card className="bg-green-100 lg:col-span-2 md:col-span-2 row-span-2">
+        <h2 className="text-2xl font-bold text-green-700 mb-4">Embedded AI</h2>
+        <div className="space-y-3">
+            {aiFeatures.map((feature) => (
+                <AIFeatureRow key={feature.title} {...feature} />
+            ))}
+        </div>
+    </Card>
+);
+
+// --- Main App Component ---
+export default function App() {
+  return (
+    <div className="bg-slate-50 min-h-screen p-4 md:p-8 font-sans">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[12rem]">
+            <ContextCard />
+            <BarChartCard />
+            <ManusCard />
+            {/* These 'SimpleButtonCard' components now get specific color props */}
+            <div className="flex flex-col gap-6">
+                 <SimpleButtonCard color="bg-violet-200 text-violet-700">Collaboration</SimpleButtonCard>
+                 <SimpleButtonCard color="bg-emerald-200 text-emerald-700">Library</SimpleButtonCard>
+            </div>
+            
+            <div className="flex flex-col gap-6">
+                <SimpleButtonCard color="bg-rose-200 text-rose-700">Notifications</SimpleButtonCard>
+                <SimpleButtonCard color="bg-purple-200 text-purple-700">Custom Domains</SimpleButtonCard>
+            </div>
+
+            <MainImageCard />
+            <DatabaseCard />
+
+            <VersionControlCard />
+            <AnalyticsCard />
+            <EmbeddedAICard />
+        </div>
+    </div>
+  );
+}
+
+

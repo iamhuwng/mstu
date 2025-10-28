@@ -1,0 +1,139 @@
+﻿[2025-10-24T11:39:29.979Z] [TEACHER QUIZ] Component mounted for session: active_session
+[2025-10-24T11:39:29.979Z] [TEACHER QUIZ] Status check: status=undefined, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:39:30.208Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=0, timer={"isPaused":false,"pausedDuration":0,"startTime":1761305969852,"totalTime":30}
+[2025-10-24T11:39:30.220Z] [TEACHER QUIZ] Loading quiz data for quizId: -OcKR89guLWUHiQuxX51
+[2025-10-24T11:39:30.220Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=false, hasQuestions=false
+[2025-10-24T11:39:30.454Z] [TEACHER QUIZ] Quiz loaded: 13 questions
+[2025-10-24T11:39:30.475Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:39:32.351Z] [TEACHER QUIZ] Game session updated: status=in-progress, currentQuestionIndex=0, timer={"isPaused":true,"pausedAt":1761305972350,"pausedDuration":0,"startTime":1761305969852,"totalTime":30}
+[2025-10-24T11:39:32.354Z] [TEACHER QUIZ] Status check: status=in-progress, hasQuiz=true, hasQuestions=true
+[2025-10-24T11:39:36.867Z] [DRAWING] Drawing mode DISABLED
+[2025-10-24T11:39:36.868Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:39:36.875Z] [DRAWING] Canvas size updated: 613x3714.796875
+[2025-10-24T11:39:39.853Z] [CANVAS] Initialized, passageId=default, loadedStrokes=6
+[2025-10-24T11:39:39.861Z] [CANVAS] Initializing canvas: 613x3714.796875, DPR=2
+[2025-10-24T11:39:39.871Z] [CANVAS] Canvas initialized successfully
+[2025-10-24T11:39:39.874Z] [CANVAS] Initial redraw: 6 strokes loaded
+[2025-10-24T11:39:39.875Z] [CANVAS] Auto-saved 6 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:39.875Z] [DRAWING] Drawing mode ENABLED, passageId: default
+[2025-10-24T11:39:39.875Z] [DRAWING] Loaded 6 saved strokes from localStorage
+[2025-10-24T11:39:44.307Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.422, buttons=1, physicalEraser=false, tilt=[21,7]
+[2025-10-24T11:39:44.308Z] [PEN] Initial point: x=92.5, y=176.0, width=3.19, pressure=0.422, coalescedEvents=1
+[2025-10-24T11:39:44.353Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.480
+[2025-10-24T11:39:44.412Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.541
+[2025-10-24T11:39:44.453Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.583
+[2025-10-24T11:39:44.496Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.605
+[2025-10-24T11:39:44.556Z] [PEN] ✓ Stroke ended: totalPoints=48, duration=249ms, avgPressure=0.603, speed=193pts/s
+[2025-10-24T11:39:44.558Z] [PEN] 💾 Stroke saved: totalStrokes=7, points=48, isEraser=false, pressure=[min:0.314, avg:0.603, max:0.677], tilt=true
+[2025-10-24T11:39:44.562Z] [CANVAS] Auto-saved 7 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:44.564Z] [DRAWING] Stroke completed, totalStrokes: 7, points: 48
+[2025-10-24T11:39:44.789Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.253, buttons=1, physicalEraser=false, tilt=[21,5]
+[2025-10-24T11:39:44.789Z] [PEN] Initial point: x=66.0, y=179.5, width=2.53, pressure=0.253, coalescedEvents=1
+[2025-10-24T11:39:44.833Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.312
+[2025-10-24T11:39:44.893Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.396
+[2025-10-24T11:39:44.931Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.463
+[2025-10-24T11:39:44.969Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.509
+[2025-10-24T11:39:45.006Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.540
+[2025-10-24T11:39:45.036Z] [PEN] ✓ Stroke ended: totalPoints=53, duration=247ms, avgPressure=0.536, speed=215pts/s
+[2025-10-24T11:39:45.037Z] [PEN] 💾 Stroke saved: totalStrokes=8, points=53, isEraser=false, pressure=[min:0.253, avg:0.536, max:0.673], tilt=true
+[2025-10-24T11:39:45.039Z] [CANVAS] Auto-saved 8 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:45.104Z] [DRAWING] Stroke completed, totalStrokes: 8, points: 53
+[2025-10-24T11:39:45.372Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.534, buttons=1, physicalEraser=false, tilt=[18,3]
+[2025-10-24T11:39:45.372Z] [PEN] Initial point: x=146.0, y=216.5, width=3.58, pressure=0.534, coalescedEvents=1
+[2025-10-24T11:39:45.419Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.614
+[2025-10-24T11:39:45.471Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.648
+[2025-10-24T11:39:45.516Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.662
+[2025-10-24T11:39:45.568Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.669
+[2025-10-24T11:39:45.621Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.674
+[2025-10-24T11:39:45.666Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.680
+[2025-10-24T11:39:45.712Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.688
+[2025-10-24T11:39:45.756Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.694
+[2025-10-24T11:39:45.787Z] [PEN] ✓ Stroke ended: totalPoints=84, duration=415ms, avgPressure=0.690, speed=202pts/s
+[2025-10-24T11:39:45.788Z] [PEN] 💾 Stroke saved: totalStrokes=9, points=84, isEraser=false, pressure=[min:0.383, avg:0.690, max:0.744], tilt=true
+[2025-10-24T11:39:45.791Z] [CANVAS] Auto-saved 9 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:45.855Z] [DRAWING] Stroke completed, totalStrokes: 9, points: 84
+[2025-10-24T11:39:45.973Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.181, buttons=1, physicalEraser=false, tilt=[13,9]
+[2025-10-24T11:39:45.973Z] [PEN] Initial point: x=244.0, y=114.0, width=2.21, pressure=0.181, coalescedEvents=1
+[2025-10-24T11:39:46.012Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.271
+[2025-10-24T11:39:46.057Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.375
+[2025-10-24T11:39:46.094Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.443
+[2025-10-24T11:39:46.132Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.488
+[2025-10-24T11:39:46.177Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.524
+[2025-10-24T11:39:46.229Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.552
+[2025-10-24T11:39:46.274Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.573
+[2025-10-24T11:39:46.320Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.589
+[2025-10-24T11:39:46.372Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.604
+[2025-10-24T11:39:46.424Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.617
+[2025-10-24T11:39:46.462Z] [PEN] ✓ Stroke ended: totalPoints=106, duration=489ms, avgPressure=0.618, speed=217pts/s
+[2025-10-24T11:39:46.464Z] [PEN] 💾 Stroke saved: totalStrokes=10, points=106, isEraser=false, pressure=[min:0.181, avg:0.618, max:0.735], tilt=true
+[2025-10-24T11:39:46.467Z] [CANVAS] Auto-saved 10 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:46.526Z] [DRAWING] Stroke completed, totalStrokes: 10, points: 106
+[2025-10-24T11:39:46.723Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.563, buttons=1, physicalEraser=false, tilt=[15,11]
+[2025-10-24T11:39:46.723Z] [PEN] Initial point: x=281.0, y=44.0, width=3.67, pressure=0.563, coalescedEvents=1
+[2025-10-24T11:39:46.929Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=206ms, avgPressure=0.470, speed=10pts/s
+[2025-10-24T11:39:46.930Z] [PEN] 💾 Stroke saved: totalStrokes=11, points=2, isEraser=false, pressure=[min:0.378, avg:0.470, max:0.563], tilt=true
+[2025-10-24T11:39:46.933Z] [CANVAS] Auto-saved 11 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:46.992Z] [DRAWING] Stroke completed, totalStrokes: 11, points: 2
+[2025-10-24T11:39:47.043Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.253, buttons=1, physicalEraser=false, tilt=[16,5]
+[2025-10-24T11:39:47.043Z] [PEN] Initial point: x=269.0, y=137.0, width=2.53, pressure=0.253, coalescedEvents=1
+[2025-10-24T11:39:47.078Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.400
+[2025-10-24T11:39:47.115Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.516
+[2025-10-24T11:39:47.161Z] [PEN] ✓ Stroke ended: totalPoints=27, duration=118ms, avgPressure=0.554, speed=229pts/s
+[2025-10-24T11:39:47.161Z] [PEN] 💾 Stroke saved: totalStrokes=12, points=27, isEraser=false, pressure=[min:0.253, avg:0.554, max:0.676], tilt=true
+[2025-10-24T11:39:47.164Z] [CANVAS] Auto-saved 12 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:47.227Z] [DRAWING] Stroke completed, totalStrokes: 12, points: 27
+[2025-10-24T11:39:47.609Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.506, buttons=1, physicalEraser=false, tilt=[17,2]
+[2025-10-24T11:39:47.609Z] [PEN] Initial point: x=292.0, y=219.5, width=3.48, pressure=0.506, coalescedEvents=1
+[2025-10-24T11:39:47.663Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.579
+[2025-10-24T11:39:47.708Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.606
+[2025-10-24T11:39:47.761Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.632
+[2025-10-24T11:39:47.806Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.645
+[2025-10-24T11:39:47.851Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.652
+[2025-10-24T11:39:47.895Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.654
+[2025-10-24T11:39:47.949Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.654
+[2025-10-24T11:39:47.994Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.658
+[2025-10-24T11:39:48.046Z] [PEN] Drawing progress: points=90, coalescedEvents=1, avgPressure=0.665
+[2025-10-24T11:39:48.104Z] [PEN] Drawing progress: points=100, coalescedEvents=1, avgPressure=0.667
+[2025-10-24T11:39:48.114Z] [PEN] ✓ Stroke ended: totalPoints=102, duration=505ms, avgPressure=0.661, speed=202pts/s
+[2025-10-24T11:39:48.115Z] [PEN] 💾 Stroke saved: totalStrokes=13, points=102, isEraser=false, pressure=[min:0.300, avg:0.661, max:0.725], tilt=true
+[2025-10-24T11:39:48.117Z] [CANVAS] Auto-saved 13 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:48.179Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.084, buttons=1, physicalEraser=false, tilt=[15,3]
+[2025-10-24T11:39:48.179Z] [PEN] Initial point: x=338.0, y=186.5, width=1.71, pressure=0.084, coalescedEvents=1
+[2025-10-24T11:39:48.234Z] [DRAWING] Stroke completed, totalStrokes: 13, points: 102
+[2025-10-24T11:39:48.241Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.349
+[2025-10-24T11:39:48.286Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.499
+[2025-10-24T11:39:48.331Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.575
+[2025-10-24T11:39:48.399Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.596
+[2025-10-24T11:39:48.445Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.577
+[2025-10-24T11:39:48.489Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.579
+[2025-10-24T11:39:48.534Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.592
+[2025-10-24T11:39:48.565Z] [PEN] ✓ Stroke ended: totalPoints=74, duration=386ms, avgPressure=0.590, speed=192pts/s
+[2025-10-24T11:39:48.566Z] [PEN] 💾 Stroke saved: totalStrokes=14, points=74, isEraser=false, pressure=[min:0.084, avg:0.590, max:0.734], tilt=true
+[2025-10-24T11:39:48.569Z] [CANVAS] Auto-saved 14 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:48.637Z] [DRAWING] Stroke completed, totalStrokes: 14, points: 74
+[2025-10-24T11:39:48.690Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.120, buttons=1, physicalEraser=false, tilt=[12,4]
+[2025-10-24T11:39:48.690Z] [PEN] Initial point: x=407.0, y=143.0, width=1.91, pressure=0.120, coalescedEvents=1
+[2025-10-24T11:39:49.143Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=453ms, avgPressure=0.374, speed=4pts/s
+[2025-10-24T11:39:49.144Z] [PEN] 💾 Stroke saved: totalStrokes=15, points=2, isEraser=false, pressure=[min:0.120, avg:0.374, max:0.628], tilt=true
+[2025-10-24T11:39:49.146Z] [CANVAS] Auto-saved 15 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:49.210Z] [DRAWING] Stroke completed, totalStrokes: 15, points: 2
+[2025-10-24T11:39:49.441Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.323, buttons=1, physicalEraser=false, tilt=[10,6]
+[2025-10-24T11:39:49.441Z] [PEN] Initial point: x=476.5, y=70.5, width=2.81, pressure=0.323, coalescedEvents=1
+[2025-10-24T11:39:49.480Z] [PEN] Drawing progress: points=10, coalescedEvents=1, avgPressure=0.423
+[2025-10-24T11:39:49.525Z] [PEN] Drawing progress: points=20, coalescedEvents=1, avgPressure=0.507
+[2025-10-24T11:39:49.563Z] [PEN] Drawing progress: points=30, coalescedEvents=1, avgPressure=0.557
+[2025-10-24T11:39:49.616Z] [PEN] Drawing progress: points=40, coalescedEvents=1, avgPressure=0.589
+[2025-10-24T11:39:49.660Z] [PEN] Drawing progress: points=50, coalescedEvents=1, avgPressure=0.603
+[2025-10-24T11:39:49.712Z] [PEN] Drawing progress: points=60, coalescedEvents=1, avgPressure=0.612
+[2025-10-24T11:39:49.757Z] [PEN] Drawing progress: points=70, coalescedEvents=1, avgPressure=0.622
+[2025-10-24T11:39:49.810Z] [PEN] Drawing progress: points=80, coalescedEvents=1, avgPressure=0.629
+[2025-10-24T11:39:49.811Z] [PEN] ✓ Stroke ended: totalPoints=81, duration=370ms, avgPressure=0.625, speed=219pts/s
+[2025-10-24T11:39:49.813Z] [PEN] 💾 Stroke saved: totalStrokes=16, points=81, isEraser=false, pressure=[min:0.280, avg:0.625, max:0.701], tilt=true
+[2025-10-24T11:39:49.815Z] [CANVAS] Auto-saved 16 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:49.870Z] [DRAWING] Stroke completed, totalStrokes: 16, points: 81
+[2025-10-24T11:39:49.894Z] [PEN] ✏️ Stroke started: type=pen, pressure=0.126, buttons=1, physicalEraser=false, tilt=[8,6]
+[2025-10-24T11:39:49.894Z] [PEN] Initial point: x=513.0, y=60.5, width=1.94, pressure=0.126, coalescedEvents=1
+[2025-10-24T11:39:50.743Z] [PEN] ✓ Stroke ended: totalPoints=2, duration=849ms, avgPressure=0.227, speed=2pts/s
+[2025-10-24T11:39:50.744Z] [PEN] 💾 Stroke saved: totalStrokes=17, points=2, isEraser=false, pressure=[min:0.126, avg:0.227, max:0.328], tilt=true
+[2025-10-24T11:39:50.748Z] [CANVAS] Auto-saved 17 strokes to localStorage (key: drawing_strokes_default)
+[2025-10-24T11:39:50.805Z] [DRAWING] Stroke completed, totalStrokes: 17, points: 2

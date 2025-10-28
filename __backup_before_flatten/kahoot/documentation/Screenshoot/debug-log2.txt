@@ -1,0 +1,228 @@
+﻿[2025-10-24T06:36:08.235Z] Question changed from null to 0
+[2025-10-24T06:36:08.236Z] Previous answer: 
+[2025-10-24T06:36:08.236Z] hasSubmittedRef reset: false
+[2025-10-24T06:36:08.464Z] Quiz loaded
+[2025-10-24T06:36:10.548Z] handleAnswerSelect called with answer: Paris
+[2025-10-24T06:36:10.548Z] Answer stored in ref: Paris
+[2025-10-24T06:36:17.270Z] handleTimeUp called
+[2025-10-24T06:36:17.272Z] handleTimeUp - Submitting answer: Paris
+[2025-10-24T06:36:17.275Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:36:17.304Z] handleTimeUp - Answer submitted
+[2025-10-24T06:36:23.521Z] Question changed from null to 1
+[2025-10-24T06:36:23.522Z] Previous answer: 
+[2025-10-24T06:36:23.522Z] hasSubmittedRef reset: false
+[2025-10-24T06:36:23.786Z] Quiz loaded
+[2025-10-24T06:36:24.917Z] handleAnswerSelect called with answer: Mars
+[2025-10-24T06:36:24.917Z] Answer stored in ref: Mars
+[2025-10-24T06:36:33.116Z] handleTimeUp called
+[2025-10-24T06:36:33.118Z] handleTimeUp - Submitting answer: Mars
+[2025-10-24T06:36:33.119Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:36:33.151Z] handleTimeUp - Answer submitted
+[2025-10-24T06:36:39.243Z] Question changed from null to 2
+[2025-10-24T06:36:39.243Z] Previous answer: 
+[2025-10-24T06:36:39.243Z] hasSubmittedRef reset: false
+[2025-10-24T06:36:39.509Z] Quiz loaded
+[2025-10-24T06:36:40.865Z] handleAnswerSelect called with answer: Red
+[2025-10-24T06:36:40.866Z] Answer stored in ref: Red
+[2025-10-24T06:36:41.322Z] handleAnswerSelect called with answer: Red,Green
+[2025-10-24T06:36:41.322Z] Answer stored in ref: Red,Green
+[2025-10-24T06:36:41.688Z] handleAnswerSelect called with answer: Red,Green,Yellow
+[2025-10-24T06:36:41.689Z] Answer stored in ref: Red,Green,Yellow
+[2025-10-24T06:36:48.770Z] handleTimeUp called
+[2025-10-24T06:36:48.772Z] handleTimeUp - Submitting answer: Red,Green,Yellow
+[2025-10-24T06:36:48.774Z] handleTimeUp - Score: 5.83, Correct: false
+[2025-10-24T06:36:48.820Z] handleTimeUp - Answer submitted
+[2025-10-24T06:36:54.768Z] Question changed from null to 3
+[2025-10-24T06:36:54.769Z] Previous answer: 
+[2025-10-24T06:36:54.769Z] hasSubmittedRef reset: false
+[2025-10-24T06:36:55.036Z] Quiz loaded
+[2025-10-24T06:36:56.258Z] handleAnswerSelect called with answer: 56
+[2025-10-24T06:36:56.258Z] Answer stored in ref: 56
+[2025-10-24T06:37:04.476Z] handleTimeUp called
+[2025-10-24T06:37:04.478Z] handleTimeUp - Submitting answer: 56
+[2025-10-24T06:37:04.481Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:37:04.508Z] handleTimeUp - Answer submitted
+[2025-10-24T06:37:10.525Z] Question changed from null to 4
+[2025-10-24T06:37:10.525Z] Previous answer: 
+[2025-10-24T06:37:10.525Z] hasSubmittedRef reset: false
+[2025-10-24T06:37:10.786Z] Quiz loaded
+[2025-10-24T06:37:12.584Z] handleAnswerSelect called with answer: Python
+[2025-10-24T06:37:12.585Z] Answer stored in ref: Python
+[2025-10-24T06:37:12.846Z] handleAnswerSelect called with answer: Python,HTML
+[2025-10-24T06:37:12.847Z] Answer stored in ref: Python,HTML
+[2025-10-24T06:37:13.485Z] handleAnswerSelect called with answer: Python,HTML,JavaScript
+[2025-10-24T06:37:13.485Z] Answer stored in ref: Python,HTML,JavaScript
+[2025-10-24T06:37:20.176Z] handleTimeUp called
+[2025-10-24T06:37:20.178Z] handleTimeUp - Submitting answer: Python,HTML,JavaScript
+[2025-10-24T06:37:20.181Z] handleTimeUp - Score: 5.83, Correct: false
+[2025-10-24T06:37:20.207Z] handleTimeUp - Answer submitted
+[2025-10-24T06:37:26.861Z] Question changed from null to 5
+[2025-10-24T06:37:26.862Z] Previous answer: 
+[2025-10-24T06:37:26.862Z] hasSubmittedRef reset: false
+[2025-10-24T06:37:27.101Z] Quiz loaded
+[2025-10-24T06:37:28.619Z] handleAnswerSelect called with answer: William Shakespeare
+[2025-10-24T06:37:28.619Z] Answer stored in ref: William Shakespeare
+[2025-10-24T06:37:35.814Z] handleTimeUp called
+[2025-10-24T06:37:35.816Z] handleTimeUp - Submitting answer: William Shakespeare
+[2025-10-24T06:37:35.817Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:37:35.854Z] handleTimeUp - Answer submitted
+[2025-10-24T06:37:41.891Z] Question changed from null to 6
+[2025-10-24T06:37:41.891Z] Previous answer: 
+[2025-10-24T06:37:41.891Z] hasSubmittedRef reset: false
+[2025-10-24T06:37:42.155Z] Quiz loaded
+[2025-10-24T06:37:43.645Z] handleAnswerSelect called with answer: Dolphin
+[2025-10-24T06:37:43.646Z] Answer stored in ref: Dolphin
+[2025-10-24T06:37:43.918Z] handleAnswerSelect called with answer: Dolphin,Shark
+[2025-10-24T06:37:43.918Z] Answer stored in ref: Dolphin,Shark
+[2025-10-24T06:37:44.105Z] handleAnswerSelect called with answer: Dolphin,Shark,Octopus
+[2025-10-24T06:37:44.105Z] Answer stored in ref: Dolphin,Shark,Octopus
+[2025-10-24T06:37:51.519Z] handleTimeUp called
+[2025-10-24T06:37:51.522Z] handleTimeUp - Submitting answer: Dolphin,Shark,Octopus
+[2025-10-24T06:37:51.525Z] handleTimeUp - Score: 1.67, Correct: false
+[2025-10-24T06:37:51.571Z] handleTimeUp - Answer submitted
+[2025-10-24T06:37:56.922Z] Question changed from null to 20
+[2025-10-24T06:37:56.922Z] Previous answer: 
+[2025-10-24T06:37:56.922Z] hasSubmittedRef reset: false
+[2025-10-24T06:37:57.160Z] Quiz loaded
+[2025-10-24T06:37:58.556Z] handleAnswerSelect called with answer: Tokyo
+[2025-10-24T06:37:58.556Z] Answer stored in ref: Tokyo
+[2025-10-24T06:38:12.059Z] handleTimeUp called
+[2025-10-24T06:38:12.062Z] handleTimeUp - Submitting answer: Tokyo
+[2025-10-24T06:38:12.063Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:38:12.089Z] handleTimeUp - Answer submitted
+[2025-10-24T06:38:18.561Z] Question changed from null to 21
+[2025-10-24T06:38:18.561Z] Previous answer: 
+[2025-10-24T06:38:18.561Z] hasSubmittedRef reset: false
+[2025-10-24T06:38:18.779Z] Quiz loaded
+[2025-10-24T06:38:19.456Z] handleAnswerSelect called with answer: 0
+[2025-10-24T06:38:19.456Z] Answer stored in ref: 0
+[2025-10-24T06:38:27.556Z] handleTimeUp called
+[2025-10-24T06:38:27.559Z] handleTimeUp - Submitting answer: 0
+[2025-10-24T06:38:27.559Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:38:27.586Z] handleTimeUp - Answer submitted
+[2025-10-24T06:38:33.341Z] Question changed from null to 22
+[2025-10-24T06:38:33.341Z] Previous answer: 
+[2025-10-24T06:38:33.341Z] hasSubmittedRef reset: false
+[2025-10-24T06:38:33.559Z] Quiz loaded
+[2025-10-24T06:38:35.188Z] handleAnswerSelect called with answer: H2O
+[2025-10-24T06:38:35.188Z] Answer stored in ref: H2O
+[2025-10-24T06:38:43.079Z] handleTimeUp called
+[2025-10-24T06:38:43.087Z] handleTimeUp - Submitting answer: H2O
+[2025-10-24T06:38:43.094Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:38:43.183Z] handleTimeUp - Answer submitted
+[2025-10-24T06:38:45.406Z] Question changed from null to 23
+[2025-10-24T06:38:45.406Z] Previous answer: 
+[2025-10-24T06:38:45.406Z] hasSubmittedRef reset: false
+[2025-10-24T06:38:45.619Z] Quiz loaded
+[2025-10-24T06:38:47.555Z] handleAnswerSelect called with answer: George Washington
+[2025-10-24T06:38:47.555Z] Answer stored in ref: George Washington
+[2025-10-24T06:38:55.050Z] handleTimeUp called
+[2025-10-24T06:38:55.053Z] handleTimeUp - Submitting answer: George Washington
+[2025-10-24T06:38:55.054Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:38:55.089Z] handleTimeUp - Answer submitted
+[2025-10-24T06:38:57.850Z] Question changed from null to 24
+[2025-10-24T06:38:57.851Z] Previous answer: 
+[2025-10-24T06:38:57.851Z] hasSubmittedRef reset: false
+[2025-10-24T06:38:58.064Z] Quiz loaded
+[2025-10-24T06:38:59.890Z] handleAnswerSelect called with answer: Nile
+[2025-10-24T06:38:59.890Z] Answer stored in ref: Nile
+[2025-10-24T06:39:07.488Z] handleTimeUp called
+[2025-10-24T06:39:07.491Z] handleTimeUp - Submitting answer: Nile
+[2025-10-24T06:39:07.491Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:39:07.525Z] handleTimeUp - Answer submitted
+[2025-10-24T06:39:09.390Z] Question changed from null to 25
+[2025-10-24T06:39:09.390Z] Previous answer: 
+[2025-10-24T06:39:09.390Z] hasSubmittedRef reset: false
+[2025-10-24T06:39:09.600Z] Quiz loaded
+[2025-10-24T06:39:11.702Z] handleAnswerSelect called with answer: r
+[2025-10-24T06:39:11.702Z] Answer stored in ref: r
+[2025-10-24T06:39:12.140Z] handleAnswerSelect called with answer: ro
+[2025-10-24T06:39:12.140Z] Answer stored in ref: ro
+[2025-10-24T06:39:12.445Z] handleAnswerSelect called with answer: rom
+[2025-10-24T06:39:12.445Z] Answer stored in ref: rom
+[2025-10-24T06:39:12.931Z] handleAnswerSelect called with answer: rome
+[2025-10-24T06:39:12.932Z] Answer stored in ref: rome
+[2025-10-24T06:39:19.038Z] handleTimeUp called
+[2025-10-24T06:39:19.040Z] handleTimeUp - Submitting answer: rome
+[2025-10-24T06:39:19.041Z] handleTimeUp - Score: 10, Correct: true
+[2025-10-24T06:39:19.061Z] handleTimeUp - Answer submitted
+[2025-10-24T06:39:24.736Z] Question changed from null to 26
+[2025-10-24T06:39:24.737Z] Previous answer: 
+[2025-10-24T06:39:24.737Z] hasSubmittedRef reset: false
+[2025-10-24T06:39:24.955Z] Quiz loaded
+[2025-10-24T06:39:27.587Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:27.587Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:33.626Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:33.627Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:34.440Z] handleTimeUp called
+[2025-10-24T06:39:34.440Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:39:34.440Z] handleTimeUp - Score: 0, Correct: false
+[2025-10-24T06:39:34.460Z] handleTimeUp - Answer submitted
+[2025-10-24T06:39:40.549Z] Question changed from null to 27
+[2025-10-24T06:39:40.550Z] Previous answer: 
+[2025-10-24T06:39:40.550Z] hasSubmittedRef reset: false
+[2025-10-24T06:39:40.792Z] Quiz loaded
+[2025-10-24T06:39:43.156Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:43.156Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:43.899Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:43.899Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:49.442Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:49.443Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:50.086Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:50.086Z] Answer stored in ref: [object Object]
+[2025-10-24T06:39:50.192Z] handleTimeUp called
+[2025-10-24T06:39:50.192Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:39:50.193Z] handleTimeUp - Score: 2.5, Correct: false
+[2025-10-24T06:39:50.198Z] handleTimeUp - Answer submitted
+[2025-10-24T06:39:56.199Z] Question changed from null to 28
+[2025-10-24T06:39:56.199Z] Previous answer: 
+[2025-10-24T06:39:56.199Z] hasSubmittedRef reset: false
+[2025-10-24T06:39:56.435Z] Quiz loaded
+[2025-10-24T06:39:59.062Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:39:59.062Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:00.842Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:00.842Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:05.830Z] handleTimeUp called
+[2025-10-24T06:40:05.833Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:40:05.835Z] handleTimeUp - Score: 2.5, Correct: false
+[2025-10-24T06:40:05.862Z] handleTimeUp - Answer submitted
+[2025-10-24T06:40:11.767Z] Question changed from null to 29
+[2025-10-24T06:40:11.768Z] Previous answer: 
+[2025-10-24T06:40:11.768Z] hasSubmittedRef reset: false
+[2025-10-24T06:40:11.988Z] Quiz loaded
+[2025-10-24T06:40:16.435Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:16.435Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:21.508Z] handleTimeUp called
+[2025-10-24T06:40:21.511Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:40:21.511Z] handleTimeUp - Score: 2.5, Correct: false
+[2025-10-24T06:40:21.530Z] handleTimeUp - Answer submitted
+[2025-10-24T06:40:27.543Z] Question changed from null to 30
+[2025-10-24T06:40:27.543Z] Previous answer: 
+[2025-10-24T06:40:27.543Z] hasSubmittedRef reset: false
+[2025-10-24T06:40:27.773Z] Quiz loaded
+[2025-10-24T06:40:30.567Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:30.567Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:32.447Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:32.447Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:37.208Z] handleTimeUp called
+[2025-10-24T06:40:37.211Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:40:37.212Z] handleTimeUp - Score: 0, Correct: false
+[2025-10-24T06:40:37.240Z] handleTimeUp - Answer submitted
+[2025-10-24T06:40:43.210Z] Question changed from null to 31
+[2025-10-24T06:40:43.210Z] Previous answer: 
+[2025-10-24T06:40:43.210Z] hasSubmittedRef reset: false
+[2025-10-24T06:40:43.470Z] Quiz loaded
+[2025-10-24T06:40:50.083Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:50.083Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:50.187Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:50.187Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:50.279Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:50.279Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:50.392Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:50.392Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:50.443Z] handleAnswerSelect called with answer: [object Object]
+[2025-10-24T06:40:50.443Z] Answer stored in ref: [object Object]
+[2025-10-24T06:40:52.903Z] handleTimeUp called
+[2025-10-24T06:40:52.906Z] handleTimeUp - Submitting answer: [object Object]
+[2025-10-24T06:40:52.909Z] handleTimeUp - Score: 0, Correct: false
+[2025-10-24T06:40:52.927Z] handleTimeUp - Answer submitted

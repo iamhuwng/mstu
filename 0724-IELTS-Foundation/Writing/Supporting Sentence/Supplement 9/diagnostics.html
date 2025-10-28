@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Loader Diagnostic</title>
+    <style>
+        body { font-family: monospace; padding: 2em; background-color: #f8f9fa; }
+        .status { padding: 8px; margin-bottom: 5px; border-radius: 4px; font-weight: bold; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .fail { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        pre { white-space: pre-wrap; word-wrap: break-word; background: #e9ecef; padding: 1em; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Application Module Loader Test</h1>
+    <p>This test attempts to load each critical JavaScript file. The results below will show us exactly which file is failing to load.</p>
+    <div id="results"></div>
+
+    <script type="module">
+        const resultsDiv = document.getElementById('results');
+
+        const modulesToTest = [
+            // Core Application Files
+            '/js/main.js',
+            '/js/auth.js',
+            '/js/quiz-handler.js',
+            '/js/submission.js',
+            '/js/renderer.js',
+            '/js/utils.js',
+            // Refactored Quiz Modules
+            '/js/quiz/dom-utils.js',
+            '/js/quiz/progress-manager.js',
+            '/js/quiz/event-handlers.js',
+            // Renderer Modules
+            '/js/renderers/mcqRenderer.js',
+            '/js/renderers/readingRenderer.js',
+            '/js/renderers/writingRenderer.js'
+        ];
+
+        async function runTest() {
+            for (const path of modulesToTest) {
+                let output = `<div class="status fail"><strong>FAIL:</strong> ${path}<br>`;
+                try {
+                    await import(path);
+                    output = `<div class="status success"><strong>SUCCESS:</strong> ${path}</div>`;
+                } catch (error) {
+                    output += `<pre>${error.stack || error.toString()}</pre></div>`;
+                }
+                resultsDiv.innerHTML += output;
+            }
+        }
+
+        runTest();
+    </script>
+</body>
+</html>

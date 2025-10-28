@@ -1,0 +1,16 @@
+﻿* text=auto eol=lf
+
+# Windows scripts dùng CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Unix scripts giữ LF
+*.sh text eol=lf
+
+# Nhị phân
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary

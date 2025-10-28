@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Vue.js library -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Quill.js Rich Text Editor assets -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal-content {
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+        .skill-tag {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .skill-writing { background-color: #e8f5e9; color: #388e3c; border-color: #a5d6a7; }
+        .skill-listening { background-color: #e3f2fd; color: #1976d2; border-color: #90caf9; }
+        .skill-reading { background-color: #fff3e0; color: #f57c00; border-color: #ffcc80; }
+        .skill-speaking { background-color: #F3E5F5; color: #8E24AA; border-color: #CE93D8; }
+        .skill-full, .skill-mid, .skill-end, .skill-test { background-color: #E0F2F1; color: #00796B; border-color: #80CBC4; }
+
+        /* Custom styles for Quill editor */
+        .ql-toolbar.ql-snow {
+            border-radius: 8px 8px 0 0 !important;
+            border-color: #d1d5db !important;
+            background-color: #f9fafb;
+        }
+        .ql-container.ql-snow {
+            border-radius: 0 0 8px 8px !important;
+            border-color: #d1d5db !important;
+            min-height: 120px;
+            font-size: 1rem;
+        }
+        .ql-editor {
+            font-family: 'Inter', sans-serif;
+        }
+        .feedback-content p { margin-bottom: 1rem; }
+        .feedback-content ul, .feedback-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .feedback-content strong { font-weight: 700; }
+        .feedback-content em { font-style: italic; }
+        
+        .upload-indicator {
+             position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+             background-color: rgba(0,0,0,0.8); color: white; padding: 20px 30px;
+             border-radius: 10px; z-index: 2000; font-weight: bold;
+        }
+
+        [v-cloak] { display: none; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+<div id="app" v-cloak>
+    <div v-if="isUploading" class="upload-indicator">Uploading...</div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-700">
+                <span class="text-blue-600">STUDENT PORTAL</span> 
+            </div>
+            <div>
+                <button @click="navigate('home')" :class="{'bg-blue-600 text-white': page === 'home', 'bg-gray-200 text-gray-700': page !== 'home'}" class="px-4 py-2 rounded-lg font-semibold mr-2 transition-colors">Home</button>
+                <button @click="navigate('admin')" :class="{'bg-blue-600 text-white': page === 'admin', 'bg-gray-200 text-gray-700': page !== 'admin'}" class="px-4 py-2 rounded-lg font-semibold transition-colors">Teacher Admin</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <!-- Home Page: Student List -->
+        <div v-if="page === 'home'">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Welcome to Your Progress Portal</h1>
+                <p class="text-lg text-gray-600 mt-4">Click your name to view your assignments, scores, and feedback.</p>
+            </div>
+
+            <div class="mb-8 max-w-lg mx-auto">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="text" v-model="searchQuery" placeholder="Search by name, class, school, or email..." class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:text-sm shadow-sm">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div v-for="student in displayedStudents" :key="student.id" @click="viewStudentDashboard(student.id)"
+                     class="card p-6 flex items-center space-x-4 cursor-pointer">
+                    <img :src="student.avatarUrl" @error="avatarError" class="h-16 w-16 rounded-full object-cover border-2 border-gray-200" :alt="student.name">
+                    <div>
+                        <p class="text-xl font-semibold text-gray-800">{{ student.name }}</p>
+                        <p class="text-gray-500">{{ student.class }}</p>
+                        <p v-if="student.school" class="text-sm text-gray-500">{{ student.school }}</p>
+                        <p class="text-sm text-gray-400 mt-1">{{ getAssignmentsForStudent(student.id).length }} assignments</p>
+                    </div>
+                </div>
+                 <div v-if="displayedStudents.length === 0" class="md:col-span-2 lg:col-span-3 text-center py-16 bg-white rounded-lg shadow-md">
+                    <p class="text-xl text-gray-500">No students found. Add a student in the Teacher Admin panel or adjust your search.</p>
+                </div>
+            </div>
+            <div v-if="!searchQuery" class="text-center mt-8 text-gray-500">
+                Showing a random selection of students. Use the search bar to find a specific student.
+            </div>
+        </div>
+
+        <!-- Teacher Admin Page -->
+        <div v-if="page === 'admin' && isAdminLoggedIn">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-6 border-b border-gray-200">
+                    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                        <button @click="adminTab = 'students'" :class="{'border-blue-500 text-blue-600': adminTab === 'students', 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300': adminTab !== 'students'}" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">
+                            Manage Students
+                        </button>
+                        <button @click="adminTab = 'assignments'" :class="{'border-blue-500 text-blue-600': adminTab === 'assignments', 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300': adminTab !== 'assignments'}" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">
+                            Manage Feedback
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Manage Students Section -->
+                <div v-if="adminTab === 'students'">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Add New Student</h2>
+                            <form @submit.prevent="addStudent" class="space-y-4">
+                                <div>
+                                    <label class="font-semibold text-gray-600">Student Name</label>
+                                    <input type="text" v-model="newStudentForm.name" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                                </div>
+                                <div>
+                                    <label class="font-semibold text-gray-600">Avatar</label>
+                                     <div class="mt-1 flex items-center space-x-4">
+                                        <img :src="newStudentForm.avatarUrl || 'https://placehold.co/100x100/?text=Avatar'" class="h-16 w-16 rounded-full object-cover border-2 border-gray-200">
+                                        <input type="file" @change="handleAvatarUpload($event, newStudentForm)" class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="font-semibold text-gray-600">Class</label>
+                                    <input type="text" v-model="newStudentForm.class" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                                </div>
+                                 <div>
+                                    <label class="font-semibold text-gray-600">School</label>
+                                    <input type="text" v-model="newStudentForm.school" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                                </div>
+                                 <div>
+                                    <label class="font-semibold text-gray-600">Address</label>
+                                    <input type="text" v-model="newStudentForm.address" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                                </div>
+                                 <div>
+                                    <label class="font-semibold text-gray-600">Phone Number</label>
+                                    <input type="tel" v-model="newStudentForm.phone" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                                </div>
+                                <div>
+                                    <label class="font-semibold text-gray-600">Date of Birth</label>
+                                    <input type="date" v-model="newStudentForm.dob" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                                </div>
+                                <div>
+                                    <label class="font-semibold text-gray-600">Email</label>
+                                    <input type="email" v-model="newStudentForm.email" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                                </div>
+                                <button type="submit" class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg">Add Student</button>
+                            </form>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                             <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Current Students</h2>
+                              <div class="relative mb-4">
+                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <input type="text" v-model="adminSearchQuery" placeholder="Search students..." class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50">
+                            </div>
+                             <div class="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                                 <div v-for="student in filteredAdminStudents" :key="student.id" @click="openEditStudentModal(student)" class="flex items-center p-3 bg-gray-50 hover:bg-gray-100 rounded-lg cursor-pointer">
+                                     <img :src="student.avatarUrl" @error="avatarError" class="h-12 w-12 rounded-full object-cover" :alt="student.name">
+                                     <div class="ml-4">
+                                         <p class="font-semibold text-gray-800">{{ student.name }}</p>
+                                         <p class="text-sm text-gray-500">{{ student.class }}</p>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Feedback Section -->
+                <div v-if="adminTab === 'assignments'">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-4">{{ editingAssignmentId === null ? 'Add New Assignment Feedback' : 'Edit Assignment Feedback' }}</h2>
+                            <form @submit.prevent="saveAssignment" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="font-semibold text-gray-600">Student</label>
+                                        <div v-if="!form.studentId" class="relative">
+                                            <input type="text" v-model="assignmentStudentSearch" @focus="assignmentStudentSearch = ''" placeholder="Search for a student..." class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                                            <div v-if="assignmentStudentSearch && filteredAssignmentStudents.length > 0" class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto">
+                                                <ul>
+                                                    <li v-for="student in filteredAssignmentStudents" :key="student.id" @click="selectStudentForAssignment(student)" class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center space-x-3">
+                                                        <img :src="student.avatarUrl" @error="avatarError" class="h-8 w-8 rounded-full object-cover" :alt="student.name">
+                                                        <span>{{ student.name }} - {{ student.class }}</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div v-if="assignmentStudentSearch && filteredAssignmentStudents.length === 0" class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg p-4 text-gray-500">
+                                                No students found.
+                                            </div>
+                                        </div>
+                                        <div v-else class="mt-1 flex items-center justify-between p-2 bg-blue-50 border border-blue-200 rounded-md">
+                                            <div class="flex items-center">
+                                                 <img :src="selectedStudentForAssignment.avatarUrl" @error="avatarError" class="h-8 w-8 rounded-full object-cover mr-3" :alt="selectedStudentForAssignment.name">
+                                                <span class="font-semibold text-blue-800">{{ selectedStudentForAssignment.name }}</span>
+                                            </div>
+                                            <button @click="clearStudentSelection" type="button" class="text-sm text-red-600 hover:text-red-800 font-semibold px-2">Change</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="font-semibold text-gray-600">Assignment Title</label>
+                                        <input type="text" v-model="form.title" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                                    </div>
+                                </div>
+                                <div class="border-t pt-6">
+                                    <label class="font-semibold text-gray-600">Add Skills for this Assignment</label>
+                                    <div class="flex items-center mt-2 space-x-2">
+                                        <select v-model="skillToAdd" class="block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                                            <option v-for="skill in availableSkills" :value="skill">{{ skill }}</option>
+                                        </select>
+                                        <button @click="addSkillToForm" type="button" class="px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300">Add</button>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mt-3" v-if="form.selectedSkills.length > 0">
+                                        <span v-for="skill in form.selectedSkills" :key="skill" class="flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                            {{ skill }}
+                                            <button @click="removeSkillFromForm(skill)" type="button" class="ml-2 text-blue-600 hover:text-blue-800">&times;</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div v-if="form.selectedSkills.length > 0" class="space-y-6 border-t pt-6">
+                                    <div v-for="skillName in form.selectedSkills" :key="skillName">
+                                        <h3 class="text-xl font-bold text-gray-700 mb-3">{{ skillName }}</h3>
+                                        <div v-if="skillName === 'Writing'" class="mb-4">
+                                            <label class="font-semibold text-gray-600">Average Score</label>
+                                            <input type="text" v-model="form.skills.Writing.averageScore" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" placeholder="e.g., 6.5">
+                                        </div>
+                                        <div class="space-y-4">
+                                            <div v-for="(part, index) in form.skills[skillName].parts" :key="part.id" class="p-4 bg-gray-50 rounded-lg border">
+                                                <div @click="togglePartCollapse(part)" class="flex justify-between items-center cursor-pointer">
+                                                    <p class="font-bold text-gray-700">{{ getPartLabel(skillName, index) }}</p>
+                                                    <div class="flex items-center">
+                                                        <button @click.stop="removeSkillPart(skillName, part.id)" type="button" class="text-gray-400 hover:text-red-500 text-2xl font-bold mr-2">&times;</button>
+                                                        <svg class="w-6 h-6 text-gray-600 transition-transform duration-300" :class="part.isCollapsed ? '' : 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <div v-show="!part.isCollapsed" class="mt-4 border-t pt-4">
+                                                    <div class="space-y-2">
+                                                        <label class="font-semibold text-gray-600 text-sm">Submission Images</label>
+                                                         <div v-for="(url, urlIndex) in part.submissionUrls" :key="urlIndex" class="flex items-center space-x-2">
+                                                            <div class="flex-grow">
+                                                                <div v-if="url" class="flex items-center space-x-2">
+                                                                    <img :src="url" class="h-12 w-12 object-cover rounded-md border">
+                                                                    <p class="text-xs text-gray-500 truncate">{{ url.split('/').pop() }}</p>
+                                                                </div>
+                                                                <input type="file" @change="handlePartImageUpload($event, part, urlIndex)" class="text-sm text-gray-500 file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                                                            </div>
+                                                        </div>
+                                                        <button @click="addImageUrl(part)" type="button" class="text-xs text-blue-600 hover:text-blue-800 font-semibold">+ Add Image</button>
+                                                    </div>
+                                                    <div class="flex items-center space-x-2 mt-3">
+                                                        <input type="text" v-model="part.studentScore" class="block w-full bg-white border rounded-md py-2 px-3" placeholder="Score">
+                                                        <span class="text-gray-500">/</span>
+                                                        <input type="text" v-model="part.maxScore" class="block w-full bg-white border rounded-md py-2 px-3" placeholder="Max">
+                                                    </div>
+                                                    <div class="mt-3">
+                                                        <label class="font-semibold text-gray-600 text-sm">Feedback</label>
+                                                        <div :ref="el => setPartEditorRef(el, skillName, part.id)" class="mt-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button @click="addSkillPart(skillName)" type="button" class="mt-2 text-sm text-blue-600 hover:text-blue-800 font-semibold">+ Add {{ getPartNoun(skillName, 1) }}</button>
+                                    </div>
+                                </div>
+                                <div class="border-t pt-6">
+                                    <label class="font-semibold text-gray-600">Overall Feedback</label>
+                                    <div ref="overallFeedbackEditor" class="mt-1"></div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg">{{ editingAssignmentId === null ? 'Add Assignment Feedback' : 'Update Assignment Feedback' }}</button>
+                                    <button v-if="editingAssignmentId !== null" @click="cancelEdit" type="button" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-4">Student Assignment Overview</h2>
+                            <div class="space-y-4 max-h-[700px] overflow-y-auto pr-2">
+                                 <div v-for="student in students" :key="student.id" @click="openStudentAssignmentsModal(student)" class="p-4 border rounded-lg bg-gray-50 hover:bg-gray-100 cursor-pointer">
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center">
+                                            <img :src="student.avatarUrl" @error="avatarError" class="h-10 w-10 rounded-full object-cover" :alt="student.name">
+                                            <div class="ml-3">
+                                                <p class="font-bold text-gray-800">{{ student.name }}</p>
+                                                <p class="text-xs text-gray-500">{{ student.class }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Dashboard -->
+        <div v-if="page === 'studentDashboard' && selectedStudent">
+            <div class="bg-white rounded-lg shadow-lg -mt-16">
+                <div class="h-32 bg-blue-500 rounded-t-lg"></div>
+                <div class="text-center p-6">
+                    <img :src="selectedStudent.avatarUrl" @error="avatarError" class="h-24 w-24 rounded-full object-cover border-4 border-white shadow-lg mx-auto -mt-16 mb-4" :alt="selectedStudent.name">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800">{{ selectedStudent.name }}</h1>
+                    <p class="text-lg text-gray-600 mt-2">{{ selectedStudent.class }}</p>
+                    <p v-if="selectedStudent.school" class="text-md text-gray-500 mt-1">{{ selectedStudent.school }}</p>
+                    <div v-if="selectedStudent.phone || selectedStudent.address" class="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500 max-w-md mx-auto">
+                       <p v-if="selectedStudent.phone"><strong>Phone:</strong> {{ selectedStudent.phone }}</p>
+                       <p v-if="selectedStudent.address" class="mt-1"><strong>Address:</strong> {{ selectedStudent.address }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 mb-8">
+                <p class="text-md text-gray-500">Here is a summary of all your submitted work. Click an assignment to see the details.</p>
+            </div>
+            <div v-if="getAssignmentsForStudent(selectedStudent.id).length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div v-for="assignment in getAssignmentsForStudent(selectedStudent.id)" :key="assignment.id" @click="viewAssignmentDetail(assignment)" class="card p-6 cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">{{ assignment.title }}</h3>
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            <span v-for="skill in assignment.skills" :key="skill.name" :class="getSkillClass(skill.name)" class="skill-tag text-xs">{{ skill.name }}</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-200 text-right">
+                         <p class="text-gray-500 text-sm">Graded: {{ assignment.dateGraded }}</p>
+                    </div>
+                </div>
+            </div>
+            <div v-else class="text-center py-16 bg-white rounded-lg shadow-md">
+                <p class="text-xl text-gray-500">No assignments have been graded for {{ selectedStudent.name }} yet.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Password Modal -->
+    <div v-if="showPasswordModal" class="modal-backdrop">
+        <div class="modal-content card max-w-sm w-full p-8">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Admin Login</h2>
+            <form @submit.prevent="handleLogin">
+                <div>
+                    <label for="password" class="font-semibold text-gray-600">Password</label>
+                    <input type="password" v-model="passwordInput" id="password" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                </div>
+                <p v-if="loginError" class="text-red-500 text-sm mt-2">{{ loginError }}</p>
+                <div class="mt-8 flex justify-between items-center">
+                    <button type="button" @click="showPasswordModal = false" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors">Cancel</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-md">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Assignment Detail Modal -->
+    <div v-if="selectedAssignment" class="modal-backdrop" @click.self="selectedAssignment = null">
+        <div class="modal-content card max-w-4xl w-full p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Left Navigation -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Nhận xét của giáo viên</h3>
+                    <div class="space-y-2">
+                        <button @click="modalView = 'overall'" :class="{'bg-blue-700 text-white shadow-lg': modalView === 'overall', 'bg-white hover:bg-gray-100 text-gray-700 border': modalView !== 'overall'}" class="w-full text-left font-bold p-3 rounded-lg transition-colors whitespace-normal break-words">Nhận xét chung</button>
+                        <button v-for="skill in selectedAssignment.skills" :key="skill.name" @click="selectSkillView(skill.name)" :class="getSkillButtonClass(skill.name)" class="w-full text-left font-bold p-3 rounded-lg transition-colors whitespace-normal break-words">
+                           {{ getVietnameseSkillName(skill.name) }}
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="md:col-span-3">
+                     <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Nhận xét của giáo viên</h2>
+                    <!-- Overall View -->
+                    <div v-if="modalView === 'overall'">
+                        <div v-html="selectedAssignment.overallFeedback" class="text-gray-700 whitespace-pre-wrap mb-6 p-4 bg-gray-50 rounded-lg border feedback-content"></div>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Bảng điểm</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border rounded-lg">
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kỹ năng</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Điểm</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr v-for="skill in selectedAssignment.skills" :key="skill.name">
+                                        <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{{ skill.name }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-700">
+                                            <div v-if="skill.name === 'Writing'" class="grid grid-cols-2 gap-4 items-center">
+                                                <div class="text-center font-bold text-lg border-r pr-2">
+                                                    {{ skill.averageScore || 'N/A' }}
+                                                </div>
+                                                <div>
+                                                    <div v-if="skill.parts && skill.parts.length > 0">
+                                                        <div v-for="(part, index) in skill.parts" :key="index" class="text-sm border-b last:border-b-0 py-1 flex justify-between">
+                                                            <span>Task {{ index + 1 }}:</span>
+                                                            <span class="font-bold">{{ part.studentScore || 'N/A' }} / {{ part.maxScore || 'N/A' }}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div v-else class="text-sm text-gray-500">No tasks.</div>
+                                                </div>
+                                            </div>
+                                            <div v-else>
+                                                <span v-if="calculateSkillTotal(skill).isText">{{ calculateSkillTotal(skill).text }}</span>
+                                                <span v-else>{{ calculateSkillTotal(skill).student }}/{{ calculateSkillTotal(skill).max }}</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Skill-Specific View -->
+                    <div v-else>
+                         <div v-if="activePartDataInModal && activePartDataInModal.submissionUrls[0]" class="mb-4">
+                            <div class="flex items-center justify-center space-x-2">
+                                 <button @click="prevImage" v-if="activePartDataInModal.submissionUrls.length > 1" class="flex-shrink-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors border border-gray-200">
+                                    <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                 </button>
+                                 <div class="relative w-full max-h-96 bg-gray-200 rounded-lg overflow-auto flex-grow">
+                                    <div class="flex justify-center items-center min-h-full">
+                                        <img :src="activePartDataInModal.submissionUrls[currentImageIndex]" @error="imageError" alt="Submission for this part" class="flex-shrink-0 max-w-full h-auto">
+                                    </div>
+                                    <div v-if="activePartDataInModal.submissionUrls.length > 1" class="absolute bottom-2 right-2 bg-black bg-opacity-60 text-white text-xs font-semibold px-2 py-1 rounded-md">
+                                        {{ currentImageIndex + 1 }} / {{ activePartDataInModal.submissionUrls.length }}
+                                    </div>
+                                </div>
+                                 <button @click="nextImage" v-if="activePartDataInModal.submissionUrls.length > 1" class="flex-shrink-0 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors border border-gray-200">
+                                    <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                 </button>
+                            </div>
+                        </div>
+
+                        <div v-if="activePartDataInModal">
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4 border-b border-gray-200 pb-2 space-y-2 sm:space-y-0">
+                                <div class="flex items-baseline">
+                                    
+                                    <div class="flex items-baseline ml-2">
+                                        <div v-if="activeSkillDataInModal && activeSkillDataInModal.parts.length > 1" class="relative">
+                                            <select v-model="modalSelectedPartIndex" class="text-xl font-bold text-gray-800 bg-gray-100 border-2 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 py-1 pl-3 pr-10 appearance-none cursor-pointer">
+                                                <option v-for="(part, index) in activeSkillDataInModal.parts" :value="index">
+                                                    {{ getPartLabel(modalView, index) }}
+                                                </option>
+                                            </select>
+                                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                                <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                            </div>
+                                        </div>
+                                        <span v-else class="text-xl font-bold text-gray-800">{{ getPartLabel(modalView, 0) }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-gray-700 whitespace-pre-wrap p-4 bg-gray-50 rounded-lg border feedback-content">
+                                <h4 class="font-bold text-gray-600 mb-2">Feedback:</h4>
+                                <div v-html="activePartDataInModal.feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button @click="selectedAssignment = null" class="mt-6 w-full bg-gray-200 text-gray-800 font-bold py-3 px-4 rounded-lg hover:bg-gray-300">Close</button>
+        </div>
+    </div>
+    
+    <!-- Edit Student Modal -->
+    <div v-if="showEditStudentModal" class="modal-backdrop" @click.self="closeEditStudentModal">
+        <div class="modal-content card max-w-lg w-full p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-4">Edit Student Profile</h2>
+            <form v-if="studentToEdit" @submit.prevent="updateStudent" class="space-y-4">
+                <div>
+                    <label class="font-semibold text-gray-600">Student Name</label>
+                    <input type="text" v-model="studentToEdit.name" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                </div>
+                 <div>
+                    <label class="font-semibold text-gray-600">Avatar</label>
+                     <div class="mt-1 flex items-center space-x-4">
+                        <img :src="studentToEdit.avatarUrl || 'https://placehold.co/100x100/?text=Avatar'" class="h-16 w-16 rounded-full object-cover border-2 border-gray-200">
+                        <input type="file" @change="handleAvatarUpload($event, studentToEdit)" class="text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                    </div>
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">Class</label>
+                    <input type="text" v-model="studentToEdit.class" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">School</label>
+                    <input type="text" v-model="studentToEdit.school" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">Address</label>
+                    <input type="text" v-model="studentToEdit.address" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">Phone Number</label>
+                    <input type="tel" v-model="studentToEdit.phone" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3">
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">Date of Birth</label>
+                    <input type="date" v-model="studentToEdit.dob" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                </div>
+                <div>
+                    <label class="font-semibold text-gray-600">Email</label>
+                    <input type="email" v-model="studentToEdit.email" class="mt-1 block w-full bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-3" required>
+                </div>
+                <div class="mt-8 flex justify-end space-x-4">
+                    <button type="button" @click="closeEditStudentModal" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-300">Cancel</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Student Assignments Modal -->
+     <div v-if="showStudentAssignmentsModal" class="modal-backdrop" @click.self="closeStudentAssignmentsModal">
+        <div class="modal-content card max-w-2xl w-full p-8">
+            <h2 class="text-2xl font-bold mb-2 text-gray-800">{{ studentForAssignments.name }}'s Assignments</h2>
+             <p class="text-sm text-gray-500 mb-6 border-b pb-4">{{ studentForAssignments.class }}</p>
+             <div class="relative mb-4">
+                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
+                </div>
+                <input type="text" v-model="assignmentSearchQuery" placeholder="Search assignments by title..." class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-gray-50">
+            </div>
+             <div class="space-y-3 max-h-[50vh] overflow-y-auto pr-2">
+                 <div v-for="assignment in filteredModalAssignments" :key="assignment.id" class="p-3 bg-white rounded-md border">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="font-semibold text-gray-700">{{ assignment.title }}</p>
+                            <p class="text-xs text-gray-400">Graded: {{ assignment.dateGraded }}</p>
+                        </div>
+                        <div class="flex space-x-2 flex-shrink-0">
+                            <button @click="editAssignment(assignment)" class="px-2 py-1 text-xs bg-yellow-400 hover:bg-yellow-500 text-white font-semibold rounded-md">Edit</button>
+                            <button @click="deleteAssignment(assignment.id)" class="px-2 py-1 text-xs bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <p v-if="filteredModalAssignments.length === 0" class="text-center text-sm text-gray-500 py-4">No assignments found for this student.</p>
+             </div>
+             <button @click="closeStudentAssignmentsModal" class="mt-6 w-full bg-gray-200 text-gray-800 font-bold py-3 px-4 rounded-lg hover:bg-gray-300">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, onSnapshot, addDoc, doc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // IMPORTANT: Fill in your Cloudinary details below
+    const CLOUDINARY_CLOUD_NAME = "dt7m5ysz1"; // <-- YOUR CLOUD NAME
+    const CLOUDINARY_UPLOAD_PRESET = "mstu.work";   // <-- YOUR UPLOAD PRESET
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB4qNTWzUVA3m8xKihEP4rT1JTtX_fX0kw",
+      authDomain: "temp-a1437.firebaseapp.com",
+      projectId: "temp-a1437",
+      storageBucket: "temp-a1437.appspot.com",
+      messagingSenderId: "171016256749",
+      appId: "1:171016256749:web:36629e9fc55658a89ca0e4",
+      measurementId: "G-22R567RD5N"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const { createApp, ref, reactive, computed, watch, onMounted, nextTick, onBeforeUpdate } = Vue
+
+    createApp({
+        setup() {
+            // --- Helper function to shuffle an array ---
+            const shuffle = (array) => {
+                let currentIndex = array.length, randomIndex;
+                while (currentIndex > 0) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+                    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+                }
+                return array;
+            };
+
+            // --- STATE ---
+            const firebaseReady = ref(false);
+            const isUploading = ref(false);
+            const page = ref('home');
+            const adminTab = ref('students');
+            const isAdminLoggedIn = ref(false);
+            const showPasswordModal = ref(false);
+            const passwordInput = ref('');
+            const loginError = ref('');
+            const modalView = ref('overall');
+            const modalSelectedPartIndex = ref(0);
+            const availableSkills = ['Writing', 'Listening', 'Reading', 'Speaking', 'Full Test', 'Mid Term Test', 'End Term Test', 'Test'];
+            const skillToAdd = ref(availableSkills[0]);
+            const editingAssignmentId = ref(null);
+            const searchQuery = ref('');
+            const adminSearchQuery = ref('');
+            const currentImageIndex = ref(0);
+            
+            const students = ref([]);
+            const newStudentForm = reactive({ name: '', class: '', school: '', address: '', phone: '', dob: '', email: '', avatarUrl: '' });
+
+            const assignments = ref([]);
+            
+            const selectedStudentId = ref(null);
+            const selectedAssignment = ref(null);
+
+            const showEditStudentModal = ref(false);
+            const studentToEdit = ref(null);
+
+            const showStudentAssignmentsModal = ref(false);
+            const studentForAssignments = ref(null);
+            const assignmentSearchQuery = ref('');
+            const assignmentStudentSearch = ref('');
+
+            const initialFormState = () => ({
+                studentId: '', title: '', selectedSkills: [],
+                skills: {},
+                overallFeedback: ''
+            });
+
+            const form = reactive(initialFormState());
+            
+            // --- QUILL EDITOR STATE ---
+            const overallFeedbackEditor = ref(null);
+            const overallQuillInstance = ref(null);
+            const partEditorRefs = new Map();
+            const partQuillInstances = new Map();
+            
+            // --- REALTIME DATABASE CONNECTION ---
+            onMounted(() => {
+                onSnapshot(collection(db, "students"), (snapshot) => {
+                    students.value = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+                    firebaseReady.value = true;
+                });
+                onSnapshot(collection(db, "assignments"), (snapshot) => {
+                    assignments.value = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                });
+            });
+            
+            // --- WATCHERS ---
+            watch(() => form.selectedSkills, (newSkills, oldSkills) => {
+                for (const skill of newSkills) {
+                    if (!oldSkills.includes(skill)) {
+                         if (form.skills[skill].parts.length === 0) { addSkillPart(skill); }
+                    }
+                }
+            });
+
+            watch(modalSelectedPartIndex, () => {
+                currentImageIndex.value = 0;
+            });
+
+            // --- COMPUTED PROPERTIES ---
+            const selectedStudent = computed(() => students.value.find(s => s.id === selectedStudentId.value));
+            
+            const selectedStudentForAssignment = computed(() => {
+                return students.value.find(s => s.id === form.studentId);
+            });
+
+            const filteredAssignmentStudents = computed(() => {
+                if (!assignmentStudentSearch.value) return [];
+                const lowerCaseQuery = assignmentStudentSearch.value.toLowerCase();
+                return students.value.filter(s =>
+                    s.name.toLowerCase().includes(lowerCaseQuery) ||
+                    s.class.toLowerCase().includes(lowerCaseQuery)
+                ).slice(0, 5); // Show top 5 matches
+            });
+
+            const filteredStudents = computed(() => {
+                if (!searchQuery.value) return students.value;
+                const lowerCaseQuery = searchQuery.value.toLowerCase();
+                return students.value.filter(s =>
+                    (s.name && s.name.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.class && s.class.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.school && s.school.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.email && s.email.toLowerCase().includes(lowerCaseQuery))
+                );
+            });
+            
+            const displayedStudents = computed(() => {
+                if (searchQuery.value) {
+                    return filteredStudents.value; // Show all search results
+                }
+                // When not searching, show a shuffled, limited list
+                return shuffle([...students.value]).slice(0, 9);
+            });
+            
+            const filteredAdminStudents = computed(() => {
+                if (!adminSearchQuery.value) return students.value;
+                const lowerCaseQuery = adminSearchQuery.value.toLowerCase();
+                 return students.value.filter(s =>
+                    (s.name && s.name.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.class && s.class.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.school && s.school.toLowerCase().includes(lowerCaseQuery)) ||
+                    (s.email && s.email.toLowerCase().includes(lowerCaseQuery))
+                );
+            });
+            
+            const filteredModalAssignments = computed(() => {
+                if (!studentForAssignments.value) return [];
+                const studentAssignments = assignments.value.filter(a => a.studentId === studentForAssignments.value.id);
+                if (!assignmentSearchQuery.value) return studentAssignments;
+                const lowerCaseQuery = assignmentSearchQuery.value.toLowerCase();
+                return studentAssignments.filter(a => a.title && a.title.toLowerCase().includes(lowerCaseQuery));
+            });
+
+            const activeSkillDataInModal = computed(() => {
+                if (!selectedAssignment.value || modalView.value === 'overall') return null;
+                return selectedAssignment.value.skills.find(s => s.name === modalView.value);
+            });
+            
+            const activePartDataInModal = computed(() => {
+                if (!activeSkillDataInModal.value || !activeSkillDataInModal.value.parts || activeSkillDataInModal.value.parts.length === 0) return null;
+                return activeSkillDataInModal.value.parts[modalSelectedPartIndex.value];
+            });
+            
+            const calculateSkillTotal = (skill) => {
+                 if (!skill || !Array.isArray(skill.parts) || skill.parts.length === 0) {
+                    return { student: 0, max: 0, isText: false };
+                }
+
+                const hasTextScore = skill.parts.some(part => part.studentScore && isNaN(parseFloat(part.studentScore)));
+
+                if (hasTextScore) {
+                    const textScores = skill.parts.map(part => part.studentScore || '').filter(Boolean).join(', ');
+                    return { text: textScores, isText: true };
+                }
+
+                const studentTotal = skill.parts.reduce((sum, part) => sum + (parseFloat(part.studentScore) || 0), 0);
+                const maxTotal = skill.parts.reduce((sum, part) => sum + (parseFloat(part.maxScore) || 0), 0);
+                return { student: studentTotal, max: maxTotal, isText: false };
+            };
+
+            // --- QUILL EDITOR LOGIC ---
+            const toolbarOptions = [
+                ['bold', 'italic', 'underline', 'strike'],
+                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                [{ 'font': [] }],
+                [{ 'align': [] }],
+                ['clean']
+            ];
+
+            const setPartEditorRef = (el, skillName, partId) => {
+                if (el) {
+                    partEditorRefs.set(`${skillName}-${partId}`, el);
+                }
+            };
+
+            onBeforeUpdate(() => {
+                partEditorRefs.clear();
+            });
+            
+            watch(overallFeedbackEditor, (newEl) => {
+                if (newEl && !overallQuillInstance.value) {
+                    const quill = new Quill(newEl, {
+                        modules: { toolbar: toolbarOptions },
+                        theme: 'snow',
+                        placeholder: 'Enter overall feedback here...'
+                    });
+                    quill.on('text-change', () => {
+                        if (quill.hasFocus()) {
+                           form.overallFeedback = quill.root.innerHTML;
+                        }
+                    });
+                    overallQuillInstance.value = quill;
+                    if (form.overallFeedback) {
+                        quill.root.innerHTML = form.overallFeedback;
+                    }
+                }
+            });
+
+            watch(() => form.skills, () => {
+                nextTick(() => {
+                    for (const [key, el] of partEditorRefs.entries()) {
+                        if (!partQuillInstances.has(key) && el) {
+                            const [skillName, partIdStr] = key.split('-');
+                            const partId = parseInt(partIdStr);
+                            const part = form.skills[skillName]?.parts.find(p => p.id === partId);
+
+                            if (part) {
+                                const quill = new Quill(el, {
+                                    modules: { toolbar: toolbarOptions },
+                                    theme: 'snow',
+                                    placeholder: 'Feedback for this part...'
+                                });
+
+                                quill.on('text-change', () => {
+                                    if (quill.hasFocus()) {
+                                        part.feedback = quill.root.innerHTML;
+                                    }
+                                });
+                                
+                                quill.root.innerHTML = part.feedback || '';
+                                partQuillInstances.set(key, quill);
+                            }
+                        }
+                    }
+                });
+            }, { deep: true });
+            
+            // --- IMAGE UPLOAD LOGIC ---
+            const uploadImage = async (file) => {
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+                try {
+                    const response = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+                    return data.secure_url;
+                } catch (error) {
+                    console.error('Image upload failed:', error);
+                    alert('Image upload failed. Please try again.');
+                    return null;
+                }
+            };
+
+            const handleAvatarUpload = async (event, targetObject) => {
+                const file = event.target.files[0];
+                if (!file) return;
+                isUploading.value = true;
+                const url = await uploadImage(file);
+                if (url) {
+                    targetObject.avatarUrl = url;
+                }
+                isUploading.value = false;
+            };
+
+            const handlePartImageUpload = async (event, part, index) => {
+                const file = event.target.files[0];
+                if (!file) return;
+                isUploading.value = true;
+                const url = await uploadImage(file);
+                if (url) {
+                    part.submissionUrls[index] = url;
+                }
+                isUploading.value = false;
+            };
+
+            // --- METHODS ---
+             const getVietnameseSkillName = (skillName) => {
+                const map = {
+                    'Writing': 'Viết',
+                    'Reading': 'Đọc',
+                    'Listening': 'Nghe',
+                    'Speaking': 'Nói'
+                };
+                const translated = map[skillName] || skillName;
+                return `Kỹ năng ${translated}`;
+            };
+
+             const selectStudentForAssignment = (student) => {
+                form.studentId = student.id;
+                assignmentStudentSearch.value = '';
+            };
+
+            const clearStudentSelection = () => {
+                form.studentId = '';
+            };
+
+             const openEditStudentModal = (student) => {
+                studentToEdit.value = JSON.parse(JSON.stringify(student));
+                showEditStudentModal.value = true;
+            };
+            const closeEditStudentModal = () => {
+                showEditStudentModal.value = false;
+                studentToEdit.value = null;
+            };
+            const updateStudent = async () => {
+                if (!studentToEdit.value) return;
+                const studentRef = doc(db, "students", studentToEdit.value.id);
+                const { id, ...dataToUpdate } = studentToEdit.value;
+                await updateDoc(studentRef, dataToUpdate);
+                closeEditStudentModal();
+            };
+
+            const openStudentAssignmentsModal = (student) => {
+                studentForAssignments.value = student;
+                showStudentAssignmentsModal.value = true;
+            };
+            const closeStudentAssignmentsModal = () => {
+                showStudentAssignmentsModal.value = false;
+                studentForAssignments.value = null;
+                assignmentSearchQuery.value = '';
+            };
+
+            const getPartNoun = (skillName, count) => {
+                let noun = 'Part';
+                switch (skillName) {
+                    case 'Listening': noun = 'Section'; break;
+                    case 'Reading': noun = 'Passage'; break;
+                    case 'Writing': noun = 'Task'; break;
+                }
+                return count === 1 ? noun : `${noun}s`;
+            };
+            
+            const getPartLabel = (skillName, index) => {
+                const noun = getPartNoun(skillName, 1);
+                return `${noun} ${index + 1}`;
+            };
+
+            const navigate = (destination) => {
+                if (destination === 'admin' && !isAdminLoggedIn.value) {
+                    passwordInput.value = ''; loginError.value = ''; showPasswordModal.value = true; return;
+                }
+                page.value = destination;
+                if (destination === 'home') {
+                    selectedStudentId.value = null;
+                    searchQuery.value = '';
+                }
+                else if (destination === 'admin' && isAdminLoggedIn.value) cancelEdit();
+            };
+            
+            const handleLogin = () => {
+                if (passwordInput.value === '338495') {
+                    isAdminLoggedIn.value = true; showPasswordModal.value = false;
+                    loginError.value = ''; passwordInput.value = ''; navigate('admin');
+                } else {
+                    loginError.value = 'Incorrect password. Please try again.'; passwordInput.value = '';
+                }
+            };
+
+            const addStudent = async () => {
+                await addDoc(collection(db, "students"), {
+                    ...newStudentForm,
+                    avatarUrl: newStudentForm.avatarUrl || `https://placehold.co/100x100/?text=${newStudentForm.name.charAt(0)}`
+                });
+                Object.keys(newStudentForm).forEach(key => newStudentForm[key] = '');
+            };
+
+            const viewStudentDashboard = (studentId) => {
+                selectedStudentId.value = studentId; page.value = 'studentDashboard';
+            };
+
+            const getAssignmentsForStudent = (studentId) => assignments.value.filter(a => a.studentId === studentId).sort((a, b) => new Date(b.dateGraded) - new Date(a.dateGraded));
+            
+            const viewAssignmentDetail = (assignment) => {
+                const sanitizedAssignment = JSON.parse(JSON.stringify(assignment));
+                if (sanitizedAssignment.skills && Array.isArray(sanitizedAssignment.skills)) {
+                    sanitizedAssignment.skills.forEach(skill => {
+                        if (skill.parts && Array.isArray(skill.parts)) {
+                            skill.parts.forEach(part => {
+                                if (!part.submissionUrls || !Array.isArray(part.submissionUrls) || part.submissionUrls.length === 0) {
+                                    part.submissionUrls = ['']; 
+                                }
+                            });
+                        }
+                    });
+                }
+                selectedAssignment.value = sanitizedAssignment;
+                modalView.value = 'overall';
+                currentImageIndex.value = 0;
+            };
+            
+            const addImageUrl = (part) => {
+                part.submissionUrls.push('');
+            };
+
+            const prevImage = () => {
+                const urls = activePartDataInModal.value.submissionUrls;
+                currentImageIndex.value = (currentImageIndex.value - 1 + urls.length) % urls.length;
+            };
+            const nextImage = () => {
+                const urls = activePartDataInModal.value.submissionUrls;
+                currentImageIndex.value = (currentImageIndex.value + 1) % urls.length;
+            };
+            
+            const addSkillToForm = () => {
+                if (skillToAdd.value && !form.selectedSkills.includes(skillToAdd.value)) {
+                    form.selectedSkills.push(skillToAdd.value);
+                    if (skillToAdd.value === 'Writing') {
+                        form.skills[skillToAdd.value] = { averageScore: '', parts: [] };
+                    } else {
+                        form.skills[skillToAdd.value] = { parts: [] };
+                    }
+                }
+            };
+            const removeSkillFromForm = (skillToRemove) => {
+                form.selectedSkills = form.selectedSkills.filter(skill => skill !== skillToRemove);
+                delete form.skills[skillToRemove];
+            };
+            
+            const togglePartCollapse = (part) => {
+                part.isCollapsed = !part.isCollapsed;
+            };
+
+            const addSkillPart = (skillName) => form.skills[skillName].parts.push({ id: Date.now(), studentScore: '', maxScore: '', feedback: '', submissionUrls: [''], isCollapsed: true });
+            const removeSkillPart = (skillName, partId) => {
+                form.skills[skillName].parts = form.skills[skillName].parts.filter(p => p.id !== partId);
+            };
+            
+            const selectSkillView = (skillName) => {
+                modalView.value = skillName;
+                modalSelectedPartIndex.value = 0;
+                currentImageIndex.value = 0;
+            };
+
+            const getSkillClass = (skillName) => {
+                const baseName = skillName.split(' ')[0].toLowerCase();
+                return `skill-${baseName}`;
+            }
+
+            const cancelEdit = () => {
+                editingAssignmentId.value = null;
+                Object.assign(form, initialFormState());
+                assignmentStudentSearch.value = '';
+                if (overallQuillInstance.value) {
+                    overallQuillInstance.value.root.innerHTML = '';
+                }
+                partQuillInstances.forEach(quill => quill.root.innerHTML = '');
+                partQuillInstances.clear();
+                partEditorRefs.clear();
+            };
+
+            const editAssignment = (assignmentToEdit) => {
+                editingAssignmentId.value = assignmentToEdit.id;
+                const formData = JSON.parse(JSON.stringify(assignmentToEdit));
+                form.studentId = formData.studentId;
+                form.title = formData.title;
+                form.overallFeedback = formData.overallFeedback;
+                form.selectedSkills = formData.skills.map(s => s.name);
+                
+                Object.assign(form.skills, {}); // Clear existing skills
+                formData.skills.forEach(skill => {
+                    form.skills[skill.name] = {
+                        averageScore: skill.averageScore || '',
+                        parts: skill.parts.map(p => ({
+                            ...p,
+                            submissionUrls: p.submissionUrls && p.submissionUrls.length > 0 ? p.submissionUrls : [''],
+                            isCollapsed: true
+                        }))
+                    };
+                });
+
+                if(showStudentAssignmentsModal.value) closeStudentAssignmentsModal();
+                adminTab.value = 'assignments';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                nextTick(() => {
+                    if (overallQuillInstance.value) {
+                        overallQuillInstance.value.root.innerHTML = form.overallFeedback;
+                    }
+                });
+            };
+
+            const deleteAssignment = async (assignmentId) => {
+                if (confirm('Are you sure you want to delete this assignment? This action cannot be undone.')) {
+                    await deleteDoc(doc(db, "assignments", assignmentId));
+                }
+            };
+            
+            const saveAssignment = async () => {
+                if (!form.studentId) {
+                    alert('Please select a student.');
+                    return;
+                }
+                if (form.selectedSkills.length === 0) { 
+                    alert('Please select at least one skill.'); 
+                    return; 
+                }
+                
+                const assignmentData = {
+                    studentId: form.studentId, title: form.title,
+                    overallFeedback: form.overallFeedback, dateGraded: new Date().toISOString().split('T')[0],
+                    skills: form.selectedSkills.map(skillName => {
+                        const skillData = form.skills[skillName];
+                        const cleanedParts = skillData.parts.map(p => {
+                            const { isCollapsed, ...partToSave } = p;
+                            return partToSave;
+                        });
+
+                        const finalSkill = { name: skillName, parts: cleanedParts };
+                        if (skillName === 'Writing') {
+                            finalSkill.averageScore = skillData.averageScore;
+                        }
+                        return finalSkill;
+                    })
+                };
+
+                if (editingAssignmentId.value !== null) {
+                    const assignmentRef = doc(db, "assignments", editingAssignmentId.value);
+                    await updateDoc(assignmentRef, assignmentData);
+                } else {
+                    await addDoc(collection(db, "assignments"), assignmentData);
+                }
+                cancelEdit();
+            };
+
+            const imageError = (event) => { event.target.src = 'https://placehold.co/600x400/ccc/FFFFFF?text=Image+Not+Found'; };
+            const avatarError = (e) => {
+                const name = e.target.alt;
+                if (name) e.target.src = `https://placehold.co/100x100/?text=${name.charAt(0)}`;
+            };
+            
+            const getSkillButtonClass = (skillName) => {
+                const isActive = modalView.value === skillName;
+                let colors = {};
+                const baseName = skillName.split(' ')[0].toLowerCase();
+
+                switch(baseName) {
+                    case 'writing': 
+                        colors = { active: 'bg-green-600 text-white shadow-md', inactive: 'bg-white hover:bg-green-50 text-gray-700 border border-green-300' };
+                        break;
+                    case 'listening':
+                        colors = { active: 'bg-blue-600 text-white shadow-md', inactive: 'bg-white hover:bg-blue-50 text-gray-700 border border-blue-300' };
+                        break;
+                    case 'reading':
+                        colors = { active: 'bg-orange-500 text-white shadow-md', inactive: 'bg-white hover:bg-orange-50 text-gray-700 border border-orange-300' };
+                        break;
+                    case 'speaking':
+                        colors = { active: 'bg-purple-600 text-white shadow-md', inactive: 'bg-white hover:bg-purple-50 text-gray-700 border border-purple-300' };
+                        break;
+                    default:
+                        colors = { active: 'bg-teal-600 text-white shadow-md', inactive: 'bg-white hover:bg-teal-50 text-gray-700 border border-teal-300' };
+                }
+                return isActive ? colors.active : colors.inactive;
+            };
+
+            return {
+                firebaseReady, page, students, assignments, form, selectedStudentId, selectedStudent, selectedAssignment,
+                modalView, isUploading,
+                availableSkills, activeSkillDataInModal, 
+                isAdminLoggedIn, showPasswordModal, passwordInput, loginError,
+                adminTab, newStudentForm, skillToAdd, editingAssignmentId, modalSelectedPartIndex, activePartDataInModal,
+                searchQuery, filteredStudents, adminSearchQuery, filteredAdminStudents, currentImageIndex,
+                showEditStudentModal, studentToEdit, openEditStudentModal, closeEditStudentModal, updateStudent,
+                showStudentAssignmentsModal, studentForAssignments, assignmentSearchQuery, openStudentAssignmentsModal, closeStudentAssignmentsModal, filteredModalAssignments,
+                navigate, handleLogin, addStudent, viewStudentDashboard, getAssignmentsForStudent, viewAssignmentDetail,
+                saveAssignment, addSkillPart, removeSkillPart, getSkillClass,
+                imageError, avatarError, addSkillToForm, removeSkillFromForm,
+                editAssignment, deleteAssignment, cancelEdit, getPartLabel, getPartNoun, addImageUrl,
+                prevImage, nextImage, togglePartCollapse, calculateSkillTotal, selectSkillView,
+                getSkillButtonClass,
+                displayedStudents,
+                overallFeedbackEditor,
+                setPartEditorRef,
+                assignmentStudentSearch,
+                selectedStudentForAssignment,
+                filteredAssignmentStudents,
+                selectStudentForAssignment,
+                clearStudentSelection,
+                getVietnameseSkillName,
+                handleAvatarUpload,
+                handlePartImageUpload
+            };
+        }
+    }).mount('#app')
+</script>
+
+</body>
+</html>
+

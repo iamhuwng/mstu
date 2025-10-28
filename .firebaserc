@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "temp-a1437"
+  },
+  "targets": {
+    "temp-a1437": {
+      "hosting": {
+        "portal": [
+          "portal69"
+        ],
+        "temp-a1437": [
+          "temp-a1437"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,371 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - paragraph [ref=e6]: Question 1 Results
+    - generic [ref=e7]:
+      - paragraph [ref=e8]: 🚀 Rocket Race 🚀
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e12]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+            - generic:
+              - generic: 🔥
+              - generic: 🔥
+          - generic [ref=e14]:
+            - paragraph [ref=e15]: 👑 Comprehensive Student 1761000983776
+            - paragraph [ref=e16]: 30 pts
+        - generic [ref=e17]:
+          - generic [ref=e19]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e21]:
+            - paragraph [ref=e22]: Comprehensive Student 1761001085928
+            - paragraph [ref=e23]: 30 pts
+        - generic [ref=e24]:
+          - generic [ref=e26]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e28]:
+            - paragraph [ref=e29]: Comprehensive Student 1761000644991
+            - paragraph [ref=e30]: 20 pts
+        - generic [ref=e31]:
+          - generic [ref=e33]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: Comprehensive Student 1761000815107
+            - paragraph [ref=e37]: 20 pts
+        - generic [ref=e38]:
+          - generic [ref=e40]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e42]:
+            - paragraph [ref=e43]: Comprehensive Student 1760995826521
+            - paragraph [ref=e44]: 10 pts
+        - generic [ref=e45]:
+          - generic [ref=e47]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: Test Student 1760995826921
+            - paragraph [ref=e51]: 10 pts
+        - generic [ref=e52]:
+          - generic [ref=e54]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: Test Student 1760996613567
+            - paragraph [ref=e58]: 10 pts
+        - generic [ref=e59]:
+          - generic [ref=e61]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e63]:
+            - paragraph [ref=e64]: Comprehensive Student 1760996613987
+            - paragraph [ref=e65]: 10 pts
+        - generic [ref=e66]:
+          - generic [ref=e68]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: Test Student 1760996747517
+            - paragraph [ref=e72]: 10 pts
+        - generic [ref=e73]:
+          - generic [ref=e75]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: Comprehensive Student 1760996747828
+            - paragraph [ref=e79]: 10 pts
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e84]:
+            - paragraph [ref=e85]: Comprehensive Student 1760997284829
+            - paragraph [ref=e86]: 10 pts
+        - generic [ref=e87]:
+          - generic [ref=e89]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e91]:
+            - paragraph [ref=e92]: Test Student 1760997284778
+            - paragraph [ref=e93]: 10 pts
+        - generic [ref=e94]:
+          - generic [ref=e96]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: Test Student 1760998469958
+            - paragraph [ref=e100]: 10 pts
+        - generic [ref=e101]:
+          - generic [ref=e103]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e105]:
+            - paragraph [ref=e106]: Comprehensive Student 1760998470356
+            - paragraph [ref=e107]: 10 pts
+        - generic [ref=e108]:
+          - generic [ref=e110]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: Comprehensive Student 1760998636144
+            - paragraph [ref=e114]: 10 pts
+        - generic [ref=e115]:
+          - generic [ref=e117]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: Test Student 1760998636210
+            - paragraph [ref=e121]: 10 pts
+        - generic [ref=e122]:
+          - generic [ref=e124]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: Test Student 1761000645002
+            - paragraph [ref=e128]: 10 pts
+        - generic [ref=e129]:
+          - generic [ref=e131]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e133]:
+            - paragraph [ref=e134]: Test Student 1761000815108
+            - paragraph [ref=e135]: 10 pts
+        - generic [ref=e136]:
+          - generic [ref=e138]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: Comprehensive Student 1761002649063
+            - paragraph [ref=e142]: 10 pts
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: Comprehensive Student 1761002764376
+            - paragraph [ref=e149]: 10 pts
+        - generic [ref=e150]:
+          - generic [ref=e152]:
+            - text: 🚀
+            - generic:
+              - generic: ✨
+              - generic: ✨
+              - generic: ✨
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: Comprehensive Student 1761003234351
+            - paragraph [ref=e156]: 10 pts
+        - generic [ref=e157]:
+          - generic [ref=e159]: 🚀
+          - generic [ref=e161]:
+            - paragraph [ref=e162]: andras
+            - paragraph [ref=e163]: 0 pts
+        - generic [ref=e164]:
+          - generic [ref=e166]: 🚀
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: cats
+            - paragraph [ref=e170]: 0 pts
+        - generic [ref=e171]:
+          - generic [ref=e173]: 🚀
+          - generic [ref=e175]:
+            - paragraph [ref=e176]: huwng
+            - paragraph [ref=e177]: 0 pts
+        - generic [ref=e178]:
+          - generic [ref=e180]: 🚀
+          - generic [ref=e182]:
+            - paragraph [ref=e183]: Test Student 1760993979721
+            - paragraph [ref=e184]: 0 pts
+        - generic [ref=e185]:
+          - generic [ref=e187]: 🚀
+          - generic [ref=e189]:
+            - paragraph [ref=e190]: Test Student
+            - paragraph [ref=e191]: 0 pts
+        - generic [ref=e192]:
+          - generic [ref=e194]: 🚀
+          - generic [ref=e196]:
+            - paragraph [ref=e197]: Test Student 1760994014445
+            - paragraph [ref=e198]: 0 pts
+        - generic [ref=e199]:
+          - generic [ref=e201]: 🚀
+          - generic [ref=e203]:
+            - paragraph [ref=e204]: Test Student 1760994134411
+            - paragraph [ref=e205]: 0 pts
+        - generic [ref=e206]:
+          - generic [ref=e208]: 🚀
+          - generic [ref=e210]:
+            - paragraph [ref=e211]: Test Student 1760994136917
+            - paragraph [ref=e212]: 0 pts
+        - generic [ref=e213]:
+          - generic [ref=e215]: 🚀
+          - generic [ref=e217]:
+            - paragraph [ref=e218]: Test Student 1760995823637
+            - paragraph [ref=e219]: 0 pts
+        - generic [ref=e220]:
+          - generic [ref=e222]: 🚀
+          - generic [ref=e224]:
+            - paragraph [ref=e225]: Test Student 1760996609865
+            - paragraph [ref=e226]: 0 pts
+        - generic [ref=e227]:
+          - generic [ref=e229]: 🚀
+          - generic [ref=e231]:
+            - paragraph [ref=e232]: Test Student 1760996745536
+            - paragraph [ref=e233]: 0 pts
+        - generic [ref=e234]:
+          - generic [ref=e236]: 🚀
+          - generic [ref=e238]:
+            - paragraph [ref=e239]: Test Student 1760997281657
+            - paragraph [ref=e240]: 0 pts
+        - generic [ref=e241]:
+          - generic [ref=e243]: 🚀
+          - generic [ref=e245]:
+            - paragraph [ref=e246]: Test Student 1760998467627
+            - paragraph [ref=e247]: 0 pts
+        - generic [ref=e248]:
+          - generic [ref=e250]: 🚀
+          - generic [ref=e252]:
+            - paragraph [ref=e253]: Test Student 1760998633424
+            - paragraph [ref=e254]: 0 pts
+        - generic [ref=e255]:
+          - generic [ref=e257]: 🚀
+          - generic [ref=e259]:
+            - paragraph [ref=e260]: Test Student 1761000642315
+            - paragraph [ref=e261]: 0 pts
+        - generic [ref=e262]:
+          - generic [ref=e264]: 🚀
+          - generic [ref=e266]:
+            - paragraph [ref=e267]: Test Student 1761000812458
+            - paragraph [ref=e268]: 0 pts
+    - generic [ref=e270]:
+      - generic [ref=e272]:
+        - heading "Live Student Answers" [level=4] [ref=e273]
+        - generic [ref=e274]: 21/37 submitted
+      - generic [ref=e275]:
+        - generic [ref=e276]:
+          - generic [ref=e277]: "London:"
+          - generic [ref=e279]: 0 students (0%)
+        - generic [ref=e280]:
+          - generic [ref=e281]: "Berlin:"
+          - generic [ref=e283]: 0 students (0%)
+        - generic [ref=e284]:
+          - generic [ref=e285]: "Paris:"
+          - generic [ref=e288]: 21 students (100%)
+        - generic [ref=e289]:
+          - generic [ref=e290]: "Madrid:"
+          - generic [ref=e292]: 0 students (0%)
+    - generic [ref=e293]:
+      - paragraph [ref=e294]: "✓ Correct Answer:"
+      - paragraph [ref=e295]: Paris
+    - generic [ref=e297]:
+      - generic [ref=e298]:
+        - paragraph [ref=e299]: ✓ Correct (21)
+        - paragraph [ref=e300]: Comprehensive Student 1760995826521, Test Student 1760995826921, Test Student 1760996613567, Comprehensive Student 1760996613987, Test Student 1760996747517, Comprehensive Student 1760996747828, Comprehensive Student 1760997284829, Test Student 1760997284778, Test Student 1760998469958, Comprehensive Student 1760998470356, Comprehensive Student 1760998636144, Test Student 1760998636210, Comprehensive Student 1761000644991, Test Student 1761000645002, Test Student 1761000815108, Comprehensive Student 1761000815107, Comprehensive Student 1761000983776, Comprehensive Student 1761001085928, Comprehensive Student 1761002649063, Comprehensive Student 1761002764376, Comprehensive Student 1761003234351
+      - generic [ref=e301]:
+        - paragraph [ref=e302]: ✗ Incorrect (16)
+        - paragraph [ref=e303]: andras, cats, huwng, Test Student 1760993979721, Test Student, Test Student 1760994014445, Test Student 1760994134411, Test Student 1760994136917, Test Student 1760995823637, Test Student 1760996609865, Test Student 1760996745536, Test Student 1760997281657, Test Student 1760998467627, Test Student 1760998633424, Test Student 1761000642315, Test Student 1761000812458
+    - generic [ref=e304]:
+      - paragraph [ref=e305]: Auto-advancing to next question in 5 seconds...
+      - progressbar [ref=e307]
+  - generic [ref=e308]:
+    - generic [ref=e309]:
+      - button "View active players (37)" [ref=e310] [cursor=pointer]:
+        - generic [ref=e311]:
+          - img [ref=e313]
+          - generic [ref=e318]: Players (37)
+      - button "View banned players" [ref=e319] [cursor=pointer]:
+        - generic [ref=e320]:
+          - img [ref=e322]
+          - generic [ref=e325]: Ban
+      - button "End quiz and return to lobby" [ref=e326] [cursor=pointer]:
+        - generic [ref=e327]:
+          - img [ref=e329]
+          - generic [ref=e333]: Back
+      - button "End session and clear all data" [ref=e334] [cursor=pointer]:
+        - generic [ref=e336]: End Session
+    - generic [ref=e337]:
+      - button "Resume timer" [ref=e338] [cursor=pointer]:
+        - generic [ref=e339]:
+          - img [ref=e341]
+          - generic [ref=e343]: Resume
+      - generic [ref=e344]:
+        - button "Go to next question or skip current" [ref=e346] [cursor=pointer]:
+          - generic [ref=e347]:
+            - img [ref=e349]
+            - generic [ref=e352]: Next
+        - button "Jump to question" [ref=e353] [cursor=pointer]:
+          - img [ref=e356]
+    - generic [ref=e358]:
+      - generic [ref=e359]:
+        - button "Jump to previous question" [disabled] [ref=e360]:
+          - img [ref=e363]
+        - button "Go to previous question" [disabled] [ref=e365]:
+          - generic [ref=e366]:
+            - img [ref=e368]
+            - generic [ref=e371]: Previous
+      - button "Logout" [ref=e372] [cursor=pointer]:
+        - generic [ref=e374]: Logout
+```

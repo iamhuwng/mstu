@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4 Submission Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .modal { transition: opacity 0.25s ease; }
+        .modal-content { transition: transform 0.25s ease; }
+        .tab-btn.active {
+            border-color: #3b82f6;
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-slate-100">
+
+    <!-- Generic Modal Dialog -->
+    <div id="modal" class="modal hidden fixed inset-0 bg-slate-800 bg-opacity-75 flex items-center justify-center z-50 p-4 opacity-0">
+        <div class="modal-content w-full max-w-2xl bg-white p-6 rounded-xl shadow-lg text-center transform scale-95">
+            <h2 id="modal-title" class="text-2xl font-bold text-slate-800 mb-4"></h2>
+            <div id="modal-body" class="text-slate-600 mb-6 text-left max-h-[70vh] overflow-y-auto"></div>
+            <div id="modal-footer" class="flex gap-3 justify-end"></div>
+        </div>
+    </div>
+
+     <!-- Login Overlay -->
+    <div id="login-overlay" class="hidden fixed inset-0 bg-slate-800 bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="w-full max-w-sm bg-white p-8 rounded-xl shadow-lg text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Teacher Access</h2>
+            <p class="text-slate-500 mb-6">Enter password to view all submissions.</p>
+            <form id="login-form">
+                <input type="password" id="password-input" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 text-center" placeholder="••••••••" required>
+                <div class="flex gap-2">
+                    <button type="button" id="cancel-login-button" class="w-full text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-base px-5 py-2.5">Cancel</button>
+                    <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-2.5">Unlock</button>
+                </div>
+            </form>
+            <p id="login-error" class="text-red-500 text-sm mt-4 hidden">Incorrect password.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="w-full max-w-5xl mx-auto p-2 sm:p-6 lg:p-8">
+        
+        <!-- Student Selection View -->
+        <div id="student-selection-view">
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h1 class="text-3xl font-bold text-slate-800">English 7 - Unit 4 Quiz</h1>
+                <p class="text-slate-500 mt-2 mb-6">Please select your name to begin.</p>
+                <div class="max-w-xs mx-auto">
+                    <select id="student-select" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <option value="">-- Select Your Name --</option>
+                        <option value="Vũ Đức Duy">Vũ Đức Duy</option>
+                        <option value="Mai Khánh An">Mai Khánh An</option>
+                        <option value="Ngô Cao Minh">Ngô Cao Minh</option>
+                        <option value="Nguyễn Gia Phúc">Nguyễn Gia Phúc</option>
+                        <option value="Nguyễn Huy Hải Nam">Nguyễn Huy Hải Nam</option>
+                        <option value="Tống Gia Bảo">Tống Gia Bảo</option>
+                        <option value="Hứa Diệu Linh">Hứa Diệu Linh</option>
+                        <option value="Ngô Chúc An">Ngô Chúc An</option>
+                        <option value="Đỗ Bảo Khánh">Đỗ Bảo Khánh</option>
+                        <option value="Nguyễn Hoàng Diệu">Nguyễn Hoàng Diệu</option>
+                        <option value="Đinh Gia Hân">Đinh Gia Hân</option>
+                        <option value="Nguyễn Cẩm Tú">Nguyễn Cẩm Tú</option>
+                    </select>
+                    <button id="start-assignment-button" class="mt-4 w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-2.5">Start Assignment</button>
+                    <p id="student-select-error" class="text-red-500 text-sm mt-2 hidden">Please select your name.</p>
+                </div>
+                 <div class="mt-8 text-center border-t pt-4">
+                    <button id="teacher-login-button" class="text-slate-600 hover:text-blue-600 text-sm font-medium">Teacher Login</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form View (Initially Hidden) -->
+        <div id="form-view" class="hidden">
+            <div class="bg-white p-4 sm:p-8 rounded-xl shadow-lg">
+                <div class="text-center border-b pb-4 mb-6">
+                     <h1 class="text-2xl font-bold text-slate-800">English 7 - Unit 4 Quiz</h1>
+                     <p class="text-slate-500 mt-1">Submitting as: <span id="student-display-name" class="font-bold"></span></p>
+                </div>
+                <form id="submission-form" novalidate>
+                    <!-- Tab Navigation -->
+                    <div id="tab-container" class="mb-6 border-b border-slate-200">
+                        <nav class="-mb-px flex flex-wrap gap-2" aria-label="Tabs">
+                            <!-- Tabs will be dynamically inserted here -->
+                        </nav>
+                    </div>
+
+                    <div id="quiz-container">
+                        <!-- Quiz sections will be inserted here -->
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t text-center">
+                        <button type="submit" id="submit-button" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base w-full sm:w-auto px-8 py-3">Submit Final Answers</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Already Submitted View (Initially Hidden) -->
+        <div id="submitted-view" class="hidden">
+             <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h1 class="text-3xl font-bold text-slate-800">Submission Confirmed</h1>
+                <p class="text-slate-500 mt-2 mb-6">You have already completed this assignment and cannot redo the tasks.</p>
+                <div class="flex flex-col items-center gap-3 max-w-xs mx-auto">
+                    <button id="view-results-button" class="w-full text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-base px-5 py-2.5">View Your Results</button>
+                    <button id="back-to-select-button" class="w-full text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-base px-5 py-2.5">Exit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teacher/All Submissions View (Initially Hidden) -->
+        <div id="all-submissions-view" class="hidden">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="flex justify-between items-center mb-6 border-b pb-4">
+                    <h2 class="text-3xl font-bold text-slate-800">All Submissions</h2>
+                    <button id="teacher-logout-button" class="text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5">Logout</button>
+                </div>
+                <div id="all-submissions-list" class="space-y-4">
+                    <p id="loading-state" class="text-slate-500 text-center">Loading submissions...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, doc, setDoc, getDoc, onSnapshot, query, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'e7-unit-4-quiz';
+        const firebaseConfig = {
+  apiKey: "AIzaSyB4qNTWzUVA3m8xKihEP4rT1JTtX_fX0kw",
+  authDomain: "temp-a1437.firebaseapp.com",
+  projectId: "temp-a1437",
+  storageBucket: "temp-a1437.firebasestorage.app",
+  messagingSenderId: "171016256749",
+  appId: "1:171016256749:web:36629e9fc55658a89ca0e4",
+  measurementId: "G-22R567RD5N"
+};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+        let currentStudent = null;
+        let studentSubmission = null;
+        let unsubscribeSubmissions = null;
+        let isTeacherView = false;
+        const TEACHER_PASSWORD = '338495';
+
+        const sections = [
+            {
+                title: "Phonetics I",
+                id: "phonetics-1",
+                questions: [
+                    { qNum: 1, prompt: "1. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["collec<u>ti</u>on", "tradi<u>ti</u>on", "exhibi<u>ti</u>on", "q<u>uesti</u>on"] }, { qNum: 2, prompt: "2. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["ver<u>si</u>on", "plea<u>su</u>re", "u<u>su</u>al", "de<u>si</u>gn"] }, { qNum: 3, prompt: "3. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["clo<u>su</u>re", "<u>su</u>re", "plea<u>su</u>re", "lei<u>su</u>re"] }, { qNum: 4, prompt: "4. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["o<u>c</u>ean", "con<u>c</u>ert", "musi<u>ci</u>an", "offi<u>ci</u>al"] }, { qNum: 5, prompt: "5. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>s</u>o", "expen<u>s</u>ive", "<u>s</u>axophone", "mu<u>s</u>ic"] }, { qNum: 6, prompt: "6. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["trea<u>su</u>re", "clo<u>su</u>re", "expo<u>su</u>re", "en<u>su</u>re"] }, { qNum: 7, prompt: "7. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["h<u>a</u>ppy", "h<u>ar</u>d", "simil<u>a</u>rity", "t<u>a</u>lent"] }, { qNum: 8, prompt: "8. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>ch</u>orus", "bro<u>ch</u>ure", "ma<u>ch</u>ine", "<u>ch</u>ef"] }, { qNum: 9, prompt: "9. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["trea<u>s</u>ure", "vi<u>si</u>on", "discu<u>ssi</u>on", "deci<u>si</u>on"] }, { qNum: 10, prompt: "10. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["exhibi<u>ti</u>on", "ac<u>ti</u>on", "ques<u>ti</u>on", "tradi<u>ti</u>on"] }, { qNum: 11, prompt: "11. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>c</u>ollect", "<u>c</u>lean", "<u>c</u>ity", "<u>c</u>racker"] }, { qNum: 12, prompt: "12. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["p<u>o</u>ttery", "mel<u>o</u>dy", "m<u>o</u>dal", "pr<u>o</u>fit"] }, { qNum: 13, prompt: "13. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["n<u>ear</u>", "cl<u>ear</u>", "d<u>ear</u>", "l<u>ear</u>n"] }, { qNum: 14, prompt: "14. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["knock<u>ed</u>", "need<u>ed</u>", "found<u>ed</u>", "want<u>ed</u>"] }, { qNum: 15, prompt: "15. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["spr<u>i</u>ng", "sw<u>i</u>mming", "th<u>i</u>nk", "real<u>i</u>ze"] }, { qNum: 16, prompt: "16. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["countr<u>y</u>", "hungr<u>y</u>", "fl<u>y</u>", "ever<u>y</u>"] }, { qNum: 17, prompt: "17. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>wh</u>y", "<u>wh</u>o", "<u>wh</u>en", "<u>wh</u>at"] }, { qNum: 18, prompt: "18. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["finish<u>ed</u>", "report<u>ed</u>", "land<u>ed</u>", "succeed<u>ed</u>"] }, { qNum: 19, prompt: "19. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["celebr<u>a</u>te", "l<u>a</u>zy", "vac<u>a</u>tion", "mech<u>a</u>nic"] }, { qNum: 20, prompt: "20. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["conclu<u>si</u>on", "en<u>su</u>re", "ru<u>sh</u>", "mi<u>ssi</u>on"] }, { qNum: 21, prompt: "21. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["st<u>u</u>dent", "st<u>u</u>dy", "d<u>u</u>st", "m<u>u</u>st"] }, { qNum: 22, prompt: "22. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["f<u>a</u>ther", "d<u>a</u>te", "h<u>a</u>rd", "l<u>a</u>st"] }, { qNum: 23, prompt: "23. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>ch</u>apter", "ri<u>ch</u>", "<u>ch</u>eese", "<u>ch</u>emist"] }, { qNum: 24, prompt: "24. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["watch<u>es</u>", "box<u>es</u>", "bus<u>es</u>", "tabl<u>es</u>"] }, { qNum: 25, prompt: "25. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["plea<u>s</u>ure", "<u>s</u>ound", "<u>s</u>ame", "be<u>s</u>t"] }, { qNum: 26, prompt: "26. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["f<u>oo</u>t", "p<u>oo</u>l", "m<u>oo</u>n", "f<u>oo</u>d"] }, { qNum: 27, prompt: "27. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["bir<u>th</u>", "<u>th</u>eir", "my<u>th</u>", "fif<u>th</u>"] }, { qNum: 28, prompt: "28. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["tr<u>ay</u>s", "s<u>ay</u>s", "b<u>ay</u>s", "d<u>ay</u>s"] }, { qNum: 29, prompt: "29. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["comp<u>a</u>nion", "c<u>o</u>mpany", "comp<u>a</u>rison", "comp<u>a</u>rtment"] }, { qNum: 30, prompt: "30. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["nak<u>ed</u>", "wick<u>ed</u>", "belov<u>ed</u>", "confus<u>ed</u>"] }, { qNum: 31, prompt: "31. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["plum<u>b</u>er", "dou<u>b</u>t", "de<u>b</u>t", "her<u>b</u>age"] }, { qNum: 32, prompt: "32. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["cl<u>o</u>thes", "g<u>o</u>ne", "dr<u>o</u>ve", "gh<u>o</u>st"] }, { qNum: 33, prompt: "33. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["h<u>ear</u>", "cl<u>ear</u>", "sw<u>ear</u>", "<u>ear</u>"] }, { qNum: 34, prompt: "34. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["h<u>ea</u>t", "gr<u>ea</u>t", "b<u>ea</u>t", "t<u>ea</u>ch"] }, { qNum: 35, prompt: "35. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["n<u>ea</u>rest", "h<u>ea</u>d", "br<u>ea</u>d", "h<u>ea</u>lth"] }, { qNum: 36, prompt: "36. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["s<u>i</u>gn", "m<u>i</u>stake", "tr<u>i</u>angle", "dr<u>i</u>ve"] }, { qNum: 37, prompt: "37. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["n<u>oo</u>n", "t<u>oo</u>l", "bl<u>oo</u>d", "sp<u>oo</u>n"] }, { qNum: 38, prompt: "38. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["play<u>s</u>", "look<u>s</u>", "want<u>s</u>", "help<u>s</u>"] }, { qNum: 39, prompt: "39. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["decid<u>ed</u>", "play<u>ed</u>", "listen<u>ed</u>", "enjoy<u>ed</u>"] }, { qNum: 40, prompt: "40. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["f<u>ee</u>d", "h<u>ea</u>t", "m<u>ea</u>t", "pl<u>ea</u>sure"] }, { qNum: 41, prompt: "41. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["d<u>ear</u>", "f<u>ear</u>", "h<u>ear</u>", "h<u>eart</u>"] }, { qNum: 42, prompt: "42. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["st<u>u</u>pid", "st<u>u</u>dio", "st<u>u</u>dy", "st<u>u</u>dent"] }, { qNum: 43, prompt: "43. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["bro<u>th</u>er", "<u>th</u>ick", "<u>th</u>ey", "<u>th</u>at"] }, { qNum: 44, prompt: "44. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["ma<u>ch</u>ine", "para<u>ch</u>ute", "<u>ch</u>ampagne", "<u>ch</u>eer"] }, { qNum: 45, prompt: "45. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["d<u>o</u>ctor", "h<u>o</u>spital", "p<u>o</u>llution", "tom<u>o</u>rrow"] }, { qNum: 46, prompt: "46. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["cou<u>gh</u>", "lau<u>gh</u>", "enou<u>gh</u>", "hi<u>gh</u>"] }, { qNum: 47, prompt: "47. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["<u>c</u>ollect", "<u>c</u>lean", "<u>c</u>ity", "<u>c</u>racker"] }, { qNum: 48, prompt: "48. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["p<u>o</u>ttery", "mel<u>o</u>dy", "m<u>o</u>dal", "pr<u>o</u>fit"] }, { qNum: 49, prompt: "49. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["n<u>ear</u>", "cl<u>ear</u>", "d<u>ear</u>", "l<u>ear</u>n"] }, { qNum: 50, prompt: "50. Choose the words whose underlined part is pronounced differently from that of the others in each group", options: ["knock<u>ed</u>", "need<u>ed</u>", "found<u>ed</u>", "want<u>ed</u>"] }
+                ],
+                answers: { 1:'D', 2:'D', 3:'B', 4:'B', 5:'D', 6:'D', 7:'B', 8:'A', 9:'C', 10:'C', 11:'C', 12:'B', 13:'D', 14:'A', 15:'D', 16:'C', 17:'B', 18:'A', 19:'D', 20:'A', 21:'A', 22:'B', 23:'D', 24:'D', 25:'A', 26:'A', 27:'B', 28:'B', 29:'B', 30:'D', 31:'D', 32:'B', 33:'C', 34:'B', 35:'A', 36:'B', 37:'C', 38:'A', 39:'A', 40:'D', 41:'D', 42:'C', 43:'B', 44:'D', 45:'C', 46:'D', 47:'C', 48:'C', 49:'D', 50:'A' }
+            },
+            {
+                title: "Phonetics II",
+                id: "phonetics-2",
+                questions: [
+                    { qNum: 51, prompt: "1. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["gallery", "musician", "recently", "excellent"] }, { qNum: 52, prompt: "2. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["fantastic", "museum", "colourful", "melodic"] }, { qNum: 53, prompt: "3. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["necessity", "definitely", "traditional", "curriculum"] }, { qNum: 54, prompt: "4. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["perform", "painting", "concert", "cello"] }, { qNum: 55, prompt: "5. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["national", "festival", "saxophone", "violin"] }, { qNum: 56, prompt: "6. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["industry", "tornado", "natural", "injury"] }, { qNum: 57, prompt: "7. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["geography", "electronic", "scientific", "preparation"] }, { qNum: 58, prompt: "8. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["patient", "humour", "deny", "friendly"] }, { qNum: 59, prompt: "9. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["worried", "reserved", "polite", "arrive"] }, { qNum: 60, prompt: "10. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["mathematics", "economics", "politics", "automatics"] }, { qNum: 61, prompt: "11. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["realize", "improve", "possible", "comfortable"] }, { qNum: 62, prompt: "12. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["important", "especially", "prefer", "influence"] }, { qNum: 63, prompt: "13. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["general", "opinion", "abroad", "surprise"] }, { qNum: 64, prompt: "14. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["comfort", "nation", "apply", "moment"] }, { qNum: 65, prompt: "15. Choose the word whose main stressed syllable is placed differently from that of the other in each group", options: ["medical", "advise", "vegetables", "physical"] }
+                ],
+                answers: { 1:'B', 2:'C', 3:'B', 4:'A', 5:'D', 6:'B', 7:'B', 8:'C', 9:'A', 10:'C', 11:'B', 12:'D', 13:'A', 14:'C', 15:'B' }
+            },
+            {
+                title: "Multiple Choice",
+                id: "multiple-choice",
+                questions: [
+                    { qNum: 66, prompt: "1. He is very good at drawing_____. He often draws his parents and friends.", options: ["crayons", "landmarks", "galleries", "portraits"] }, { qNum: 67, prompt: "2. She can play some musical_____ such as guitar, piano or cello.", options: ["instruments", "paintbrushes", "opera", "microphones"] }, { qNum: 68, prompt: "3. He_____ as a photographer. He likes ______ photos very much.", options: ["plays/drawing", "writes/taking", "works/taking", "works/drawing"] }, { qNum: 69, prompt: "4. Physical education, music or art are the subjects in the secondary___ in Viet Nam.", options: ["curriculum", "necessity", "consideration", "importance"] }, { qNum: 70, prompt: "5. Do you know the national ______ of Viet Nam? -Yes. It's Tien Quan Ca.", options: ["composer", "anthem", "academic", "music"] }, { qNum: 71, prompt: "6. Some people should take notice of the main content in the discussion. They just talk about______ things.", options: ["suitable", "central", "unimportant", "necessary"] }, { qNum: 72, prompt: "7. The puppeteers are _____ the puppets by their strings.", options: ["controlling", "visiting", "appearing", "enjoying"] }, { qNum: 73, prompt: "8. She's looking to receiving the letter from her mother.", options: ["on", "forward", "up", "for"] }, { qNum: 74, prompt: "9. Your paintings are _______ his.", options: ["as beautiful so", "as beautiful as", "more beautiful as", "so beautiful than"] }, { qNum: 75, prompt: "10. Her paintbrushes are so old. Hers are ______ yours.", options: ["as not new as", "not as new like", "not as new as", "not as new than"] }, { qNum: 76, prompt: "11. His knowledge of history of art is _________ours.", options: ["the same as", "very same as", "like same as", "more same as"] }, { qNum: 77, prompt: "12. Their kind of music is _____ mine.", options: ["different with", "so different to", "as different than", "different from"] }, { qNum: 78, prompt: "13. Some people think the band's rock and roll songs are very lively. They are _______ some of their gentle old songs.", options: ["the same as", "different from", "not as far as", "as much as"] }, { qNum: 79, prompt: "14. I love dancing, and my sister loves it, ________.", options: ["so", "too", "neither", "either"] }, { qNum: 80, prompt: "15. He can't play the saxophone, and his brother can't __________ .", options: ["either", "neither", "so", "too"] }, { qNum: 81, prompt: "16. No one else in the class plays the guitar John.", options: ["as well", "as far as", "so well as", "as soon as"] }, { qNum: 82, prompt: "17. The Brit School is the most famous arts school in Britain.", options: ["performing", "performance", "perform", "performed"] }, { qNum: 83, prompt: "18. Jane is not her brother.", options: ["more intelligent as", "intelligent as", "so intelligent as", "so intelligent that"] }, { qNum: 84, prompt: "19. Since the 1970s, the festival in Glastonbury has taken almost every year and has grown in size.", options: ["part", "place", "note", "notice"] }, { qNum: 85, prompt: "20. He drives as his father does.", options: ["careful as", "more carefully", "the most careful", "carefully as"] }, { qNum: 86, prompt: "21. Dong Ho paintings are made on paper with beautiful colors.", options: ["traditional nature", "tradition - natural", "tradition nature", "traditional - natural"] }, { qNum: 87, prompt: "22. I'll be there I can.", options: ["sooner as", "no sooner as", "as soon as", "soonest as"] }, { qNum: 88, prompt: "23. My village is not it was ten years ago.", options: ["the same as", "the same to", "same as", "the same"] }, { qNum: 89, prompt: "24. The villagers are they were years ago. There is no change at all.", options: ["differently from", "not as friendly as", "as friend as", "as friendly as"] }, { qNum: 90, prompt: "25. Water puppetry in the 11th century in the villages of the Red River Delta of North Viet Nam.", options: ["originated", "formed", "started", "began"] }, { qNum: 91, prompt: "26. The puppet shows present themes of Vietnamese villages.", options: ["city", "urban", "village", "rural"] }, { qNum: 92, prompt: "27. No one in my class is beautiful her.", options: ["as as", "more - as", "as - than", "the - more"] }, { qNum: 93, prompt: "28. The group is for their albums and tours around the world.", options: ["well-knows", "know-how", "well-prepared", "well-known"] }, { qNum: 94, prompt: "29. Going by train isn't convenient as going by car.", options: ["so", "as", "more", "A & B are correct."] }, { qNum: 95, prompt: "30. The performances of puppetry show in the countryside and _____.", options: ["everyday life - folk rock", "every day life-folk people", "everyday life - folk tales", "every day life-folk stories"] }, { qNum: 96, prompt: "31. Today, subjects like music and arts are put into the school in Viet Nam.", options: ["curriculum", "education", "school year", "subjects"] }, { qNum: 97, prompt: "32. Robert does not have Peter does.", options: ["money more than", "as many money as", "more money as", "as much money as"] }, { qNum: 98, prompt: "33. For many people, a good knowledge of music and arts is regarded as a for every student.", options: ["in needs", "necessity", "necessary", "need"] }, { qNum: 99, prompt: "34. Last year, Matt earned his brother.", options: ["twice as much as", "twice as many as", "twice more than", "twice as more as"] }, { qNum: 100, prompt: "35. Arts are of great in education, especially for young children.", options: ["unimportant", "unimportance", "importantly", "importance"] }, { qNum: 101, prompt: "36. The Brit School is the most famous arts school in Britain.", options: ["perform", "performed", "performing", "performance"] }, { qNum: 102, prompt: "37. This river is _____ that one.", options: ["as length as", "the same length as", "like length", "as deep as"] }, { qNum: 103, prompt: "38. He is _______my father, but he looks young.", options: ["the same age of", "as old", "the same age as", "so old as"] }, { qNum: 104, prompt: "39. You can see many interesting in that art gallery.", options: ["paints", "colours", "portraits", "paper"] }, { qNum: 105, prompt: "40. The ring is ______that one. How much does it cost?", options: ["as expensive", "so expensive as", "as expensive as", "as expensively as"] }, { qNum: 106, prompt: "41. The story is very interesting. I ______ it several times.", options: ["have read", "am reading", "read", "havent read"] }, { qNum: 107, prompt: "42. We ______. to New York last summer.", options: ["flew", "were going to fly", "were flying", "have flown"] }, { qNum: 108, prompt: "43. She always talks in class. ______", options: ["So is Mai", "Mai is, too", "So does Mai", "Neither is Mai"] }, { qNum: 109, prompt: "44. I never watch ballet, and my sister doesn't .", options: ["too", "so", "either", "like that"] }, { qNum: 110, prompt: "45. Teenagers in Viet Nam like K-pop, and they like Korean films .", options: ["too", "either", "so", "however"] }, { qNum: 111, prompt: "46. Today, subjects like music and arts are put into the school in Viet Nam.", options: ["school year", "subjects", "curriculum", "education"] }, { qNum: 112, prompt: "47. They are cutting grass in the garden. ______", options: ["I am, too", "So do I", "I do either", "I do neither"] }, { qNum: 113, prompt: "48. Arts are of great in education, especially for young children.", options: ["important", "importance", "unimportant", "unimportance"] }, { qNum: 114, prompt: "49. Classical music is not as pop music.", options: ["as exciting", "as excited", "exciting", "more excited"] }, { qNum: 115, prompt: "50. This film is not long as the film I watched last week.", options: ["as", "but", "either", "too"] }
+                ],
+                answers: { 1:'D', 2:'A', 3:'C', 4:'A', 5:'B', 6:'C', 7:'A', 8:'B', 9:'B', 10:'C', 11:'A', 12:'D', 13:'B', 14:'B', 15:'A', 16:'C', 17:'A', 18:'C', 19:'B', 20:'D', 21:'D', 22:'C', 23:'A', 24:'D', 25:'A', 26:'D', 27:'A', 28:'D', 29:'D', 30:'C', 31:'A', 32:'D', 33:'B', 34:'A', 35:'D', 36:'C', 37:'B', 38:'C', 39:'C', 40:'C', 41:'A', 42:'A', 43:'C', 44:'C', 45:'A', 46:'C', 47:'A', 48:'B', 49:'A', 50:'A' }
+            }
+        ];
+        
+        const totalQuestions = sections.reduce((sum, section) => sum + section.questions.length, 0);
+
+        // DOM Elements
+        const studentSelectionView = document.getElementById('student-selection-view');
+        const formView = document.getElementById('form-view');
+        const submittedView = document.getElementById('submitted-view');
+        const allSubmissionsView = document.getElementById('all-submissions-view');
+        const studentSelect = document.getElementById('student-select');
+        const startAssignmentButton = document.getElementById('start-assignment-button');
+        const studentSelectError = document.getElementById('student-select-error');
+        const studentDisplayName = document.getElementById('student-display-name');
+        const submissionForm = document.getElementById('submission-form');
+        const quizContainer = document.getElementById('quiz-container');
+        const tabContainer = document.getElementById('tab-container').querySelector('nav');
+        const viewResultsButton = document.getElementById('view-results-button');
+        const backToSelectButton = document.getElementById('back-to-select-button');
+        const allSubmissionsList = document.getElementById('all-submissions-list');
+        const loadingState = document.getElementById('loading-state');
+        const teacherLogoutButton = document.getElementById('teacher-logout-button');
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalFooter = document.getElementById('modal-footer');
+        const loginOverlay = document.getElementById('login-overlay');
+        const loginForm = document.getElementById('login-form');
+        const passwordInput = document.getElementById('password-input');
+        const loginError = document.getElementById('login-error');
+        const cancelLoginButton = document.getElementById('cancel-login-button');
+        const teacherLoginButton = document.getElementById('teacher-login-button');
+
+        function showModal(title, body, buttons) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = body;
+            modalFooter.innerHTML = '';
+            buttons.forEach(btn => {
+                const button = document.createElement('button');
+                button.textContent = btn.text;
+                button.className = btn.classes;
+                button.onclick = btn.onClick;
+                modalFooter.appendChild(button);
+            });
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('.modal-content').classList.remove('scale-95');
+            }, 10);
+        }
+
+        function hideModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 250);
+        }
+        
+        function switchTab(targetId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-target') === targetId);
+            });
+            document.querySelectorAll('.quiz-section-content').forEach(content => {
+                content.classList.toggle('hidden', content.id !== targetId);
+            });
+            document.getElementById(targetId).parentElement.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function generateQuiz() {
+            tabContainer.innerHTML = '';
+            quizContainer.innerHTML = '';
+
+            sections.forEach((section, index) => {
+                // Create Tab Button
+                const tabButton = document.createElement('button');
+                tabButton.type = 'button';
+                tabButton.className = `tab-btn whitespace-nowrap py-2 px-3 font-medium text-sm rounded-md border-2 border-transparent text-slate-500 hover:bg-slate-100`;
+                if(index === 0) tabButton.classList.add('active');
+                tabButton.textContent = section.title;
+                tabButton.setAttribute('data-target', section.id);
+                tabButton.addEventListener('click', (e) => handleTabClick(e));
+                tabContainer.appendChild(tabButton);
+
+                // Create Section Content Container
+                const sectionContent = document.createElement('div');
+                sectionContent.id = section.id;
+                sectionContent.className = 'quiz-section-content grid grid-cols-1 gap-4';
+                if(index !== 0) sectionContent.classList.add('hidden');
+                
+                section.questions.forEach(q => {
+                    const qNum = q.qNum;
+                    const questionCard = document.createElement('div');
+                    questionCard.className = 'bg-white border border-slate-200 rounded-lg p-4 transition-shadow hover:shadow-md';
+
+                    let optionsHTML;
+                    if (section.id.includes('phonetics')) {
+                         optionsHTML = q.options.map((opt, i) => {
+                            const optionLetter = String.fromCharCode(65 + i); // A, B, C, D
+                            return `
+                                <label for="q${qNum}-${optionLetter}" class="flex items-center justify-center p-3 rounded-md border-2 border-slate-200 hover:bg-slate-100 cursor-pointer has-[:checked]:bg-blue-50 has-[:checked]:border-blue-500 has-[:checked]:ring-2 has-[:checked]:ring-blue-300">
+                                    <input id="q${qNum}-${optionLetter}" name="q${qNum}" type="radio" value="${optionLetter}" class="sr-only">
+                                    <span class="font-semibold text-slate-700">${opt}</span>
+                                </label>`;
+                         }).join('');
+                    } else { // Multiple Choice
+                         optionsHTML = q.options.map((opt, i) => {
+                             const optionLetter = String.fromCharCode(65 + i); // A, B, C, D
+                             return `
+                                <label for="q${qNum}-${optionLetter}" class="col-span-1 flex items-start text-left p-3 rounded-md border-2 border-slate-200 hover:bg-slate-100 cursor-pointer has-[:checked]:bg-blue-50 has-[:checked]:border-blue-500 has-[:checked]:ring-2 has-[:checked]:ring-blue-300">
+                                    <input id="q${qNum}-${optionLetter}" name="q${qNum}" type="radio" value="${optionLetter}" class="sr-only">
+                                    <span class="font-semibold text-slate-700 mr-2">${optionLetter}.</span>
+                                    <span class="text-slate-700">${opt}</span>
+                                </label>`;
+                         }).join('');
+                    }
+
+                    questionCard.innerHTML = `
+                        <p class="font-medium text-slate-800">${q.prompt}</p>
+                        <fieldset class="mt-4">
+                            <legend class="sr-only">Options for question ${q.prompt}</legend>
+                            <div class="grid ${section.id.includes('multiple-choice') ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-2'} gap-2">
+                                ${optionsHTML}
+                            </div>
+                        </fieldset>
+                    `;
+                    sectionContent.appendChild(questionCard);
+                });
+                quizContainer.appendChild(sectionContent);
+            });
+        }
+        
+        async function checkSubmissionStatus() {
+            if (!currentStudent || !db) return;
+            const studentDocRef = doc(db, `/artifacts/${appId}/public/data/submissions`, currentStudent);
+            const docSnap = await getDoc(studentDocRef);
+            if (docSnap.exists()) {
+                studentSubmission = docSnap.data();
+                studentSelectionView.classList.add('hidden');
+                formView.classList.add('hidden');
+                submittedView.classList.remove('hidden');
+            } else {
+                studentSubmission = null;
+                studentSelectionView.classList.add('hidden');
+                submittedView.classList.add('hidden');
+                formView.classList.remove('hidden');
+                loadProgress();
+            }
+        }
+
+        async function handleFormSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(submissionForm);
+            const userAnswers = {};
+            let missingQuestions = [];
+            for (let i = 1; i <= totalQuestions; i++) {
+                const answer = formData.get(`q${i}`);
+                if (answer) { userAnswers[i] = answer; } 
+                else { 
+                    const questionPrompt = sections.flatMap(s => s.questions).find(q => q.qNum === i).prompt;
+                    missingQuestions.push(questionPrompt.split('.')[0]);
+                }
+            }
+
+            if (missingQuestions.length > 0) {
+                showModal('Incomplete Assignment', `<p>Please answer the following questions:</p><ul class="list-disc list-inside mt-2 text-sm">${missingQuestions.map(q => `<li>Question ${q}</li>`).join('')}</ul>`, [{ text: 'OK', classes: 'w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal }]);
+                return;
+            }
+
+            showModal('Confirm Submission', '<p>Are you sure? You will not be able to change your answers later.</p>', [
+                { text: 'Cancel', classes: 'text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal },
+                { text: 'Submit Now', classes: 'text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: async () => {
+                    hideModal();
+                    await saveSubmission(userAnswers);
+                }}
+            ]);
+        }
+        
+        async function saveSubmission(answers) {
+            const studentDocRef = doc(db, `/artifacts/${appId}/public/data/submissions`, currentStudent);
+            const submissionData = { answers, submittedAt: new Date() };
+            try {
+                await setDoc(studentDocRef, submissionData);
+                studentSubmission = submissionData;
+                formView.classList.add('hidden');
+                submittedView.classList.remove('hidden');
+                // Clear progress from localStorage after successful final submission
+                localStorage.removeItem(`quizProgress_${currentStudent}`);
+            } catch (error) { console.error("Error saving submission: ", error); }
+        }
+
+        function calculateScore(submissionData) {
+            let score = 0;
+            sections.forEach(section => {
+                section.questions.forEach((q, index) => {
+                    const userAnswer = submissionData.answers[q.qNum];
+                    const correctAnswer = section.answers[index + 1];
+                    if (userAnswer === correctAnswer) score++;
+                });
+            });
+            return score;
+        }
+
+        function showResults(submissionData, isTeacher = false) {
+            if (!submissionData) return;
+            const score = calculateScore(submissionData);
+
+            let tabHTML = `<div class="mb-4 border-b border-slate-200"><nav class="-mb-px flex flex-wrap gap-2" aria-label="Tabs">`;
+            sections.forEach((section, index) => {
+                tabHTML += `<button type="button" class="results-tab-btn whitespace-nowrap py-2 px-3 font-medium text-sm rounded-md border-2 border-transparent text-slate-500 hover:bg-slate-100 ${index === 0 ? 'active' : ''}" data-target="results-${section.id}">${section.title}</button>`;
+            });
+            tabHTML += `</nav></div>`;
+
+            let tablesHTML = '<div>';
+            sections.forEach((section, index) => {
+                tablesHTML += `<div id="results-${section.id}" class="results-section-content ${index !== 0 ? 'hidden' : ''}">`;
+                
+                let tableHeader = `<th class="px-4 py-2 text-left text-xs font-medium text-slate-500 uppercase">Question</th><th class="px-4 py-2 text-left text-xs font-medium text-slate-500 uppercase">Your Answer</th>`;
+                if(isTeacher){
+                    tableHeader += `<th class="px-4 py-2 text-left text-xs font-medium text-slate-500 uppercase">Correct Answer</th>`;
+                }
+                tableHeader += `<th class="px-4 py-2 text-center text-xs font-medium text-slate-500 uppercase">Result</th>`;
+
+                tablesHTML += `<div class="border border-slate-200 rounded-lg"><table class="min-w-full divide-y divide-slate-200"><thead class="bg-slate-50"><tr>${tableHeader}</tr></thead><tbody class="bg-white divide-y divide-slate-200">`;
+                
+                section.questions.forEach((q, qIndex) => {
+                    const userAnswer = submissionData.answers[q.qNum];
+                    const correctAnswer = section.answers[qIndex + 1];
+                    const isCorrect = userAnswer === correctAnswer;
+                    
+                    let rowHTML = `<td class="px-4 py-2 text-sm font-medium text-slate-900">${q.prompt.split('.')[0]}</td><td class="px-4 py-2 text-sm text-slate-700">${userAnswer}</td>`;
+                    if(isTeacher){
+                         rowHTML += `<td class="px-4 py-2 text-sm text-slate-700">${isCorrect ? '' : `<span class="font-bold text-green-700">${correctAnswer}</span>`}</td>`;
+                    }
+                    rowHTML += `<td class="px-4 py-2 text-center">${isCorrect ? '<span class="text-green-600 font-bold">✔</span>' : '<span class="text-red-600 font-bold">✘</span>'}</td>`;
+
+                    tablesHTML += `<tr class="${isCorrect ? 'bg-green-50' : 'bg-red-50'}">${rowHTML}</tr>`;
+                });
+                
+                tablesHTML += `</tbody></table></div></div>`;
+            });
+            tablesHTML += '</div>';
+            
+            const finalScoreHTML = `<p class="mb-4 text-center">Final score is <strong>${score}/${totalQuestions}</strong>.</p>`;
+            const fullResultsHTML = finalScoreHTML + tabHTML + tablesHTML;
+            
+            showModal('Your Results', fullResultsHTML, [{ text: 'Close', classes: 'text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal }]);
+            
+            // Add event listeners for the new tabs inside the modal
+            document.querySelectorAll('.results-tab-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('data-target');
+                    document.querySelectorAll('.results-tab-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    document.querySelectorAll('.results-section-content').forEach(content => {
+                        content.classList.toggle('hidden', content.id !== targetId);
+                    });
+                });
+            });
+        }
+        
+        function renderAllSubmissions(docs) {
+            allSubmissionsList.innerHTML = '';
+            if (docs.length === 0) {
+                loadingState.textContent = 'No submissions yet.';
+                return;
+            }
+            loadingState.classList.add('hidden');
+
+            const sortedDocs = docs.sort((a, b) => (b.data().submittedAt?.toDate() || 0) - (a.data().submittedAt?.toDate() || 0));
+            
+            sortedDocs.forEach(doc => {
+                const submissionData = doc.data();
+                const studentName = doc.id;
+                const score = calculateScore(submissionData);
+                const formattedDate = submissionData.submittedAt ? submissionData.submittedAt.toDate().toLocaleString() : 'N/A';
+                
+                const subEl = document.createElement('div');
+                subEl.className = 'flex items-center justify-between p-4 border border-slate-200 rounded-lg bg-slate-50';
+                subEl.innerHTML = `
+                    <div>
+                        <p class="font-bold text-slate-800">${studentName}</p>
+                        <p class="text-sm text-slate-600">Score: ${score}/${totalQuestions} <span class="mx-2">|</span> Submitted: ${formattedDate}</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button class="view-details-btn text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2">View Details</button>
+                        <button class="delete-btn text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-4 py-2">Delete</button>
+                    </div>
+                `;
+                subEl.querySelector('.view-details-btn').addEventListener('click', () => showResults(submissionData, true)); // Teacher view is true
+                subEl.querySelector('.delete-btn').addEventListener('click', () => handleDeleteSubmission(studentName));
+                allSubmissionsList.appendChild(subEl);
+            });
+        }
+        
+        async function handleDeleteSubmission(studentName) {
+            showModal(
+                'Confirm Deletion',
+                `<p>Are you sure you want to delete the submission for <strong>${studentName}</strong>? This action cannot be undone and the student will be able to retake the quiz.</p>`,
+                [
+                    { text: 'Cancel', classes: 'text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal },
+                    { text: 'Delete Submission', classes: 'text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: async () => {
+                        const studentDocRef = doc(db, `/artifacts/${appId}/public/data/submissions`, studentName);
+                        try {
+                            await deleteDoc(studentDocRef);
+                            hideModal();
+                        } catch (error) {
+                            console.error("Error deleting document: ", error);
+                            hideModal();
+                            showModal('Error', 'Failed to delete submission. Please try again.', [{ text: 'OK', classes: 'w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal }]);
+                        }
+                    }}
+                ]
+            );
+        }
+
+        function getAnsweredState() {
+            const formData = new FormData(submissionForm);
+            let allAnswered = true;
+            for (let i = 1; i <= totalQuestions; i++) {
+                if (!formData.get(`q${i}`)) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+            return { allAnswered };
+        }
+
+        function handleTabClick(event) {
+            const targetId = event.currentTarget.getAttribute('data-target');
+            const currentActiveTab = tabContainer.querySelector('.active');
+            if(!currentActiveTab) {
+                 switchTab(targetId);
+                 return;
+            }
+            const currentTabId = currentActiveTab.getAttribute('data-target');
+
+            if (targetId === currentTabId) return; 
+
+            const currentSection = sections.find(s => s.id === currentTabId);
+            const formData = new FormData(submissionForm);
+            const missingInCurrentTab = [];
+            currentSection.questions.forEach(q => {
+                if (!formData.get(`q${q.qNum}`)) {
+                    missingInCurrentTab.push(q.prompt.split('.')[0]);
+                }
+            });
+
+            if (missingInCurrentTab.length > 0) {
+                showModal('Unanswered Questions', `<p>You have not answered the following questions in this section:</p><ul class="list-disc list-inside mt-2 text-sm"><li>Questions: ${missingInCurrentTab.join(', ')}</li></ul><p class="mt-4">Are you sure you want to move on?</p>`, [
+                    { text: 'Stay Here', classes: 'text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal },
+                    { text: 'Move On', classes: 'text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: () => {
+                        hideModal();
+                        switchTab(targetId);
+                    }}
+                ]);
+            } else {
+                switchTab(targetId);
+            }
+        }
+
+        function saveProgress() {
+            if (!currentStudent) return;
+            const formData = new FormData(submissionForm);
+            const answers = {};
+            for(let i=1; i<= totalQuestions; i++) {
+                const answer = formData.get(`q${i}`);
+                if(answer) {
+                    answers[i] = answer;
+                }
+            }
+            localStorage.setItem(`quizProgress_${currentStudent}`, JSON.stringify(answers));
+        }
+
+        function loadProgress() {
+            if (!currentStudent) return;
+            const savedProgress = localStorage.getItem(`quizProgress_${currentStudent}`);
+            if (savedProgress) {
+                const answers = JSON.parse(savedProgress);
+                for (const qNum in answers) {
+                    const answer = answers[qNum];
+                    const radioInput = document.querySelector(`input[name="q${qNum}"][value="${answer}"]`);
+                    if (radioInput) {
+                        radioInput.checked = true;
+                    }
+                }
+            }
+        }
+        
+        function handleAnswerSelection(event) {
+            if (event.target.type !== 'radio') return;
+
+            saveProgress(); // Auto-save on every answer change
+
+            setTimeout(() => {
+                const currentActiveTab = tabContainer.querySelector('.active');
+                const currentTabId = currentActiveTab.getAttribute('data-target');
+                const currentSection = sections.find(s => s.id === currentTabId);
+                const formData = new FormData(submissionForm);
+                const isCurrentTabComplete = currentSection.questions.every(q => formData.get(`q${q.qNum}`));
+                
+                const { allAnswered } = getAnsweredState();
+
+                if (allAnswered) {
+                     showModal('Congratulations!', `<p>You have answered all the questions.</p><p class="mt-2">Would you like to review your answers or submit now?</p>`, [
+                        { text: 'Review Answers', classes: 'text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5', onClick: hideModal },
+                        { text: 'Submit', classes: 'text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5', onClick: () => {
+                            hideModal();
+                            submissionForm.requestSubmit();
+                        }}
+                    ]);
+                } else if (isCurrentTabComplete) {
+                    let nextTabId = null;
+                    for (const section of sections) {
+                        const isSectionComplete = section.questions.every(q => formData.get(`q${q.qNum}`));
+                        if (!isSectionComplete) {
+                            nextTabId = section.id;
+                            break;
+                        }
+                    }
+                    if (nextTabId) {
+                        switchTab(nextTabId);
+                    }
+                }
+            }, 100);
+        }
+        
+        function listenForAllSubmissions() {
+             if (!auth.currentUser || unsubscribeSubmissions) return;
+             const submissionsCollectionRef = collection(db, `/artifacts/${appId}/public/data/submissions`);
+             unsubscribeSubmissions = onSnapshot(query(submissionsCollectionRef), (snapshot) => {
+                 renderAllSubmissions(snapshot.docs);
+             }, (error) => {
+                 console.error("Error listening to submissions:", error);
+                 loadingState.textContent = "Could not load submissions.";
+             });
+        }
+
+        async function main() {
+            generateQuiz();
+
+            if (!firebaseConfig.apiKey) {
+                startAssignmentButton.textContent = 'System Offline';
+                startAssignmentButton.disabled = true;
+                return;
+            }
+
+            const app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+
+            try {
+                if (initialAuthToken) { await signInWithCustomToken(auth, initialAuthToken); } 
+                else { await signInAnonymously(auth); }
+            } catch(error) {
+                 startAssignmentButton.textContent = 'System Offline';
+                 startAssignmentButton.disabled = true;
+            }
+
+            quizContainer.addEventListener('change', handleAnswerSelection);
+
+            startAssignmentButton.addEventListener('click', () => {
+                if (studentSelect.value) {
+                    currentStudent = studentSelect.value;
+                    studentDisplayName.textContent = currentStudent;
+                    studentSelectError.classList.add('hidden');
+                    isTeacherView = false;
+                    checkSubmissionStatus();
+                } else {
+                    studentSelectError.classList.remove('hidden');
+                }
+            });
+            
+            backToSelectButton.addEventListener('click', () => {
+                submittedView.classList.add('hidden');
+                studentSelectionView.classList.remove('hidden');
+                currentStudent = null;
+                studentSubmission = null;
+                studentSelect.value = '';
+            });
+
+            submissionForm.addEventListener('submit', handleFormSubmit);
+            viewResultsButton.addEventListener('click', () => showResults(studentSubmission, false));
+            
+            teacherLoginButton.addEventListener('click', () => loginOverlay.classList.remove('hidden'));
+            cancelLoginButton.addEventListener('click', () => loginOverlay.classList.add('hidden'));
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (passwordInput.value === TEACHER_PASSWORD) {
+                    isTeacherView = true;
+                    studentSelectionView.classList.add('hidden');
+                    loginOverlay.classList.add('hidden');
+                    allSubmissionsView.classList.remove('hidden');
+                    listenForAllSubmissions();
+                    passwordInput.value = '';
+                    loginError.classList.add('hidden');
+                } else {
+                    loginError.classList.remove('hidden');
+                }
+            });
+            teacherLogoutButton.addEventListener('click', () => {
+                isTeacherView = false;
+                allSubmissionsView.classList.add('hidden');
+                studentSelectionView.classList.remove('hidden');
+                if(unsubscribeSubmissions) {
+                    unsubscribeSubmissions();
+                    unsubscribeSubmissions = null;
+                }
+            });
+        }
+
+        main();
+
+    </script>
+</body>
+</html>
+

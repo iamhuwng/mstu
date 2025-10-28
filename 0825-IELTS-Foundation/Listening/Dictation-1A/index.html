@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Homework Submission System - Group 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        #success-message {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-100">
+
+    <!-- Login Overlay (Initially Hidden) -->
+    <div id="login-overlay" class="hidden fixed inset-0 bg-slate-800 bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div class="w-full max-w-sm bg-white p-8 rounded-xl shadow-lg text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Teacher Access</h2>
+            <p class="text-slate-500 mb-6">Enter the password to view submissions.</p>
+            <form id="login-form">
+                <label for="password-input" class="sr-only">Password</label>
+                <input type="password" id="password-input" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4 text-center" placeholder="••••••••" required>
+                <div class="flex gap-2">
+                    <button type="button" id="cancel-login-button" class="w-full text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-base px-5 py-2.5">Cancel</button>
+                    <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-2.5">Unlock</button>
+                </div>
+            </form>
+            <p id="login-error" class="text-red-500 text-sm mt-4 hidden">Incorrect password. Please try again.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="w-full max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Student Selection View -->
+        <div id="student-selection-view">
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <h1 class="text-3xl font-bold text-slate-800">Welcome!</h1>
+                <p class="text-slate-500 mt-2 mb-6">Please select your name to begin.</p>
+                <div class="max-w-xs mx-auto">
+                    <select id="student-select" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <option value="">-- Select Your Name --</option>
+                        <option value="Chi">Chi</option>
+                        <option value="Nhi">Nhi</option>
+                        <option value="Đức">Đức</option>
+                        <option value="Nguyên">Nguyên</option>
+                    </select>
+                    <button id="start-assignment-button" class="mt-4 w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base px-5 py-2.5">Start Assignment</button>
+                    <p id="student-select-error" class="text-red-500 text-sm mt-2 hidden">Please select your name.</p>
+                </div>
+                 <div class="mt-8 text-center border-t pt-4">
+                    <button id="show-login-button" class="text-slate-600 hover:text-blue-600 text-sm font-medium">Teacher Login</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Container (Initially Hidden) -->
+        <div id="form-view" class="hidden">
+            <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-center mb-6 border-b pb-4">
+                    <div>
+                        <h1 class="text-2xl font-bold text-slate-800">Dictation Homework 1</h1>
+                        <p class="text-slate-500 mt-1">Submitting as: <span id="student-display-name" class="font-bold"></span></p>
+                    </div>
+                    <button id="change-student-button" class="text-sm text-slate-600 hover:text-blue-600 font-medium">Change Student</button>
+                </div>
+                <div class="mb-6 p-3 bg-blue-50 border border-blue-200 rounded-lg text-center">
+                    <p class="text-sm text-blue-800">Please locate the listening audio in: <strong class="font-semibold">Drive/Supplement/Listening/Audio</strong></p>
+                </div>
+                <form id="submission-form" novalidate>
+                    <div class="space-y-8">
+                        <!-- Exercises will be dynamically inserted here -->
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" id="submit-button" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-base w-full sm:w-auto px-8 py-3 text-center transition-colors duration-300 disabled:bg-slate-400">
+                            Submit Assignment
+                        </button>
+                    </div>
+                     <div id="success-message" class="mt-4 text-center text-green-600 font-medium opacity-0">
+                        Submission saved successfully!
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- All Submissions Display Container (Initially Hidden) -->
+        <div id="submissions-view" class="hidden">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+                 <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold text-slate-800">All Submissions</h2>
+                    <button id="back-to-student-select-button" class="text-slate-700 bg-slate-200 hover:bg-slate-300 font-medium rounded-lg text-sm px-5 py-2.5">Back to Student Select</button>
+                 </div>
+                <p id="loading-state" class="text-slate-500 text-center">Loading submissions...</p>
+                <div id="submissions-list" class="space-y-6 mt-4">
+                    <!-- Submissions will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="fixed bottom-4 left-4 text-xs text-slate-400">v1.1 - Corrected</div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, doc, setDoc, onSnapshot, serverTimestamp, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id-group-2';
+        
+        // IMPORTANT: When deploying, replace this line with your actual firebaseConfig object
+        const firebaseConfig = {
+  apiKey: "AIzaSyB4qNTWzUVA3m8xKihEP4rT1JTtX_fX0kw",
+  authDomain: "temp-a1437.firebaseapp.com",
+  projectId: "temp-a1437",
+  storageBucket: "temp-a1437.firebasestorage.app",
+  messagingSenderId: "171016256749",
+  appId: "1:171016256749:web:36629e9fc55658a89ca0e4",
+  measurementId: "G-22R567RD5N"
+};
+        
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+        let unsubscribeSubmissions = null;
+        let currentStudent = null;
+
+        const loginOverlay = document.getElementById('login-overlay');
+        const loginForm = document.getElementById('login-form');
+        const passwordInput = document.getElementById('password-input');
+        const loginError = document.getElementById('login-error');
+        const cancelLoginButton = document.getElementById('cancel-login-button');
+        const showLoginButton = document.getElementById('show-login-button');
+        const backToStudentSelectButton = document.getElementById('back-to-student-select-button');
+        
+        const studentSelectionView = document.getElementById('student-selection-view');
+        const studentSelect = document.getElementById('student-select');
+        const startAssignmentButton = document.getElementById('start-assignment-button');
+        const studentSelectError = document.getElementById('student-select-error');
+        const studentDisplayName = document.getElementById('student-display-name');
+        const changeStudentButton = document.getElementById('change-student-button');
+
+        const formView = document.getElementById('form-view');
+        const submissionsView = document.getElementById('submissions-view');
+        
+        const submissionForm = document.getElementById('submission-form');
+        const submitButton = document.getElementById('submit-button');
+        const successMessage = document.getElementById('success-message');
+        const submissionsList = document.getElementById('submissions-list');
+        const loadingState = document.getElementById('loading-state');
+
+        const TEACHER_PASSWORD = '338495';
+
+        const exercises = [
+            { id: 1, original: "1 Address where the robbery took place: ____ Road", q1: "What did the student want to do?", q2: "Who is the student talking to?", q3: "What does the officer ask the student to state?" },
+            { id: 2, original: "2 Address where the woman is from: ____ Road", q1: "What did the woman lose?", q2: "Where was it lost?", q3: "How will the clerk contact the woman?" },
+            { id: 3, original: "3 Address of the tailoring shop: ____ Street", q1: "What is the shop's first name?", q2: "What is the building's name?", q3: "What does the woman say after getting the spelling?" },
+            { id: 4, original: "4 Location of the school: Green Way, ____", q1: "What is the student going to do at the school?", q2: "What kind of course is it?", q3: "After the next street, which way should the student turn?" },
+            { id: 5, original: "5 Address where the man lives: No.33 ____", q1: "What does the man want to file?", q2: "What was delayed?", q3: "What will the clerk take on this?" },
+            { id: 6, original: "6 Road where the restaurant is located: ____ Road", q1: "Who is Peter talking to?", q2: "What kind of job is he looking for?", q3: "What kind of establishment is the job at?" },
+            { id: 7, original: "7 Address of the house for rent: North Street, ____", q1: "What is the status of the house?", q2: "What is the house located beside?", q3: "What street is the house on?" },
+            { id: 8, original: "8 Road where the woman is located: ____ Road", q1: "What service did the woman call for?", q2: "What specifically does she want changed?", q3: "What does the man ask the woman to tell him?" },
+            { id: 9, original: "9 Name of the place where the woman is from in New Zealand: ____", q1: "What is the tourist's name?", q2: "Who is she trying to locate?", q3: "How long ago did the cousin move here?" },
+            { id: 10, original: "10 Road where the new office is located: ____ Road, London", q1: "What is the woman's first name?", q2: "What kind of pages does she want to update?", q3: "What kind of company is it?" },
+        ];
+
+        function generateExerciseForm() {
+            const container = submissionForm.querySelector('.space-y-8');
+            container.innerHTML = '';
+            exercises.forEach(ex => {
+                const fieldset = document.createElement('fieldset');
+                fieldset.className = 'space-y-3';
+                
+                const parts = ex.original.split('____');
+                const mainAnswerHTML = `
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <label for="ex-${ex.id}-main" class="text-lg font-semibold text-slate-800">${parts[0]}</label>
+                        <input type="text" id="ex-${ex.id}-main" class="bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-2.5 w-48" required>
+                        <span class="text-lg font-semibold text-slate-800">${parts[1] || ''}</span>
+                    </div>
+                    <p class="error-message text-red-500 text-xs mt-1 hidden">Please provide an answer.</p>
+                `;
+
+                fieldset.innerHTML = `
+                    ${mainAnswerHTML}
+                    <div class="pl-4 border-l-2 border-slate-200 space-y-3 pt-2">
+                        <div>
+                            <label for="ex-${ex.id}-q1" class="block text-sm font-medium text-slate-600">${ex.q1}</label>
+                            <input type="text" id="ex-${ex.id}-q1" class="mt-1 bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                            <p class="error-message text-red-500 text-xs mt-1 hidden">Please provide an answer.</p>
+                        </div>
+                        <div>
+                            <label for="ex-${ex.id}-q2" class="block text-sm font-medium text-slate-600">${ex.q2}</label>
+                            <input type="text" id="ex-${ex.id}-q2" class="mt-1 bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                            <p class="error-message text-red-500 text-xs mt-1 hidden">Please provide an answer.</p>
+                        </div>
+                        <div>
+                            <label for="ex-${ex.id}-q3" class="block text-sm font-medium text-slate-600">${ex.q3}</label>
+                            <input type="text" id="ex-${ex.id}-q3" class="mt-1 bg-slate-50 border border-slate-300 text-slate-900 text-sm rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                            <p class="error-message text-red-500 text-xs mt-1 hidden">Please provide an answer.</p>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(fieldset);
+            });
+        }
+
+        function renderSubmissions(docs) {
+            submissionsList.innerHTML = '';
+            if (docs.length === 0) {
+                loadingState.textContent = 'No submissions yet.';
+                return;
+            }
+            
+            loadingState.textContent = '';
+
+            const sortedDocs = docs.sort((a, b) => (b.data().updatedAt?.toMillis() || 0) - (a.data().updatedAt?.toMillis() || 0));
+
+            sortedDocs.forEach(doc => {
+                const submission = doc.data();
+                const studentName = doc.id;
+                const submissionEl = document.createElement('div');
+                submissionEl.className = 'p-4 border border-slate-200 rounded-lg bg-slate-50';
+                
+                const formattedDate = submission.updatedAt ? submission.updatedAt.toDate().toLocaleString() : 'Date not available';
+                
+                const answers = submission.answers || {};
+
+                let answersHtml = '<div class="space-y-4">';
+                exercises.forEach(ex => {
+                    const exAnswers = answers[`exercise${ex.id}`] || {};
+                    const parts = ex.original.split('____');
+                    const mainAnswerDisplay = parts[0] + `<strong class="text-blue-600">${exAnswers.main || '____'}</strong>` + (parts[1] || '');
+
+                    answersHtml += `
+                        <div>
+                            <h4 class="font-semibold text-slate-800">${mainAnswerDisplay}</h4>
+                            <ul class="list-disc list-inside space-y-1 pl-4 mt-1 text-sm">
+                                <li>${ex.q1} <span class="font-semibold text-slate-900">${exAnswers.q1 || 'No answer'}</span></li>
+                                <li>${ex.q2} <span class="font-semibold text-slate-900">${exAnswers.q2 || 'No answer'}</span></li>
+                                <li>${ex.q3} <span class="font-semibold text-slate-900">${exAnswers.q3 || 'No answer'}</span></li>
+                            </ul>
+                        </div>
+                    `;
+                });
+                answersHtml += '</div>';
+
+                submissionEl.innerHTML = `
+                    <div class="border-b pb-3 mb-3">
+                        <div class="flex justify-between items-center flex-wrap gap-2">
+                            <h3 class="font-bold text-xl text-slate-800">${studentName}</h3>
+                            <span class="text-sm text-slate-500">Last updated: ${formattedDate}</span>
+                        </div>
+                    </div>
+                    ${answersHtml}
+                `;
+                submissionsList.appendChild(submissionEl);
+            });
+        }
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            if (!currentStudent) return;
+
+            let isFormValid = true;
+            document.querySelectorAll('.error-message').forEach(msg => msg.classList.add('hidden'));
+
+            submissionForm.querySelectorAll('input[type="text"]').forEach(input => {
+                if (input.value.trim() === '') {
+                    isFormValid = false;
+                    let errorElement;
+                    // Find the error message based on the input's structure
+                    if (input.id.includes('-main')) {
+                        // For main answers, the error <p> is the next sibling of the input's container <div>
+                        errorElement = input.parentElement.nextElementSibling;
+                    } else {
+                        // For sub-questions, the error <p> is the direct next sibling of the <input>
+                        errorElement = input.nextElementSibling;
+                    }
+
+                    if (errorElement && errorElement.classList.contains('error-message')) {
+                        errorElement.classList.remove('hidden');
+                    }
+                }
+            });
+
+            if (!isFormValid) return;
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            try {
+                const answers = {};
+                exercises.forEach(ex => {
+                    answers[`exercise${ex.id}`] = {
+                        main: document.getElementById(`ex-${ex.id}-main`).value.trim(),
+                        q1: document.getElementById(`ex-${ex.id}-q1`).value.trim(),
+                        q2: document.getElementById(`ex-${ex.id}-q2`).value.trim(),
+                        q3: document.getElementById(`ex-${ex.id}-q3`).value.trim(),
+                    };
+                });
+
+                const studentDocRef = doc(db, `/artifacts/${appId}/public/data/submissions`, currentStudent);
+                
+                const submissionData = {
+                    updatedAt: serverTimestamp(),
+                    answers: answers
+                };
+                
+                await setDoc(studentDocRef, submissionData);
+
+                submissionForm.reset();
+                successMessage.classList.remove('opacity-0');
+                setTimeout(() => { successMessage.classList.add('opacity-0'); }, 3000);
+
+            } catch (error) {
+                console.error("Error writing document: ", error);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Assignment';
+            }
+        }
+        
+        function listenForSubmissions() {
+             if (!auth.currentUser || unsubscribeSubmissions) return;
+            const submissionsCollectionRef = collection(db, `/artifacts/${appId}/public/data/submissions`);
+            unsubscribeSubmissions = onSnapshot(query(submissionsCollectionRef), (snapshot) => {
+                renderSubmissions(snapshot.docs);
+            }, (error) => {
+                console.error("Error listening to submissions:", error);
+                loadingState.textContent = "Could not load submissions.";
+            });
+        }
+
+        async function main() {
+            generateExerciseForm();
+
+            if (!firebaseConfig.apiKey) {
+                console.error("Firebase configuration is missing.");
+                startAssignmentButton.disabled = true;
+                startAssignmentButton.textContent = 'System Offline';
+                return;
+            }
+
+            const app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            
+            try {
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (error) {
+                console.error("Authentication failed:", error);
+                startAssignmentButton.disabled = true;
+                startAssignmentButton.textContent = 'System Offline';
+            }
+
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    submissionForm.addEventListener('submit', handleFormSubmit);
+                }
+            });
+        }
+
+        startAssignmentButton.addEventListener('click', () => {
+            if (studentSelect.value) {
+                currentStudent = studentSelect.value;
+                studentDisplayName.textContent = currentStudent;
+                studentSelectionView.classList.add('hidden');
+                formView.classList.remove('hidden');
+                studentSelectError.classList.add('hidden');
+            } else {
+                studentSelectError.classList.remove('hidden');
+            }
+        });
+
+        changeStudentButton.addEventListener('click', () => {
+            formView.classList.add('hidden');
+            studentSelectionView.classList.remove('hidden');
+            currentStudent = null;
+            submissionForm.reset();
+        });
+        
+        showLoginButton.addEventListener('click', () => {
+            loginOverlay.classList.remove('hidden');
+            passwordInput.focus();
+        });
+
+        cancelLoginButton.addEventListener('click', () => {
+            loginOverlay.classList.add('hidden');
+            loginError.classList.add('hidden');
+            passwordInput.value = '';
+        });
+
+        backToStudentSelectButton.addEventListener('click', () => {
+            submissionsView.classList.add('hidden');
+            studentSelectionView.classList.remove('hidden');
+            if (unsubscribeSubmissions) {
+                unsubscribeSubmissions();
+                unsubscribeSubmissions = null;
+            }
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (passwordInput.value === TEACHER_PASSWORD) {
+                loginOverlay.classList.add('hidden');
+                studentSelectionView.classList.add('hidden');
+                formView.classList.add('hidden');
+                submissionsView.classList.remove('hidden');
+                passwordInput.value = '';
+                loginError.classList.add('hidden');
+                listenForSubmissions();
+            } else {
+                loginError.classList.remove('hidden');
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        });
+
+        main();
+    </script>
+</body>
+</html>
+
